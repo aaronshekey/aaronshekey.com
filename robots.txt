@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /home/
+Disallow: /chats/
+Disallow: /adobe/
+Disallow: /archives/
+Disallow: /extra/
+Disallow: /prototypes/
+Disallow: /clients/
+Disallow: /mint/

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Rental"
+AuthUserFile "/home/aaronshe/.htpasswds/public_html/home/passwd"
+require valid-user
