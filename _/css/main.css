@@ -244,6 +244,10 @@ hr {
 	margin-bottom: 15em;
 }
 
+#article ul {
+    margin-bottom: 3em;
+}
+
 #work img {
 	margin: 2em auto;
 	max-width: 90%;
