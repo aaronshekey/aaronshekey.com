@@ -165,6 +165,14 @@ hr {
             transition: background-color .15s ease-in-out;
 }
 
+#email_btn {
+	background: #8a8a8a center center url("../img/email_btn.png");
+}
+
+#email_btn:hover {
+	background-color: #2a2a2a;
+}
+
 #twitter_btn {
 	background: #8a8a8a center center url("../img/twitter_btn.png");
 }
@@ -471,18 +479,24 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
    
+    
+    #email_btn {
+    	background-image: url("../img/email_btn@2x.png");
+    	background-size: 32px;
+    }
+    
     #linkedin_btn {
     	background-image: url("../img/linkedin_btn@2x.png");
-    	background-size: 34px;
+    	background-size: 32px;
     }
     
     #twitter_btn {
     	background-image: url("../img/twitter_btn@2x.png");
-    	background-size: 34px;
+    	background-size: 32px;
     }
     
     #dribbble_btn {
     	background-image: url("../img/dribbble_btn@2x.png");
-    	background-size: 34px;
+    	background-size: 32px;
     }
 }
