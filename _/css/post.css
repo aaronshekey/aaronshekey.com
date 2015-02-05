@@ -9,6 +9,12 @@ body {
     background: #fff;
 }
 
+    @media only screen and (max-width: 478px) {
+	    body {
+    	    font-size: 16px;
+	    }
+    }
+
 h1,
 h2,
 h3,
@@ -20,12 +26,20 @@ h4 {
 }
 
 h1 {
-    margin: 1em .8em;
+    margin: 1em 10%;
 	font-size: 4em;
 }
 
+    @media only screen and (max-width: 790px) {
+        h1 {
+    	    margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            max-width: 600px;
+	    }
+    }
+
 h1.single {
-    margin: 1em 1em;
 	font-size: 5em;
 }
 
@@ -44,6 +58,10 @@ h3 {
 h4 {
 	font-size: 1.125em;
 	margin-bottom: .5em;
+}
+
+.center {
+    text-align: center;
 }
 
 .meta {
@@ -117,6 +135,7 @@ hr {
     
     #article ul,
     #article ol {
+        margin-left: 1em;
         margin-bottom: 3em;
     }
     
@@ -125,7 +144,7 @@ hr {
     }
     
     #article ul {
-        list-style-type: circle;
+        list-style-type: disc;
     }
 
     #article li {
@@ -139,15 +158,24 @@ hr {
     	font-style: normal;
     	font-size: 3.125em;
     	line-height: 1.14em;
-    	margin: 1.6em auto 1.8em -.5em;
+    	margin: 1.6em auto 1.8em -1em;
     }
+    
+        @media only screen and (max-width: 820px) {
+            #article blockquote {
+            	margin-left: auto;
+        	}   
+        }
 
     #article blockquote.long {
     	font-size: .875em;
     	font-weight: 300;
-    	text-indent: 0;
     	margin-bottom: 2.8em;
     }
+    
+        #article blockquote.long p {
+            margin-bottom: 1em;
+        }
 
     #article hr {
     	margin-top: 6em;
@@ -196,7 +224,7 @@ a.btn:hover {
     
     font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: .7em;
     letter-spacing: 1px;
 }
 
@@ -235,22 +263,3 @@ a.btn:hover {
     	color: #0279b3;
     	border-bottom: 1px solid #0279b3;
     }
-
-
-
-
-@media only screen and (max-width: 478px) {
-	body {
-    	font-size: 16px;
-	}
-	
-	h1 {
-    	margin-left: auto;
-    	margin-right: auto;
-    	width: 90%;
-	}
-	
-	#article blockquote {
-    	margin-left: auto;
-	}
-}
