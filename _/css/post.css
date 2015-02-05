@@ -1,0 +1,256 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+    font-size: 20px;
+    font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0 auto 1em;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin: 1em .8em;
+	font-size: 4em;
+}
+
+h1.single {
+    margin: 1em 1em;
+	font-size: 5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+	font-size: 1.375em;
+	margin-bottom: .5em;
+}
+
+h4 {
+	font-size: 1.125em;
+	margin-bottom: .5em;
+}
+
+.meta {
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+    .meta a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 1em;
+    }
+
+hr {
+	border: 0;
+	width: 150px;
+	color: #808080;
+	background-color: #808080;
+	height: 2px;
+	margin: 2.5em auto 3em;
+}
+
+/* Article */
+
+#article {
+	font-family: "rooney-web", Georgia, serif;
+	padding: 3em 0;
+	line-height: 1.625em;
+	color: #333;
+}
+
+    #article .wrapper {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #article p {
+    	line-height: 1.8em;
+    	margin-bottom: 3em;
+    }
+    
+        #article p.summary {
+            margin-bottom: 8em;
+        }
+        
+        #article p.divider {
+        	text-align: center;
+        	font-size: 2.5em;
+        	font-style: normal;
+        	margin: 4em auto 3.2em;
+        }
+    
+    #article a {
+    	color: inherit;
+    	text-decoration: none;
+    	border-bottom: 1px solid #333;
+    	
+    	-webkit-transition: color .15s ease-in-out;
+           -moz-transition: color .15s ease-in-out;
+             -o-transition: color .15s ease-in-out;
+            -ms-transition: color .15s ease-in-out;
+                transition: color .15s ease-in-out;
+    }
+    
+    #article a:hover {
+    	color: #000;
+    	border-bottom: 1px solid #000;
+    }
+    
+    #article ul,
+    #article ol {
+        margin-bottom: 3em;
+    }
+    
+    #article ol {
+        list-style-type: decimal;
+    }
+    
+    #article ul {
+        list-style-type: circle;
+    }
+
+    #article li {
+        margin-bottom: 1em;
+    }
+
+    #article blockquote {
+    	display: block;
+    	font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    	font-weight: 700;
+    	font-style: normal;
+    	font-size: 3.125em;
+    	line-height: 1.14em;
+    	margin: 1.6em auto 1.8em -.5em;
+    }
+
+    #article blockquote.long {
+    	font-size: .875em;
+    	font-weight: 300;
+    	text-indent: 0;
+    	margin-bottom: 2.8em;
+    }
+
+    #article hr {
+    	margin-top: 6em;
+    	margin-bottom: 6em;
+    }
+    
+
+
+/* Home button */
+
+a.btn {
+    display: block;
+    margin: 0px auto;
+    max-width: 290px;
+	
+	font-family: "brandon-grotesque","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	
+	color: #8a8a8a;
+	border: 2px solid #808080;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2.13em 1.6667em 2em;
+	letter-spacing: 2px;
+	border-radius: 3px;
+	
+	-webkit-transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+       -moz-transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+         -o-transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+        -ms-transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+            transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+a.btn:hover {
+    background: #fff;
+}
+
+/* Elsewhere */
+
+#elsewhere {
+    margin: 5em 0;
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+    #elsewhere li {
+    	display: inline;
+    	margin: 0 .5em;
+    }
+    
+    #elsewhere a {
+        color: #888;
+        text-decoration: none;
+        
+    	-webkit-transition: color .1s ease-in-out;
+           -moz-transition: color .1s ease-in-out;
+             -o-transition: color .1s ease-in-out;
+            -ms-transition: color .1s ease-in-out;
+                transition: color .1s ease-in-out;
+    }
+    
+    #email-btn:hover {
+    	color: #2a2a2a;
+    	border-bottom: 1px solid #2a2a2a;
+    }
+    
+    #twitter-btn:hover {
+    	color: #00aced;
+    	border-bottom: 1px solid #00aced;
+    }
+    
+    #dribbble-btn:hover {
+    	color: #ea4C89;
+    	border-bottom: 1px solid #ea4C89;
+    }
+    
+    #linkedin-btn:hover {
+    	color: #0279b3;
+    	border-bottom: 1px solid #0279b3;
+    }
+
+
+
+
+@media only screen and (max-width: 478px) {
+	body {
+    	font-size: 16px;
+	}
+	
+	h1 {
+    	margin-left: auto;
+    	margin-right: auto;
+    	width: 90%;
+	}
+	
+	#article blockquote {
+    	margin-left: auto;
+	}
+}
