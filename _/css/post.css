@@ -14,11 +14,35 @@ body {
     	    font-size: 16px;
 	    }
     }
+    
+    @media only screen and (min-width: 1350px) {
+	    body {
+    	    font-size: 28px;
+	    }
+    }
+    
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid #333;
+	
+	-webkit-transition: color .15s ease-in-out;
+       -moz-transition: color .15s ease-in-out;
+         -o-transition: color .15s ease-in-out;
+        -ms-transition: color .15s ease-in-out;
+            transition: color .15s ease-in-out;
+}
+
+a:hover {
+	color: #000;
+	border-bottom: 1px solid #000;
+}
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0 auto 1em;
 	font-weight: 700;
@@ -60,13 +84,17 @@ h4 {
 	margin-bottom: .5em;
 }
 
+h5 {
+    margin-top: -1em;
+}
+
 .center {
     text-align: center;
 }
 
 .meta {
 	display: block;
-	font-size: 14px;
+	font-size: .8em;
 	font-weight: 400;
 }
 
@@ -74,6 +102,10 @@ h4 {
         color: inherit;
         text-decoration: none;
         margin-right: 1em;
+    }
+    
+    h1 .meta {
+        font-size: 14px;
     }
 
 hr {
@@ -85,6 +117,173 @@ hr {
 	margin: 2.5em auto 3em;
 }
 
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    clear: both;
+    box-sizing: border-box;
+}
+
+/* Home */
+
+#home {
+    margin-top: 4em;
+    padding-top: 17%;
+    
+	font-family: "rooney-web", Georgia, serif;
+	line-height: 1.625em;
+	color: #333;
+	
+	background: url("../img/aaronshekey.svg") no-repeat top;
+	background-size: 100%;
+}
+
+    @media only screen and (max-width: 478px) {
+	    #home {
+    	    text-align: center;
+	    }
+    }
+
+    #home .wrapper {
+        position: relative;
+        max-width: 40em;
+        padding-left: 17em;
+    }
+    
+    #home img {
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+    
+    @media only screen and (max-width: 750px) {
+	    #home .wrapper {
+            padding-left: 0;
+            max-width: 18em;
+        }
+    }
+    
+    @media only screen and (min-width: 1350px) {
+	    #home .wrapper {
+    	    padding-left: 13em;
+    	    max-width: 36em;
+	    }
+    }
+
+    #me img {
+        position: absolute;
+        left: 0;
+        top: -4em;
+    }
+    
+    @media only screen and (max-width: 750px) {
+	    #me img {
+            position: static;
+            display: block;
+            margin-top: -2em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    @media only screen and (min-width: 1350px) {
+	    #me img {
+            top: -1.8em;          
+        }
+    }
+    
+    
+    /* Posts */
+    
+    
+    #posts {
+        font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+    }
+    
+        #posts a {
+            font-size: 1.375em;
+            border-bottom: 1px solid #fff;
+            
+            -webkit-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+               -moz-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+                 -o-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+                -ms-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+                    transition: border-color .1s ease-in-out, color .1s ease-in-out;
+        }
+        
+        #posts a:hover {
+            border-bottom: 1px solid #000;
+        }
+    
+        #posts li {
+            margin-bottom: 1.4em;
+        }
+        
+        #posts .meta {
+            margin-top: -.5em;
+        }
+
+
+    /* Work */
+    
+    #work h2 {
+        margin-bottom: 2em;
+    }
+    
+    #work .project,
+    #work .record {
+        position: relative;
+        clear: both;
+        margin-bottom: 8em;
+    }
+
+        .project p {
+            margin-bottom: 1em;
+        }
+        
+        .project a {
+            font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            margin-right: .5em;
+        }
+    
+        .project img {
+            position: absolute;
+            left: -17em;
+            top: -2.5em;
+        }
+        
+        .project img.reflow-thumbnail {
+            left: -19em;
+        }
+        
+        @media only screen and (max-width: 750px) {
+    	    .project img {
+                position: static;
+                display: block;
+                margin: 0 auto 1em auto;
+            }
+        }
+        
+        @media only screen and (min-width: 1350px) {
+    	    .project img {
+                left: -13em;
+                top: 0;
+            }
+            
+            .project img.reflow-thumbnail {
+                left: -14.5em;
+            }
+        }
+    
+    @media only screen and (max-width: 750px) {
+	    #work .record {
+    	    margin-left: auto;
+    	    margin-right: auto;
+    	    text-align: center;
+        }
+    }
+
 /* Article */
 
 #article {
@@ -95,9 +294,7 @@ hr {
 }
 
     #article .wrapper {
-        width: 90%;
         max-width: 600px;
-        margin: 0 auto;
     }
 
     #article p {
@@ -115,23 +312,6 @@ hr {
         	font-style: normal;
         	margin: 4em auto 3.2em;
         }
-    
-    #article a {
-    	color: inherit;
-    	text-decoration: none;
-    	border-bottom: 1px solid #333;
-    	
-    	-webkit-transition: color .15s ease-in-out;
-           -moz-transition: color .15s ease-in-out;
-             -o-transition: color .15s ease-in-out;
-            -ms-transition: color .15s ease-in-out;
-                transition: color .15s ease-in-out;
-    }
-    
-    #article a:hover {
-    	color: #000;
-    	border-bottom: 1px solid #000;
-    }
     
     #article ul,
     #article ol {
@@ -235,13 +415,13 @@ a.btn:hover {
     
     #elsewhere a {
         color: #888;
-        text-decoration: none;
+        border-bottom: 1px solid #fff;
         
-    	-webkit-transition: color .1s ease-in-out;
-           -moz-transition: color .1s ease-in-out;
-             -o-transition: color .1s ease-in-out;
-            -ms-transition: color .1s ease-in-out;
-                transition: color .1s ease-in-out;
+    	-webkit-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+           -moz-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+             -o-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+            -ms-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+                transition: border-color .1s ease-in-out, color .1s ease-in-out;
     }
     
     #email-btn:hover {
@@ -262,4 +442,9 @@ a.btn:hover {
     #linkedin-btn:hover {
     	color: #0279b3;
     	border-bottom: 1px solid #0279b3;
+    }
+    
+    #github-btn:hover {
+        color: #4183c4;
+        border-bottom: 1px solid #4183c4;
     }
