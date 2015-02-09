@@ -320,6 +320,11 @@ hr {
         margin: 1em auto 4em auto;
     }
     
+    #article .images img {
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+        
     #article ul,
     #article ol {
         margin-left: 1em;
@@ -379,8 +384,37 @@ hr {
         font-size: .8em;
         margin-top: -4em;
         margin-bottom: 8em;
+    }    
+    
+    #article .browser {
+    	margin: 5em auto;
+    	width: 90%;
+    	max-width: 800px;
     }
     
+    #article .browser img {
+    	margin: 0;
+    	width: 100%;
+    	max-width: 100%;
+    }
+    
+    #article .site-embed {
+    	width: 100%;
+    	height: 0;
+    	padding-top: 60.681034%;
+    	position: relative;
+    	overflow: hidden;
+    	overflow-y: scroll;
+    }
+    
+    #article .site-embed img {
+    	margin: 0;
+    	width: 100%;
+    	max-width: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
 
 
 /* Home button */
