@@ -124,6 +124,11 @@ hr {
     box-sizing: border-box;
 }
 
+.footnote {
+	font-size: .625em;
+	vertical-align: super; 
+}
+
 /* Home */
 
 #home {
@@ -414,6 +419,10 @@ hr {
     	position: absolute;
     	top: 0;
     	left: 0;
+    }
+    
+    #article .player {
+        margin-bottom: 3em;
     }
 
 
