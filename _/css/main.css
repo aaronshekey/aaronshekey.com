@@ -537,6 +537,8 @@ a.btn:hover {
     font-size: .75em;
     padding: 0 .25em;
     border: 1px solid rgb(200, 200, 200);
+    display: inline-block;
+    vertical-align: bottom;
 
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -563,6 +565,7 @@ a.btn:hover {
     background: #efefef;
     cursor: pointer;
     padding: 0 .5em;
+    margin-left: -2px;
   }
 
   .subscribe-btn:hover,
