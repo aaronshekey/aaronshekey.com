@@ -95,9 +95,21 @@
 }
 
 .credits {
-  position: absolute;
-  top: 1.2em;
-  right: 15px;
+  display: block;
+  background-color: #Eee;
+  background-image: -webkit-linear-gradient(bottom, #e8e8e8 0%, #fff 50%);
+  background-image: -webkit-linear-gradient(bottom, #e8e8e8 0%, #ffffff 50%);
+  background-image: linear-gradient(bottom, #e8e8e8 0%,#ffffff 50%);
+  border-top: #E8E8E8 1px solid;
+  font-size: 15px;
+  color: #A58500;
+  margin: 0 -15px 1px;
+  padding: 6px 15px;
+  text-shadow: 0 0 0.2em #Fff, 0 0 0.2em #Fff;
+}
+
+b {
+  font-weight: bold;
 }
 
 .known {
@@ -161,4 +173,8 @@
   float: right;
   text-align: right;
   margin-left: 1.2em;
+}
+
+.role {
+  display: block;
 }
