@@ -461,13 +461,10 @@ a.btn:hover {
 
 #elsewhere {
   margin: 5em 0;
-
   text-align: center;
-  text-transform: uppercase;
-
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: .65em;
+  font-size: .5em;
   letter-spacing: 1px;
 }
 
@@ -520,12 +517,13 @@ a.btn:hover {
   }
 
 #subscribe {
+  font-size: .75em;
   margin: 0 auto 5em;
   text-align: center;
 }
 
   #subscribe p {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     line-height: 1.1em;
   }
 
