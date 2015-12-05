@@ -6,6 +6,7 @@
   background-color: #e3e2dd;
   background-repeat: no-repeat;
   padding: 100px 0;
+  margin-bottom: 100px;
 }
 
 #imdb-page {
@@ -114,8 +115,36 @@ b {
 
 .known {
   float: left;
-  margin-right: 1.2em;
-  width: 148px;
+  width: 25%;
+  margin-bottom: 1.4em;
+}
+
+.known img {
+  display: block;
+  margin: 0 auto .5em;
+}
+
+.known .title {
+  display: block;
+  margin: 0 auto;
+  max-width: 148px;
+}
+
+@media only screen and (max-width: 815px) {
+  .known {
+    width: 50%;
+  }
+
+  .known:nth-child(4) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .known {
+    float: none;
+    width: 100%;
+  }
 }
 
 #navbar {
