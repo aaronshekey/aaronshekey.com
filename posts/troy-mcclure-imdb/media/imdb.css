@@ -1,0 +1,211 @@
+#imdb-wrapper {
+  background: #b3b3b0;
+  background: -webkit-linear-gradient(#b3b3b0 0%, #e3e2dd 500px);
+  background: -webkit-linear-gradient(top, #b3b3b0 0%, #e3e2dd 500px);
+  background: linear-gradient(top, #b3b3b0 0%,#e3e2dd 500px);
+  background-color: #e3e2dd;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+
+#imdb-page {
+  margin: 0 auto;
+  max-width: 830px;
+  width: 90%;
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  font-size: 13px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+#imdb-content {
+  padding: 15px;
+  line-height: 1.6;
+}
+
+#imdb-content h1 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+
+#imdb-content h4 {
+  font-family: Verdana, Arial, sans-serif;
+  display: inline;
+}
+
+#imdb-content hr {
+	border: 0;
+	width: auto;
+	color: #e8e8e8;
+	background-color: #e8e8e8;
+	height: 1px;
+	margin: 1em 0;
+}
+
+#imdb-content p {
+  margin-bottom: 1em;
+}
+
+#imdb-content .image {
+  float: left;
+  margin-right: 1.2em;
+}
+
+#imdb-content .article {
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 15px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#imdb-content .article:last-child {
+  margin-bottom: 0;
+}
+
+#imdb-content h2 {
+  font-family: Verdana, Arial, sans-serif;
+  color: #664700;
+  font-size: 1.6em;
+  margin: 0 0 .6em 0;
+  letter-spacing: 0;
+}
+
+#filmography.article {
+  position: relative;
+  padding-bottom: 0;
+}
+
+#filmography .row {
+  margin: 0 -15px;
+  border-bottom: 2px solid #fff;
+  padding: .4em 15px;
+}
+
+#filmography .row:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+#filmography .row:nth-child(even) {
+  background-color: #fbfbfb;
+}
+
+.credits {
+  display: block;
+  background-color: #Eee;
+  background-image: -webkit-linear-gradient(bottom, #e8e8e8 0%, #fff 50%);
+  background-image: -webkit-linear-gradient(bottom, #e8e8e8 0%, #ffffff 50%);
+  background-image: linear-gradient(bottom, #e8e8e8 0%,#ffffff 50%);
+  border-top: #E8E8E8 1px solid;
+  font-size: 15px;
+  color: #A58500;
+  margin: 0 -15px 1px;
+  padding: 6px 15px;
+  text-shadow: 0 0 0.2em #Fff, 0 0 0.2em #Fff;
+}
+
+b {
+  font-weight: bold;
+}
+
+.known {
+  float: left;
+  width: 25%;
+  margin-bottom: 1.4em;
+}
+
+.known img {
+  display: block;
+  margin: 0 auto .5em;
+}
+
+.known .title {
+  display: block;
+  margin: 0 auto;
+  max-width: 148px;
+}
+
+@media only screen and (max-width: 815px) {
+  .known {
+    width: 50%;
+  }
+
+  .known:nth-child(4) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .known {
+    float: none;
+    width: 100%;
+  }
+}
+
+#navbar {
+  background: #333333;
+  background: -webkit-linear-gradient(top, #646464 0%, #0e0e0e 100%);
+  background: linear-gradient(to bottom, #646464 0%, #0e0e0e 100%);
+  color: #fff;
+  height: 83px;
+  position: relative;
+}
+
+#logo {
+  background-position: 0 -70px;
+  border: none;
+  display: block;
+  height: 49px;
+  left: 20px;
+  position: absolute;
+  top: 17px;
+  width: 101px;
+}
+
+#navbar-input {
+  border: none;
+  background: #fff;
+  color: #666;
+  border-radius: 3px 0 0 3px;
+  -webkitz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  font: 14px Verdana, Arial, sans-serif;
+  height: 19px;
+  padding: 5px 8px;
+  vertical-align: middle;
+  position: absolute;
+  top: 27px;
+  left: 137px;
+  right: 50px;
+}
+
+#navbar button {
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #f9ec75 20%, #f3ce00 70%);
+  background: linear-gradient(top, #f2f2f2 0%, #f9ec75 20%, #f3ce00 70%);
+  border-radius: 0 3px 3px 0;
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#f3ce00', GradientType=0);
+  height: 29px;
+  margin: 0;
+  vertical-align: middle;
+  border: 0;
+  position: absolute;
+  right: 23px;
+  top: 27px;
+  width: 29px;
+  border-left: 1px solid rgb(170, 134, 22);
+}
+
+.year {
+  float: right;
+  text-align: right;
+  margin-left: 1.2em;
+}
+
+.role {
+  display: block;
+}
