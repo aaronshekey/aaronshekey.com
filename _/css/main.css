@@ -194,7 +194,12 @@ hr {
   margin: 1em auto 4em auto;
 }
 
+.article .images {
+  text-align: center;
+}
+
 .article .images img {
+  display: inline-block;
   margin-left: .5em;
   margin-right: .5em;
 }
@@ -282,5 +287,6 @@ hr {
 }
 
 .article .player {
+  max-width: 100%;
   margin-bottom: 3em;
 }
