@@ -194,6 +194,10 @@ hr {
   margin: 1em auto 4em auto;
 }
 
+.article img.left {
+  margin-left: 0;
+}
+
 .article .images {
   text-align: center;
 }
