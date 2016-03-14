@@ -90,6 +90,10 @@ p {
   }
 }
 
+.container.wide {
+  max-width: none;
+}
+
 .intro {
   margin-bottom: 6rem;
 }
