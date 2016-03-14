@@ -94,10 +94,6 @@ p {
   max-width: none;
 }
 
-.intro {
-  margin-bottom: 6rem;
-}
-
 .posts {
   font-size: .8em;
 }
@@ -128,9 +124,13 @@ p {
   font-size: 1em;
 }
 
-.elsewhere li {
+.elsewhere li, .navigation li {
   display: inline;
   margin-right: .5em;
+}
+
+.navigation {
+  margin-bottom: 6rem;
 }
 
 .subscribe p {
