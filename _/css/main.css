@@ -10,6 +10,12 @@ body {
   -webkit-font-feature-settings: "liga", "dlig";
 }
 
+@media (max-width: 460px) {
+  body {
+    font-size: 1em;
+  }
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -71,9 +77,15 @@ p {
 }
 
 .container {
-  max-width: 730px;
-  padding-right: 33%;
-  margin: 6rem auto;
+  margin: 6em 12%;
+  max-width: 640px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 3em auto;
+    width: 88%;
+  }
 }
 
 .intro {
@@ -82,6 +94,12 @@ p {
 
 .posts {
   font-size: .8em;
+}
+
+@media (max-width: 460px) {
+  .posts {
+    font-size: 1em;
+  }
 }
 
 .post {
