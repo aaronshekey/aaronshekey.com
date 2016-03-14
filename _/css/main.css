@@ -114,6 +114,11 @@ p {
   font-size: .9em;
 }
 
+.update {
+  color: #9b9b9b;
+  font-style: italic;
+}
+
 .elsewhere {
   margin: 6rem 0;
   font-size: 1em;
