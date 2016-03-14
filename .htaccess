@@ -15,12 +15,12 @@ BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
 
 # Don't compress images
 SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|ico)$ no-gzip
-</IfModule> 
+</IfModule>
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteRule ^(.*)\.(\d+)(_m_\d+)?\.([^\.]+)$    $1.$4    [L,QSA]
-</IfModule> 
+</IfModule>
 
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -33,3 +33,7 @@ ExpiresByType application/x-javascript "access plus 1 year"
 ExpiresByType application/javascript "access plus 1 year"
 ExpiresByType text/javascript "access plus 1 year"
 </IfModule>
+
+# Redirects
+Redirect 301 /hum/ /work/hum/
+Redirect 301 /reflow/ /work/reflow/
