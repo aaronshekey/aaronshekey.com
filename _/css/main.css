@@ -12,7 +12,7 @@ body {
 
 @media (max-width: 460px) {
   body {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 
@@ -34,10 +34,12 @@ h5 {
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  line-height: 1em;
 }
 
 h1 {
   font-size: 2.6em;
+  margin-bottom: .25em;
 }
 
 h2 {
@@ -110,10 +112,6 @@ p {
   color: #9b9b9b;
   font-style: italic;
   font-size: .9em;
-}
-
-.article .meta {
-  margin-top: -0.6em;
 }
 
 .elsewhere {
@@ -249,19 +247,22 @@ hr {
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3.125em;
-  line-height: 1.14em;
+  font-size: 2.3em;
+  line-height: 1em;
   margin: 1.6em auto 1.8em;
 }
 
 .article blockquote.medium {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .article blockquote.long {
-	font-size: .875em;
-	font-weight: 300;
-	margin-bottom: 2.8em;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 2.8em;
 }
 
 .article blockquote.long p {
