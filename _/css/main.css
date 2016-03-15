@@ -79,7 +79,7 @@ p {
 }
 
 .container {
-  margin: 6em 12%;
+  margin: 6em 12% 0;
   max-width: 640px;
 }
 
@@ -91,6 +91,7 @@ p {
 }
 
 .container.wide {
+  margin-top: 0;
   max-width: none;
 }
 
@@ -105,7 +106,7 @@ p {
 }
 
 .post {
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
 }
 
 .meta {
@@ -120,17 +121,25 @@ p {
 }
 
 .elsewhere {
-  margin: 6rem 0;
+  margin: 6em 0 7em;
   font-size: 1em;
 }
 
 .elsewhere li, .navigation li {
   display: inline;
-  margin-right: .5em;
+  margin-right: .7em;
+}
+
+.intro {
+  margin-bottom: 4em;
 }
 
 .navigation {
-  margin-bottom: 6rem;
+  margin-bottom: 4.4em;
+}
+
+.subscribe {
+  margin-bottom: 6em;
 }
 
 .subscribe p {
