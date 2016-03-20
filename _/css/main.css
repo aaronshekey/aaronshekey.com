@@ -183,14 +183,14 @@ p {
 
 .subscribe-btn {
   border: 0;
-  background: #61b498;
+  background: #8ad4e4;
   color: #fff;
   cursor: pointer;
 }
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
-  background: #4e9f83;
+  background: #60b1c3;
   outline: none;
 }
 
