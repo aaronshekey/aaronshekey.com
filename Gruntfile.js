@@ -38,7 +38,8 @@ module.exports = function(grunt) {
           cwd: 'src',
           src: ['**', '!**/_templates/**'],
           dest: 'build/',
-          flatten: false
+          flatten: false,
+          dot: true
         }]
       }
     }
