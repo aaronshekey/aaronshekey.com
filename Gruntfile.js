@@ -9,8 +9,19 @@ module.exports = function(grunt) {
         dest: 'build/_/js/menu.js'
       }
     },
+    includes: {
+      build: {
+        cwd: 'src',
+        src: [ '**/*.html', '!**/_templates/*.html' ],
+        dest: 'build/',
+        options: {
+          flatten: true,
+          includePath: 'src/_templates'
+        }
+      }
+    },
     cssmin: {
-      target: {
+      build: {
         files: [{
           expand: true,
           cwd: 'src/_/css',
@@ -25,8 +36,8 @@ module.exports = function(grunt) {
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-includes');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify'], ['cssmin']);
-
+  grunt.registerTask('default', ['uglify','cssmin', 'includes']);
 };

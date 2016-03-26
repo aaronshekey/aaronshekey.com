@@ -1,1 +1,0 @@
-if("querySelector"in document&&"addEventListener"in window){var menuBtn=document.getElementsByClassName("menu-btn")[0],navigation=document.getElementsByClassName("navigation")[0];menuBtn.addEventListener("click",function(a){menuBtn.classList.toggle("open"),navigation.classList.toggle("open")},!1)}
