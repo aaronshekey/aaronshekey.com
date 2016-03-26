@@ -30,6 +30,17 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       }
+    },
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['**', '!**/_templates/**'],
+          dest: 'build/',
+          flatten: false
+        }]
+      }
     }
   });
 
@@ -37,7 +48,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-includes');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify','cssmin', 'includes']);
+  grunt.registerTask('default', ['copy', 'uglify', 'cssmin', 'includes']);
 };
