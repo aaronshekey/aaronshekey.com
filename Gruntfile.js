@@ -3,6 +3,8 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    clean: ["build"],
     uglify: {
       build: {
         src: 'src/_/js/menu.js',
@@ -57,7 +59,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
-  grunt.registerTask('default', ['copy', 'uglify', 'cssmin', 'includes']);
+  grunt.registerTask('default', ['clean', 'copy', 'uglify', 'cssmin', 'includes']);
 };
