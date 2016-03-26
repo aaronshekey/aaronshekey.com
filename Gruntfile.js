@@ -42,6 +42,12 @@ module.exports = function(grunt) {
           dot: true
         }]
       }
+    },
+    watch: {
+      build: {
+        files: ['src/**/*'],
+        tasks: ['default']
+      },
     }
   });
 
@@ -50,6 +56,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
   grunt.registerTask('default', ['copy', 'uglify', 'cssmin', 'includes']);
