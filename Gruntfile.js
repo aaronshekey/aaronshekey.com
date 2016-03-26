@@ -50,7 +50,22 @@ module.exports = function(grunt) {
         files: ['src/**/*'],
         tasks: ['default']
       },
-    }
+    },
+    rsync: {
+      options: {
+        args: ["--verbose"],
+        exclude: [".DS_Store"],
+        recursive: true
+      },
+      production: {
+        options: {
+          src: "build/",
+          dest: "/srv/users/serverpilot/apps/aaronshekey/public",
+          host: "serverpilot@45.55.179.159",
+          delete: false
+        }
+      }
+    },
   });
 
   // Load plugins
@@ -60,7 +75,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-rsync');
 
   // Default task(s).
   grunt.registerTask('default', ['clean', 'copy', 'uglify', 'cssmin', 'includes']);
+
+  grunt.registerTask('deploy', ['rsync:production']);
 };
