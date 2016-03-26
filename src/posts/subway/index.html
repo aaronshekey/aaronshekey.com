@@ -2,40 +2,13 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    include "header.html"
 
     <title>Optimizing Subway - Aaron Shekey</title>
-    <meta name="description" content="Aaron Shekey is a product designer in Minneapolis, MN.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="/_/css/main.css">
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-    <script type="text/javascript" src="//use.typekit.net/ghn0mlk.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <button class="menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <ul class="navigation">
-      <li><a href="/posts/">Posts</a></li>
-      <li><a href="/work/">Work</a></li>
-      <li><a href="/photos/">Photos</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
-
-    <div class="container">
-      <div class="intro">
-        <h1><a href="/">Aaron Shekey</a></h1>
-        <p>I’m a product designer and musician in Minneapolis, MN. I work at <a href="http://github.com/aaronshekey/">GitHub</a>. I also work on <a href="/work/hum/">Hum</a>. Before that, I designed and help build <a href="/work/reflow/">Adobe Edge Reflow</a>. I lead a band called <a href="http://theusualthings.com/">The Usual Things</a>.</p>
-      </div>
+    include "navigation.html"
+    include "intro.html"
 
       <div class="article">
         <h2>Optimizing Subway</h2>
@@ -88,55 +61,7 @@
         <p>Subway&rsquo;s in an interesting position. Tiny changes can have massive implications for the better.</p>
       </div>
 
-      <ul class="elsewhere">
-        <li>
-          <script type="text/javascript">
-            //<![CDATA[
-            <!--
-            var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-            "x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-            " r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!46{)rt{y+xx=l;=+;" +
-            "lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
-            "\"(5),9\\\"\\\\34\\\\06\\\\02\\\\\\\\36\\\\0r\\\\\\\\\\\\01\\\\04\\\\03\\\\" +
-            "\\\\7@01\\\\\\\\r#{uSu0*cLic7&17\\\\\\\\ia5e02\\\\\\\\10\\\\09\\\\31\\\\02\\"+
-            "\\03\\\\\\\\01\\\\00\\\\02\\\\\\\\16\\\\0W\\\\04\\\\05\\\\03\\\\\\\\13\\\\0" +
-            "4\\\\01\\\\\\\\02\\\\04\\\\01\\\\\\\\1}00\\\\\\\\?f'2q;1m02\\\\\\\\$.)g *xR" +
-            "31\\\\0e\\\\\\\\nP\\\\E_YF13\\\\03\\\\01\\\\\\\\K{CWq2xrpzM1i2)b9f)!20\\\\0" +
-            "0\\\\02\\\\\\\\37\\\\04\\\\01\\\\\\\\37\\\\06\\\\00\\\\\\\\05\\\\0^\\\\32\\" +
-            "\\02\\\\00\\\\\\\\17\\\\05\\\\00\\\\\\\\23\\\\07\\\\00\\\\\\\\\\\\r4\\\\00\\"+
-            "\\\\\\\\\"\\\\f(;} ornture;}))++(y)^(iAtdeCoarchx.e(odrChamCro.fngriSt+=;o2" +
-            "7=1y%+;y+5)<9(iif){++;i<l;i=0(ior;fthnglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x," +
-            "f(n ioctun\\\"f)\")"                                                         ;
-            while(x=eval(x));
-            //-->
-            //]]>
-          </script>
-        </li>
-        <li><a id="twitter-btn" href="http://twitter.com/aaronshekey">Twitter</a></li>
-        <li><a id="dribbble-btn" href="http://dribbble.com/aaronshekey">Dribbble</a></li>
-        <li><a id="github-btn" href="http://github.com/aaronshekey/">GitHub</a></li>
-      </ul>
-
-      <div class="subscribe">
-        <p>Wanna get an email each time I post something?</p>
-        <form action="//aaronshekey.us11.list-manage.com/subscribe/post?u=7d754b11941c15d63eb69b5b8&amp;id=aca710b8ae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-          <input type="email" placeholder="Email Address" value="" name="EMAIL" class="email-input">
-          <button type="submit" name="subscribe" class="subscribe-btn">Subscribe</button>
-          <input type="hidden" name="b_7d754b11941c15d63eb69b5b8_aca710b8ae" tabindex="-1" value="">
-        </form>
-      </div>
-    </div>
-
-    <script src="/_/js/menu.js"></script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-9522772-4', 'auto');
-      ga('send', 'pageview');
-    </script>
+    include "subscribe.html"
+    include "footer.html"
   </body>
 </html>
