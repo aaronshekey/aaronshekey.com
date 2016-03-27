@@ -23,3 +23,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Grunt
+node_modules
+.npm-debug.log
+tmp
+
+build

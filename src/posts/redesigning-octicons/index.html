@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    include "header.html"
+
+    <title>Redesigning Octicons - Aaron Shekey</title>
+  </head>
+  <body>
+    include "navigation.html"
+    include "intro.html"
+
+      <div class="article">
+        <h2>Redesigning Octicons</h2>
+        <p class="meta">March, 2016</p>
+
+        <h3>What are Octicons?</h3>
+        <p>GitHub.com and every other GitHub property (Atom, GitHub Desktop, GitHub Universe, etc.) uses an icon library called <a href="http://octicons.github.com/">Octicons</a>. These are little 16x16px vectors that are <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivered via SVG</a>. This allows for resolution-independence as well as coloring on the fly via CSS. We’ve open sourced the set if you want to poke around.</p>
+
+        <h3>Why redesign Octicons?</h3>
+
+        <p>This set of icons includes all the metaphors familiar to you as a user of GitHub—things like forking, branching, pull requests. Perhaps some are less familiar to you. We sought to kill all the icons that were rarely used and to repurpose others.</p>
+
+        <p>This was an opportunity to pare down the icon set. We could also explore making some of their visuals a bit more harmonious. We lost a bit of consistency over the years. Perhaps it was time to try to get some back.</p>
+
+        <p>Prior to 3.0, Octicons were pretty chunky, with different stroke weights appearing throughout the set. Corner radii were inconsistent. Nested corners were the same radius as their parents, leaving things feeling unnatural. Some icons suffered from legibility issues.</p>
+
+        <img src="media/line-weights.png" width="119">
+        <div class="caption">Inconsistent stroke weights</div>
+
+        <img src="media/corner-radius.png" width="155">
+        <div class="caption">Inconsistent corner radii</div>
+
+        <img src="media/lightbulb.png" width="56">
+        <div class="caption">Our light bulb was looking a little skull-like at small sizes.</div>
+
+        <h3>Style explorations.</h3>
+
+        <p>In early style explorations, it became obvious that there wasn’t a ton we were going to be able to change within the core Git icons. Thinning them to 1px left them fragile, unreadable. Since we’ve built a brand around these metaphors, changing them wildly was out of the question. These icons would have to stay put.</p>
+
+        <img src="media/thin-git.png" width="152">
+        <div class="caption">Thin git icons</div>
+
+        <img src="media/square-git.png" width="162">
+        <div class="caption">Square git icons</div>
+
+        <p>Previous efforts had normalized all strokes to 2px based on these icons. This made all the icons really thick, leaving little room for detail on inner shapes.</p>
+
+        <img src="media/chunky-issues.png" width="56">
+        <div class="caption">Chunky issues</div>
+
+        <p>And since we’re on a grid of 16, single pixel shapes are impossible to center-align without them favoring the right or left side.</p>
+
+        <h3>Final stylings.</h3>
+
+        <p>These explorations led to a loose rule of 1px outer strokes, supported by a 2px inner stroke. Some of these strokes would have to be fussed over, optically, to keep things from appearing too razor-thin.</p>
+
+        <p>There were some exceptions to this rule. File-types, for example, were really muddied by 2px inner strokes.</p>
+
+        <img src="media/file-icons.png" width="78">
+        <div class="caption">File icons exploration</div>
+
+        <p>We also standardized on 1px corner radii to soften the overall appearance of the iconset. We were careful to never double those corners on the inside, leaving the edges hard. The calendar icon shows these rules well.</p>
+
+        <img src="media/corner-radius-detail.png" width="208">
+        <div class="caption">Corner radius detail</div>
+
+        <h3>Context vs. Consistency</h3>
+
+        <p>When building icon sets, it’s easy to fall into the trap of working on them all within a single canvas. This can be a form of tunnel vision. It certainly means a more harmonious set, but it can easily create a worse experience when they’re viewed in context of a large app like GitHub. Our folder icons, for example, needed to be filled so users could more easily discern between files and folders.</p>
+
+        <p>Similarly, the sizing of certain icons needed to be revisited once they were shown in context. Strokes, baselines, and overall metaphors needed to be changed as well.</p>
+
+        <h3>Practical Changes</h3>
+
+        <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub.com. We were able to swap our global notifications icon from an inbox icon (aka "Robot Bikini Top") to a more common bell shape.</p>
+
+        <p>We also embraced a redrawn gear, shying away from our ‘tools’ icon for settings and the like.</p>
+
+        <h3>Wrap It Up</h3>
+
+        <p>These aren’t earth-shattering revelations. They’re just icons, after all.</p>
+
+        <p>This new aesthetic should offer a strong rationale for future and current icons. We iterate on these often. As new features drop, we’ll consider new metaphors to support them.</p>
+
+        <p>This is but one step toward a more cohesive, harmonious GitHub experience.</p>
+
+        <img src="media/before-after.gif" width="200">
+        <div class="caption">A before and after</div>
+      </div>
+
+    include "subscribe.html"
+    include "footer.html"
+  </body>
+</html>
