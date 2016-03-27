@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'src/_/css',
+          cwd: 'build/_/css',
           src: ['*.css', '!*.min.css'],
           dest: 'build/_/css',
           ext: '.css'
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src',
-          src: ['**', '!**/_templates/**'],
+          src: ['**', '!**/_templates/**', '!_/css/*.less'],
           dest: 'build/',
           flatten: false,
           dot: true
@@ -59,12 +59,22 @@ module.exports = function(grunt) {
       },
       production: {
         options: {
-          src: "build/",
-          dest: "/srv/users/serverpilot/apps/aaronshekey/public",
-          host: "serverpilot@45.55.179.159",
+          src: 'build/',
+          dest: '/srv/users/serverpilot/apps/aaronshekey/public',
+          host: 'serverpilot@45.55.179.159',
           delete: false
         }
       }
+    },
+    less: {
+      build: {
+        options: {
+          paths: ['src/_/css/'],
+        },
+        files: {
+          'build/_/css/main.css': 'src/_/css/main.less'
+        }
+      },
     },
   });
 
@@ -76,9 +86,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-rsync');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'copy', 'uglify', 'cssmin', 'includes']);
+  grunt.registerTask('default', ['clean', 'copy', 'less', 'uglify', 'cssmin', 'includes']);
 
   grunt.registerTask('deploy', ['rsync:production']);
 };
