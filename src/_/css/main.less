@@ -126,8 +126,24 @@ p {
   }
 }
 
+body.post .elsewhere {
+  color: #bebebe;
+
+  &:hover {
+    color: #333;
+  }
+}
+
 .intro {
   margin-bottom: 4em;
+}
+
+body.post .intro {
+  color: #bebebe;
+
+  &:hover {
+    color: #333;
+  }
 }
 
 .subscribe {
@@ -135,6 +151,14 @@ p {
 
   p {
     margin-bottom: .25em;
+  }
+}
+
+body.post .subscribe {
+  color: #bebebe;
+
+  &:hover {
+    color: #333;
   }
 }
 
@@ -162,11 +186,15 @@ p {
   background: #fff;
   color: #333;
   border: 1px solid #eee;
-}
 
-.email-input:focus {
-  border: 1px solid #999;
-  outline: none;
+  &:focus {
+    border: 1px solid #999;
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #bebebe;
+  }
 }
 
 .subscribe-btn {
@@ -213,7 +241,7 @@ hr {
     }
   }
 
-  img {
+  img, svg {
     display: block;
     max-width: 100%;
     margin: 1em auto 4em auto;
@@ -432,6 +460,18 @@ hr {
 
   @media (max-width: 460px) {
     top: 5.1em;
+  }
+}
+
+body.post .menu-btn {
+  span {
+    background: #bebebe;
+  }
+
+  &.open {
+    span {
+      background: #333;
+    }
   }
 }
 
