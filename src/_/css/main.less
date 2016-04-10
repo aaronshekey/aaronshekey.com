@@ -10,7 +10,7 @@ body {
   -webkit-font-feature-settings: "liga", "dlig";
 
   @media (max-width: 460px) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 
@@ -79,7 +79,7 @@ p {
 }
 
 .container {
-  margin: 6em 12% 0;
+  margin: 3em 12% 0;
   max-width: 640px;
 
   &.wide {
@@ -88,7 +88,7 @@ p {
   }
 
   @media (max-width: 700px) {
-    margin: 3em auto;
+    margin: 1em auto 3em;
     width: 88%;
   }
 }
@@ -128,10 +128,6 @@ p {
 
 body.post .elsewhere {
   color: #bebebe;
-
-  &:hover {
-    color: #333;
-  }
 }
 
 .intro {
@@ -140,10 +136,6 @@ body.post .elsewhere {
 
 body.post .intro {
   color: #bebebe;
-
-  &:hover {
-    color: #333;
-  }
 }
 
 .subscribe {
@@ -156,10 +148,6 @@ body.post .intro {
 
 body.post .subscribe {
   color: #bebebe;
-
-  &:hover {
-    color: #333;
-  }
 }
 
 .email-input,
@@ -362,10 +350,21 @@ hr {
   }
 }
 
+.menu {
+  padding: 3em 12% 0;
+
+  &.open {
+    background-color: #90ddee;
+  }
+
+  @media (max-width: 700px) {
+    width: 90%;
+    padding: .85em 5% 0;
+  }
+}
+
 .menu-btn {
-  position: absolute;
-  top: 12em;
-  right: 12%;
+  position: relative;
   width: 44px;
   height: 44px;
   border: 0;
@@ -452,15 +451,6 @@ hr {
       }
     }
   }
-
-  @media (max-width: 700px) {
-    top: 6.3em;
-    right: 6%;
-  }
-
-  @media (max-width: 460px) {
-    top: 5.1em;
-  }
 }
 
 body.post .menu-btn {
@@ -478,11 +468,7 @@ body.post .menu-btn {
 .navigation {
   display: none;
   background-color: #90ddee;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 2em 12%;
+  padding: 1em 12%;
   font-size: 2.7em;
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -503,6 +489,7 @@ body.post .menu-btn {
 
   @media (max-width: 700px) {
     width: 88%;
-    padding: .85em 6% 1em;
+    padding: .5em 6% .7em;
+    margin-bottom: .9em;
   }
 }
