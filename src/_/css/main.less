@@ -207,6 +207,27 @@ hr {
 	margin: 6.5em auto 7em;
 }
 
+img,
+svg {
+  display: block;
+  max-width: 90%;
+  margin: 1em auto 3em auto;
+
+  &.left {
+    margin-left: 0;
+  }
+}
+
+.caption {
+  max-width: 350px;
+  text-align: center;
+  font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .8em;
+  margin: -3em auto 4em;
+  line-height: 1.2em;
+}
+
 .article {
   h2 {
     font-size: 2em;
@@ -218,6 +239,8 @@ hr {
     margin-bottom: 3em;
 
     &.summary {
+      font-style: italic;
+      color: #9b9b9b;
       margin-bottom: 8em;
     }
 
@@ -229,14 +252,9 @@ hr {
     }
   }
 
-  img, svg {
-    display: block;
+  img,
+  svg {
     max-width: 100%;
-    margin: 1em auto 4em auto;
-
-    &.left {
-      margin-left: 0;
-    }
   }
 
   .images {
@@ -292,16 +310,6 @@ hr {
         margin-bottom: 1em;
       }
     }
-  }
-
-  .caption {
-    max-width: 350px;
-    text-align: center;
-    font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: .8em;
-    margin: -4em auto 5em;
-    line-height: 1.2em;
   }
 
   .browser {
