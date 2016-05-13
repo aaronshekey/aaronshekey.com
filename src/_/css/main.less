@@ -95,6 +95,7 @@ p {
 
 .posts {
   font-size: .8em;
+  margin-bottom: 7em;
 
   @media (max-width: 460px) {
     font-size: 1em;
@@ -117,7 +118,7 @@ p {
 }
 
 .elsewhere {
-  margin: 6em 0 7em;
+  margin-bottom: 6em;
   font-size: 1em;
 
   li {
@@ -135,11 +136,13 @@ body.post .elsewhere {
 }
 
 body.post .intro {
+  margin-top: 6em;
   color: #bebebe;
 }
 
 .subscribe {
-  margin: 7em 0 6em;
+  margin-bottom: 4em;
+  margin-left: -7px;
 
   p {
     margin-bottom: .25em;
@@ -375,6 +378,7 @@ svg {
   position: relative;
   width: 44px;
   height: 44px;
+  margin-left: -7px;
   border: 0;
   z-index: 10;
   background: transparent;
@@ -457,18 +461,6 @@ svg {
         width: 0%;
         left: 50%;
       }
-    }
-  }
-}
-
-body.post .menu-btn {
-  span {
-    background: #bebebe;
-  }
-
-  &.open {
-    span {
-      background: #333;
     }
   }
 }
