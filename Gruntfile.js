@@ -5,12 +5,6 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: ["build"],
-    uglify: {
-      build: {
-        src: 'src/_/js/menu.js',
-        dest: 'build/_/js/menu.js'
-      }
-    },
     includes: {
       build: {
         cwd: 'src',
@@ -71,14 +65,14 @@ module.exports = function(grunt) {
           paths: ['src/_/css/'],
         },
         files: {
-          'build/_/css/main.css': 'src/_/css/main.less'
+          'build/_/css/home.css': 'src/_/css/home.less',
+          'build/_/css/post.css': 'src/_/css/post.less'
         }
       },
     },
   });
 
   // Load plugins
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -88,7 +82,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'copy', 'less', 'uglify', 'cssmin', 'includes']);
-
+  grunt.registerTask('default', ['clean', 'copy', 'less', 'cssmin', 'includes']);
   grunt.registerTask('deploy', ['rsync:production']);
 };
