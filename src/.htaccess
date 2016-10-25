@@ -36,5 +36,7 @@ ExpiresByType text/javascript "access plus 1 year"
 
 # Redirects
 Redirect 301 /hum/ /work/hum/
-Redirect 301 /reflow/ /work/reflow/
+Redirect 301 /reflow/ /work/adobe/
+Redirect 301 /work/reflow/ /work/adobe/
+Redirect 301 /github/ /work/github/
 Redirect 301 /posts/the-truth-and-the-onion/ /posts/americas-finest-news-source/

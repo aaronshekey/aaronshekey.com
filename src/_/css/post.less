@@ -17,10 +17,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "liga", "dlig";
 
-  @media (max-width: 700px) {
+  @media (max-width: 810px) {
     padding: 6% 0;
-
-    @margin: 20px;
   }
 }
 
@@ -108,7 +106,10 @@ h3 {
   margin-bottom: @margin;
 }
 
-p + h3 {
+p + h3,
+ol + h3,
+ul + h3,
+.image + h3 {
   margin-top: @margin * 2;
 }
 
@@ -161,11 +162,18 @@ ul {
   margin-left: 14%;
   max-width: 596px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 810px) {
     margin-left: auto;
     margin-right: auto;
     width: 88%;
   }
+}
+
+.highlight {
+  font-family: monospace;
+  background: #e9e9e9;
+  padding: .2em .3em;
+  border-radius: 4px;
 }
 
 .update {
@@ -208,36 +216,50 @@ hr {
 }
 
 .image {
-  text-align: center;
+  padding-left: 14%;
+  padding-right: 14%;
   margin-top: @margin * 2;
   margin-bottom: @margin * 2;
+  text-align: left;
 
   img {
+    display: inline-block;
     max-width: 100%;
+    margin-bottom: @margin;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
-  &.full-width {
-    width: 95%;
+  // &.full-width {
+  //   width: 95%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
+  @media (max-width: 810px) {
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  &.images {
-    margin-bottom: 0;
-
-    img {
-      margin-bottom: @margin;
-    }
-
-    img + img {
-      margin-left: 15px;
-    }
+    width: 90%;
+    text-align: center;
   }
 
   &.background {
     background-color: #efefef;
-    padding: @margin;
-    width: 100%;
+    padding-top: @margin;
+    padding-bottom: @margin;
+
+    @media (max-width: 810px) {
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 100%;
+    }
+  }
+
+  &.rounded img {
+    border-radius: 3px;
   }
 }
 
@@ -251,6 +273,7 @@ svg {
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.2em;
+  text-align: center;
 }
 
 blockquote {
@@ -387,7 +410,7 @@ blockquote {
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 810px) {
       display: none;
     }
   }
