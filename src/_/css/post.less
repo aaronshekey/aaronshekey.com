@@ -106,45 +106,134 @@ h3 {
   margin-bottom: @margin;
 }
 
-p + h3,
-ol + h3,
-ul + h3,
-.image + h3 {
-  margin-top: @margin * 2;
-}
-
 h4 {
 	font-size: 1.8em;
-	margin-bottom: 30px
+	margin-bottom: @margin;
 }
 
-h5 {
-  font-size: 1.1em;
-  margin-top: -1em;
-}
-
-p {
-  font-size: 1.4em;
-  margin-bottom: @margin;
-}
-
+p,
 ul,
-ol {
+ol,
+img {
   font-size: 1.4em;
-  margin-left: 1em;
   margin-bottom: @margin;
-
-  li {
-    margin-bottom: 1em;
-  }
 }
 
 ol {
-  list-style-type: decimal;
+  list-style: decimal;
+  padding-left: @margin;
 }
 
 ul {
-  list-style-type: disc;
+  list-style: disc;
+  padding-left: @margin;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+// Let's give all these elements some structure
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+ul,
+blockquote {
+  max-width: 595px;
+
+  @media (max-width: 810px) {
+    width: 88%;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+ul,
+blockquote,
+img,
+hr,
+.caption {
+  margin-left: 14%;
+
+  @media (max-width: 810px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+img,
+.caption {
+  max-width: 72%;
+
+  @media (max-width: 810px) {
+    display: block;
+    max-width: 93%;
+  }
+}
+
+img {
+  display: block;
+}
+
+.caption {
+  display: inline-block;
+  max-width: 72%;
+  margin-top: @margin;
+  margin-bottom: @margin;
+  font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-bottom: @margin / 4;
+  }
+
+  @media (max-width: 810px) {
+    display: block;
+    width: 93%;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Let's add some overrides to positioning depending on context
+
+p + img,
+img + p,
+.caption + p,
+.caption + ol,
+.caption + ul {
+  margin-top: @margin * 2;
+}
+
+p + h3,
+ol + h3,
+ul + h3,
+img + h3,
+.caption + h3,
+ol + h4,
+ul + h4,
+p + h4,
+img + h4,
+.caption + h4 {
+  margin-top: @margin * 3;
 }
 
 .intro {
@@ -156,17 +245,6 @@ ul {
   font-size: 1.25em;
   font-style: italic;
   color: #bdbdbd;
-}
-
-.container {
-  margin-left: 14%;
-  max-width: 596px;
-
-  @media (max-width: 810px) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 88%;
-  }
 }
 
 .highlight {
@@ -182,7 +260,7 @@ ul {
 }
 
 .elsewhere {
-  margin-left: 0;
+  padding: 0;
   margin-bottom: 0;
   font-size: 1.25em;
 
@@ -200,7 +278,6 @@ hr {
 	height: 2px;
 	margin-top: @margin * 4;
   margin-bottom: @margin * 4;
-  margin-left: 0;
 }
 
 .summary {
@@ -215,65 +292,30 @@ hr {
   margin: 2em auto 3.2em;
 }
 
-.image {
-  padding-left: 14%;
-  padding-right: 14%;
+.background {
+  background-color: #efefef;
+  padding-top: @margin;
+  padding-bottom: @margin;
   margin-top: @margin * 2;
   margin-bottom: @margin * 2;
-  text-align: left;
 
   img {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: @margin;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
-  // &.full-width {
-  //   width: 95%;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
+  .caption img {
+    margin-bottom: @margin / 4;
+  }
 
   @media (max-width: 810px) {
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    text-align: center;
-  }
-
-  &.background {
-    background-color: #efefef;
-    padding-top: @margin;
-    padding-bottom: @margin;
-
-    @media (max-width: 810px) {
-      padding-left: 5%;
-      padding-right: 5%;
-      width: 100%;
-    }
-  }
-
-  &.rounded img {
-    border-radius: 3px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    width: 100%;
   }
 }
 
 svg {
   margin-bottom: @margin;
-}
-
-.caption {
-  margin: 0 auto;
-  max-width: 350px;
-  font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.2em;
-  text-align: center;
 }
 
 blockquote {
