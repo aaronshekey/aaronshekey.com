@@ -129,25 +129,123 @@
 
     <p>Protected Branches allow for repository administrators to block pushing to certain branches. This required adding a setting page that allowed for protected branch management.</p>
 
-    <p>[branch selection]</p>
+    <img class="rounded" src="media/protected-branches.png" title="Branch selection" width="935">
 
     <p>In addition to blocking pushing directly to the protected branch, administrators can require status checks. These statuses are bots that can check for all sorts of things—code quality and linting, integration tests, regressions, etc.</p>
 
-    <p>[add status checks]</p>
-
     <p>When these status checks fail, you can disable merging to the protected branch.</p>
 
-    <p>[disabled merge button]</p>
+    <img class="rounded" src="media/protected-branches-status.png" title="Status" width="775">
 
     <p>Since both our settings page user interface language and our merge area were well established, most of the design work for protected branches was focused on writing clear, balanced copy that was balanced, discoverable, marketing, and each edge case for when something didn't behave normally—a rogue status test, for example.</p>
+
+    <p>Protected branches was one of the first features I worked on at GitHub. The details are fuzzy, but it was mostly built by <a href="https://github.com/aroben">@aroben</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/nakajima">@nakajima</a> with product direction being provided by <a href="https://github.com/bleikamp">@bleikamp</a>. I think ✌️. Check out the <a href="https://github.com/blog/2051-protected-branches-and-required-status-checks">blog post announcing the feature</a>.</p>
 
     <h3>Saved Replies</h3>
 
     <p>When a large number of GitHub power users started to talk about their desire for re-usable snippets of text throughout <span class="highlight">dotcom</span>, we thought this might be an opportunity a new feature. Saved replies allow you to create any number of canned responses. These could aid in better bug filing or issue triage, for example. Or perhaps you're just sick of responding to that <em>same</em> feature request or bug.</p>
 
-    <p>With any sufficiently complex product, there are a lot of questions that need to be answered, even for what seems to be a simple feature. Who owns saved replies? Do they belong to the repo? Do they belong to the user? Maybe they should be organization-wide. How will they get saved? Should we do a Markdown file in the repo directory like we did with Issue and Pull Request templates? Maybe these should be saved to the database.</p>
+    <p>With any sufficiently complex product, there are a lot of questions that need to be answered, even for what seems to be a simple feature. Who owns saved replies? Do they belong to the repo? Do they belong to the user? Maybe they should be organization-wide. How will they get saved? Should we just put a Markdown file in the repo directory like we did with Issue and Pull Request templates? Maybe these should be saved to the database.</p>
 
-    <p>Ultimately, I argued users would get the most utility out of their saved replies being stored in the database at the user level. This way, we could easily test their usage and they'd follow users around to any repo, regardless of organizational ownership.</p>
+    <p>Ultimately, I argued users would get the most utility out of their saved replies being stored in the database at the user level. This way, we could easily test their usage and they'd follow users around to any repo, regardless of organizational ownership. Managing your saved replies would show up in your user settings.</p>
+
+    <p>Like Protected Branches, much of this design system already existed, making for short work of adding the settings page.</p>
+
+    <img src="media/saved-reply-settings.png" width="980">
+
+    <p>Since we'd added the Markdown toolbar to all our comment areas, it made sense to add saved replies as another GitHub-specific button.</p>
+
+    <img src="media/saved-reply-toolbar.png" width="731">
+
+    <p>I worked hard to introduce the feature with its blank slate. When folks started to add their saved replies, I wanted to make sure they were able to easily add saved replies from the toolbar, providing a shortcut to the settings page.
+
+    <div class="caption">
+      <img src="media/saved-reply-empty.png" width="730">
+      Empty saved replies
+    </div>
+
+    <img src="media/saved-reply-full.png" width="730">
+
+    <p><a href="https://github.com/blog/2135-saved-replies">Saved replies</a> was built by <a href="https://github.com/dgraham">@dgraham</a> with <a href="https://github.com/aymannadeem">@aymannadeem</a> providing product direction.</p>
+
+    <h3>Octicons</h3>
+    <p>GitHub.com and every other GitHub property (Atom, GitHub Desktop, GitHub Universe, etc.) uses an icon library called <a href="http://octicons.github.com/">Octicons</a>. These are little 16x16px vectors that are <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivered via SVG</a>. This allows for resolution-independence as well as coloring on the fly via CSS. We’ve open sourced the set if you want to poke around.</p>
+
+    <h4>Why redesign Octicons?</h4>
+    <p>This set of icons includes all the metaphors familiar to you as a user of GitHub—things like forking, branching, pull requests. Perhaps some are less familiar to you. We sought to kill all the icons that were rarely used and to repurpose others.</p>
+    <p>This was an opportunity to pare down the icon set. We could also explore making some of their visuals a bit more harmonious. We lost a bit of consistency over the years. Perhaps it was time to try to get some back.</p>
+    <p>Prior to 3.0, Octicons were pretty chunky, especially when paired with system fonts, with different stroke weights appearing throughout the set. Corner radii were inconsistent. Nested corners were the same radius as their parents, leaving things feeling unnatural. Some icons suffered from legibility issues.</p>
+
+    <div class="caption">
+      <img src="media/octicons-line-weights.png" width="119">
+      Inconsistent stroke weights
+    </div>
+
+    <div class="caption">
+      <img src="media/octicons-corner-radius.png" width="155">
+      Inconsistent corner radii
+    </div>
+
+    <div class="caption">
+      <img src="media/octicons-lightbulb.png" width="56">
+      Our light bulb was looking a little skull-like at small sizes.
+    </div>
+
+    <h4>Exploration</h4>
+    <p>In early style explorations, it became obvious that there wasn’t a ton we were going to be able to change within the core Git icons. Thinning them to 1px left them fragile, unreadable. Since we’ve built a brand around these metaphors, changing them wildly was out of the question. These icons would have to stay put.</p>
+
+    <div class="caption">
+      <img src="media/octicons-thin-git.png" width="152">
+      Thin git icons
+    </div>
+
+    <div class="caption">
+      <img src="media/octicons-square-git.png" width="162">
+      Square git icons
+    </div>
+
+    <p>Previous efforts had normalized all strokes to 2px based on these icons. This made all the icons really thick, leaving little room for detail on inner shapes.</p>
+
+    <div class="caption">
+      <img src="media/octicons-chunky-issues.png" width="56">
+      Chunky issues
+    </div>
+
+    <p>And since we’re on a grid of 16, single pixel shapes are impossible to center-align without them favoring the right or left side.</p>
+
+    <h4>Final stylings</h4>
+    <p>These explorations led to a loose rule of 1px outer strokes, supported by a 2px inner stroke. Some of these strokes would have to be fussed over, optically, to keep things from appearing too razor-thin.</p>
+    <p>There were some exceptions to this rule. File-types, for example, were really muddied by 2px inner strokes.</p>
+
+    <div class="caption">
+      <img src="media/octicons-file-icons.png" width="78">
+      File icons exploration
+    </div>
+
+    <p>We also standardized on 1px corner radii to soften the overall appearance of the iconset. We were careful to never double those corners on the inside, leaving the edges hard. The calendar icon shows these rules well.</p>
+
+    <div class="caption">
+      <img src="media/octicons-corner-radius-detail.png" width="208">
+      Corner radius detail
+    </div>
+
+    <h4>Context vs. Consistency</h4>
+    <p>When building icon sets, it’s easy to fall into the trap of working on them all within a single canvas. This can be a form of tunnel vision. It certainly means a more harmonious set, but it can easily create a worse experience when they’re viewed in context of a large app like GitHub. Our folder icons, for example, needed to be filled so users could more easily discern between files and folders.</p>
+    <p>Similarly, the sizing of certain icons needed to be revisited once they were shown in context. Strokes, baselines, and overall metaphors needed to be changed as well.</p>
+
+    <h4>Practical Changes</h4>
+    <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub.com. We were able to swap our global notifications icon from an inbox icon (aka "Robot Bikini Top") to a more common bell shape.</p>
+    <p>We also embraced a redrawn gear, shying away from our ‘tools’ icon for settings and the like.</p>
+    <p>These aren’t earth-shattering revelations. They’re just icons, after all.</p>
+    <p>This new aesthetic should offer a strong rationale for future and current icons. We iterate on these often. As new features drop, we’ll consider new metaphors to support them.</p>
+    <p>This was but one step toward a more cohesive, harmonious GitHub experience.</p>
+
+    <div class="caption">
+      <img src="media/octicons-before-after.gif" width="200">
+      A before and after
+    </div>
+
+    <p><a href="https://github.com/jonrohan">@jonrohan</a> did lots of testing with me in determining the best way of <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivering Octicons as SVG</a> on <span class="highlight">dotcom</a>.</p>
 
     <hr>
 

@@ -40,3 +40,4 @@ Redirect 301 /reflow/ /work/adobe/
 Redirect 301 /work/reflow/ /work/adobe/
 Redirect 301 /github/ /work/github/
 Redirect 301 /posts/the-truth-and-the-onion/ /posts/americas-finest-news-source/
+Redirect 301 /posts/redesigning-octicons/ /work/github/

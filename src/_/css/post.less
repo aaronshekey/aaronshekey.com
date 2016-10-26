@@ -133,6 +133,10 @@ li {
   margin-bottom: 1em;
 }
 
+em {
+  font-style: italic;
+}
+
 // Let's give all these elements some structure
 
 p,
@@ -336,16 +340,12 @@ blockquote {
   }
 
   &.long {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 1em;
     font-weight: 300;
-    margin-top: @margin * 2;
-    margin-bottom: @margin * 2;
     line-height: 1.6;
 
     p {
+      margin-right: 14%;
       margin-bottom: @margin;
     }
   }
