@@ -108,7 +108,7 @@
       <img src="media/code-header-before.png" title="Code header before" width="980">
       Before
     </div>
-
+    <br>
     <div class="caption">
       <img src="media/code-header-after.png" title="Code header after" width="1000">
       After
@@ -129,15 +129,15 @@
 
     <p>Protected Branches allow for repository administrators to block pushing to certain branches. This required adding a setting page that allowed for protected branch management.</p>
 
-    <img class="rounded" src="media/protected-branches.png" title="Branch selection" width="935">
+    <img src="media/protected-branches.png" title="Branch selection" width="980">
 
     <p>In addition to blocking pushing directly to the protected branch, administrators can require status checks. These statuses are bots that can check for all sorts of things—code quality and linting, integration tests, regressions, etc.</p>
 
     <p>When these status checks fail, you can disable merging to the protected branch.</p>
 
-    <img class="rounded" src="media/protected-branches-status.png" title="Status" width="775">
+    <img src="media/protected-branches-status.png" title="Status" width="758">
 
-    <p>Since both our settings page user interface language and our merge area were well established, most of the design work for protected branches was focused on writing clear, balanced copy that was balanced, discoverable, marketing, and each edge case for when something didn't behave normally—a rogue status test, for example.</p>
+    <p>Since both our settings page user interface language and our merge area were well established, most of the design work for protected branches was focused on writing clear copy that was balanced and discoverable. This copy writing extended to each edge case—a rogue status test, for example.</p>
 
     <p>Protected branches was one of the first features I worked on at GitHub. The details are fuzzy, but it was mostly built by <a href="https://github.com/aroben">@aroben</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/nakajima">@nakajima</a> with product direction being provided by <a href="https://github.com/bleikamp">@bleikamp</a>. I think ✌️. Check out the <a href="https://github.com/blog/2051-protected-branches-and-required-status-checks">blog post announcing the feature</a>.</p>
 
@@ -177,18 +177,13 @@
     <p>Prior to 3.0, Octicons were pretty chunky, especially when paired with system fonts, with different stroke weights appearing throughout the set. Corner radii were inconsistent. Nested corners were the same radius as their parents, leaving things feeling unnatural. Some icons suffered from legibility issues.</p>
 
     <div class="caption">
-      <img src="media/octicons-line-weights.png" width="119">
+      <img src="media/octicons-line-weights.png" width="490">
       Inconsistent stroke weights
     </div>
-
+    <br>
     <div class="caption">
-      <img src="media/octicons-corner-radius.png" width="155">
+      <img src="media/octicons-corner-radius.png" width="640">
       Inconsistent corner radii
-    </div>
-
-    <div class="caption">
-      <img src="media/octicons-lightbulb.png" width="56">
-      Our light bulb was looking a little skull-like at small sizes.
     </div>
 
     <h4>Exploration</h4>
@@ -207,7 +202,7 @@
     <p>Previous efforts had normalized all strokes to 2px based on these icons. This made all the icons really thick, leaving little room for detail on inner shapes.</p>
 
     <div class="caption">
-      <img src="media/octicons-chunky-issues.png" width="56">
+      <img src="media/octicons-chunky-issues.png" width="486">
       Chunky issues
     </div>
 
@@ -234,24 +229,79 @@
     <p>Similarly, the sizing of certain icons needed to be revisited once they were shown in context. Strokes, baselines, and overall metaphors needed to be changed as well.</p>
 
     <h4>Practical Changes</h4>
-    <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub.com. We were able to swap our global notifications icon from an inbox icon (aka "Robot Bikini Top") to a more common bell shape.</p>
-    <p>We also embraced a redrawn gear, shying away from our ‘tools’ icon for settings and the like.</p>
-    <p>These aren’t earth-shattering revelations. They’re just icons, after all.</p>
-    <p>This new aesthetic should offer a strong rationale for future and current icons. We iterate on these often. As new features drop, we’ll consider new metaphors to support them.</p>
+    <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub.com. We were able to swap our global notifications icon from an inbox icon (aka "Robot Bikini Top") to a more common bell shape. We also embraced a redrawn gear, shying away from our ‘tools’ icon for settings and the like.</p>
     <p>This was but one step toward a more cohesive, harmonious GitHub experience.</p>
 
     <div class="caption">
-      <img src="media/octicons-before-after.gif" width="200">
-      A before and after
+      <img src="media/octicons-before.png" width="340">
+      Before
+    </div>
+    <br>
+    <div class="caption">
+      <img src="media/octicons-after.png" width="344">
+      After
     </div>
 
     <p><a href="https://github.com/jonrohan">@jonrohan</a> did lots of testing with me in determining the best way of <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivering Octicons as SVG</a> on <span class="highlight">dotcom</a>.</p>
+
+    <h3>Code review</h3>
+
+    <p>By far the largest project I worked on at GitHub was code review. Prior to this feature, code review was an informal thing that happened in pull requests. Say you wanted to make some changes to your app's code. You'd make your changes in a new branch, and then create a pull request to merge those changes into master. Prior to protected branches, there was really nothing stopping you from merging those changes. Social conventions steered people toward asking someone to view your pull request and leave comments. These comments couldn't keep folks from merging into master, regardless of the code quality.</p>
+
+    <p>When building first-class code review, we wanted to do a few things:</p>
+
+    <ol>
+      <li>Allow reviewers to explicitly approve, request changes, or simply comment on pull requests.</li>
+      <li>Batch up individual review comments into a single review notification.</li>
+      <li>Disallow merging based on reviews requesting changes.</li>
+      <li>More easily facilitate code-based conversations</li>
+    </ol>
+
+    <p>The first thing we needed to do was provide a user interface to actually leave the review. In pull requests we had the ability to leave comments on individual lines of code. Doing so would send a notification to anyone participating in the pull request. This ended up being super noisy even in tiny pull requests. Apart from adding an explicit approval, change request, or comment, we wanted to provide the ability to leave an overall comment. We originally attempted to put this whole form at the bottom of the `files changed` tab. Conceptually, this seemed to make sense. Users would read from top to bottom, and then leave their overall review.</p>
+
+    <img src="media/code-review-footer.png" width="803">
+
+    <p>In practice, this proved to be a little cumbersome. Not everyone's code review process is that linear. After building an early version, we found that users often write a few comments, move onto another task, and then return to the pull request later. The review footer was often missed or ignored entirely, especially if the diff was a particularly long one.</p>
+
+    <p>Instead, we moved the act of signoff into a popover that lived in our already-sticky header. Instead of showing our approve, request changes, or commenting options in a drop down combo box, we'd make it a permanent fixture. This made code review more discoverable, and allowed us to more easily disable those options if needed.</p>
+
+    <img src="media/code-review-popover.png" width="450">
+
+    <p>To cut down on the noise that multiple comments made, we decided not to submit the comment immediately. This proved to be slightly tricky, since we'd be changing behavior slightly. We'd need to show that comments were in a pending state.</p>
+
+    <img src="media/code-review-pending.png" width="550">
+
+    <p>Now that users were submitting reviews, we needed a way to thread them into the conversation view. We originally took an aggressive approach, only showing the comments and the line numbers where they occurred. It was an intersting goal, but it ended up messing up the scanability of a conversation.</p>
+
+    <div class="caption">
+      <img src="media/code-review-timeline.png" width="694">
+      Not the most readable review.
+    </div>
+
+    <p>Instead, we needed to show more context for where the conversation was taking place. We also needed a way to quickly reply right inline with that original conversation. In internally-shipped versions of code review, the only way to reply to a code review was to then leave your own review. This was super cumbersome. We'd always had a version of replying to line comments, but their positioning was only inferred. With code review, we also built a first-class version of replies that follow the original comment around, regardless of context.</p>
+
+    <img src="media/code-review-timeline-actual.png" width="730">
+
+    <p>The final piece in code review was allowing or disallowing merging based on the status of a code review. For the default, it was decided that in order for a pull request to merge, it would require at least one approved review and no reviews requesting changes. In terms of our user interface, this would require another section in our merge area. There were a ton of permutations in this section, since pull requests may require statuses on top of reviews. This needed to be accounted for in the design exploration.</p>
+
+    <img src="media/code-review-merge.png" width="759">
+
+    <p>Since we were making pretty substantial workflow changes, we needed a way to announce these. GitHub has a nice history of blogging and making announcements, but often our users miss these. I proposed an interstitial that folks could silence once they understood the changes. This included a large banner explaining what code review is, as well as smaller tutorial popovers explaining that comments were now batched.</p>
+
+    <img src="media/code-review-announce.png" width="592">
+
+    <p>Code review was built by <a href="https://github.com/dgraham">@dgraham</a>, <a href="https://github.com/nplasterer">@nplasterer</a>, <a href="https://github.com/jessicard">@jessicard</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/skalnik">@skalnik</a>, with design direction being provided by <a href="https://github.com/connors">@connors</a> and <a href="https://github.com/fabianperez">@fabianperez</a>. It seemed the feature touched just about every single part of the GitHub codebase. It's no small miracle that the feature worked as well as it did. The effort the team put in to make sure it shipped relatively bug free was amazing.
+
+    <hr>
+
+    <p>Working on GitHub was an amazing experience. It was my first foray into using <a href="http://githubengineering.com/deploying-branches-to-github-com/">chat ops to deploy</a> to a massive userbase. Since GitHub used GitHub to build GitHub, it was both exciting and frustrating to be fully immersed in the product you're building. Helping build even the smallest feature at such a massive scale was often nerve-wracking, but fulfilling.</p>
+
+    <p>This post serves as a greatest-hits, so to speak, of my time at GitHub. Countless of tiny refinements are made by each of GitHub's talented designers and engineers each day. Often, instead of filing a bug, it was easier to just submit a pull request if something you encountered was broken.</p>
 
     <hr>
 
     include "intro.html"
     include "elsewhere.html"
-
     include "footer.html"
 	</body>
 </html>
