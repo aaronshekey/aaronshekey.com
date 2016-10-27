@@ -34,8 +34,14 @@
 }
 
 #imdb-content h4 {
+  margin-left: 0;
+  font-size: 1em;
   font-family: Verdana, Arial, sans-serif;
   display: inline;
+}
+
+#imdb-content svg {
+  margin-left: 0;
 }
 
 #imdb-content hr {
@@ -165,6 +171,7 @@ b {
   position: absolute;
   top: 17px;
   width: 101px;
+  margin-left: 0;
 }
 
 #navbar-input {
