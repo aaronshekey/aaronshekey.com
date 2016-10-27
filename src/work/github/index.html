@@ -18,99 +18,101 @@
 
     <p>In early conversations with GitHub, I’d shared my desire to help simplify some of their core experiences. Increasingly, GitHub is used by non-programmers and programmers alike. Issue triage and project management are often equally as important as the code itself, especially as an organization grows.</p>
 
-    <p>All of the comment fields throughout github.com support GitHub-flavored Markdown. Markdown is a syntax that allows folks to make richer comments—adding things like links, lists, and images. Unfortunately, a great wealth of useful features were hidden behind this syntax. This seemed like a decent opportunity to add a lightweight toolbar to surface some of these. Prior to joining, we only had a link to a help document explaining the syntax.</p>
+    <p>All of the comment fields throughout GitHub support <a href="https://guides.github.com/features/mastering-markdown/">GitHub-flavored Markdown</a>. Markdown is a syntax that allows folks to make richer comments—adding things like links, lists, and images. Unfortunately, a great wealth of useful features were hidden behind this syntax. This seemed like a decent opportunity to add a lightweight toolbar to surface some of these. Prior to joining, we only had a link to a help document explaining the syntax.</p>
 
     <h4>Exploration</h4>
 
-    <p>My first exploration into the feature was considering revamping the “Write” and “Preview” pane. I wanted to swap them for “Visual” and “Markdown”. Our visual editor would render Markdown on the fly, allowing full use of the toolbar for formatting text. If this wasn’t desired, users could always flip tabs to see their raw Markdown. We’d remember that preference and allow for folks to ignore the Visual editor entirely. This style of editing was popularized by Wordpress.</p>
+    <p>I first considered revamping the existing “Write” and “Preview” pane. The comment area is plain text in the “Write” tab, but when switching over to "Preview", it shows the final rendered output. I was hoping to swap these experiences. Instead of frequently switching to the “Preview” tab, I wanted to build an editor that would render Markdown on the fly. I would call these tabs “Visual” and “Markdown”. Our visual editor would render Markdown on the fly, allowing full use of the toolbar for formatting text. If this wasn’t desired, users could always flip tabs to see their raw Markdown. We’d remember that preference and allow for folks to ignore the Visual editor entirely. This style of editing was popularized by Wordpress.</p>
 
-    <img src="media/markdown-wysiwyg-visual.png" title="Visual" width="760">
-    <img src="media/markdown-wysiwyg-markdown.png" title="Markdown" width="760">
+    <img src="media/markdown-wysiwyg-visual.png" alt="Visual" width="760">
+    <img src="media/markdown-wysiwyg-markdown.png" alt="Markdown" width="760">
 
     <p>This being the very first issue I’d posted to <span class="highlight">github/github</span>, it was wisely suggested that I scale back the scope of modifying our site-wide comment box. Fair enough!</p>
 
-    <img src="media/markdown-inline.png" title="Half" width="760">
+    <img src="media/markdown-inline.png" alt="Half" width="760">
 
-    <p>I then wanted to try to add light styling to the Write tab. This could allow for less toggling between the Write and Preview tab. Italics, for example, could be rendered inline. This is a popular pattern and turns up in lots of Markdown-based apps like iA Writer.</p>
+    <p>I then wanted to try to add light styling to the “Write” tab. This could allow for less toggling between the “Write” and “Preview” mode. Italics, for example, could be rendered inline while still showing the Markdown syntax. This is a popular pattern and turns up in lots of Markdown-based editors like <a href="https://ia.net/writer">iA Writer</a>.</p>
 
     <h4>Final approach</h4>
 
-    <p>Ultimately, we ended up building a single toolbar for our GitHub Flavored Markdown without modifying either of the tabs. Instead of hiding functionality behind a help link, we put our powerful, but less-used features up front. Task lists, for example, are a really powerful project management tool that very few users knew about. The toolbar shows powerful features while making it easier for beginners to use GitHub. Rad!</p>
+    <p>Ultimately, we ended up building a single toolbar for our GitHub Flavored Markdown without modifying either of the tabs. Instead of hiding Markdown functionality behind a help link, we put our powerful, but less-used features up front in a toolbar. Task lists, for example, are a really powerful project management tool that very few users knew about. The toolbar shows powerful features while making it easier for beginners to use GitHub. Rad!</p>
 
-    <img src="media/markdown-final.png" title="Toolbar" width="626">
+    <img src="media/markdown-final.png" alt="Toolbar" width="626">
 
-    <p>In our iterations, we stripped the button treatment on the toolbar. Since we didn’t want this feature to feel intrusive, this made things a lot lighter. We also ended up grouping things by similar task. Text manipulations, links and media, lists, and less-used GitHub-flavored Markdown features are all properly grouped.</p>
+    <p>While iterating, we stripped the button treatment on the toolbar. Since we didn’t want this feature to feel intrusive, this made things a lot lighter. We also ended up grouping functions by similar tasks. Text manipulations, links and media, lists, and less-used GitHub-flavored Markdown features are all properly grouped.</p>
 
-    <img src="media/markdown-toolbar.png" title="Toolbar" width="626">
+    <img src="media/markdown-toolbar.png" alt="Toolbar" width="626">
 
-    <p>The heavy lifting on this feature was done by <a href="http://github.com/skalnik">@skalnik</a> and <a href="http://github.com/probablycorey">@probablycorey</a>. I drew pretty pictures and provided the UI work. Have a look at the <a href="https://github.com/blog/2097-improved-commenting-with-markdown">product release blog post</a>.</p>
+    <p>The heavy lifting on this feature was done by <a href="http://github.com/skalnik">@skalnik</a> and <a href="http://github.com/probablycorey">@probablycorey</a>. I drew pretty pictures and provided the UI work, and helped build proof of concept prototypes. Have a look at the <a href="https://github.com/blog/2097-improved-commenting-with-markdown">product release blog post</a>.</p>
 
     <h3>Re-orderable Task Lists</h3>
 
     <p>After our markdown toolbar shipped, many users would soon discover our task list feature.</p>
 
-    <img src="media/tasklist.png" title="Tasklist" width="660">
+    <img src="media/tasklist.png" alt="Tasklist" width="660">
 
-    <p>These are interactive lists that allow users to add tasks that can be checked off as they’re completed. They’re often used to describe the scope of the work left in a particular issue or pull request. They’re also used in meta issues, that act as a way to track the status of other issues or pull requests. Whenever issues or pull requests are displayed in a list, we expose the number of completed tasks in the issue body as a progress bar.</p>
+    <p>Tasklists are interactive lists that allow users to add tasks that can be checked off as they’re completed. They’re often used to describe the scope of the work left to do in a particular issue or pull request. They’re also used in meta issues, that act as a way to track the status of other issues or pull requests. Whenever issues or pull requests are displayed in a list, we expose the number of completed tasks in the issue body as a progress bar.</p>
 
-    <img src="media/tasklist-progress.png" title="Tasklist progress" width="596">
+    <img src="media/tasklist-progress.png" alt="Tasklist progress" width="596">
 
-    <p>Since users were now using task lists more frequently, we received lots of feedback asking for the ability to re-arrange these items without having to edit the underlying Markdown content.</p>
+    <p>Since users were now using task lists more frequently, we received lots of requests for the ability to re-arrange these items without having to edit the original comment.</p>
 
     <h4>Exploration</h4>
 
-    <p>Early in the exploration of this feature, we discovered that since the task lists were already indented, we could use this empty space to show a drag affordance on hover. After a quick number of iterations, we landed on a simple three-bar metaphor.</p>
+    <p>Early in the exploration of this feature, we discovered that since the task lists were already indented, we could use this empty space to show a drag affordance on hover. After a quick number of iterations, we landed on a simple three-bar’d icon approach.</p>
 
-    <img src="media/tasklist-bugs.png" title="Tasklist grabbers" width="596">
+    <img src="media/tasklist-bugs.png" alt="Tasklist grabbers" width="596">
 
     <h4>Final approach</h4>
-    <p>On highlight, we’ll show the grabber, but we’ll only change the cursor when the mouse is to the left of the checkbox so as not to interfere with text selection and checking the box.</p>
+    <p>On highlight, we’ll show the grabber, but we’ll only change the cursor when the mouse is to the left of the checkbox so as not to interfere with text selection and checking the box. We’ll highlight the entire row and give it structure, so it’s more obvious what you’re about to drag.</p>
 
 
-    <img src="media/tasklist-hover.png" title="Tasklist hover" width="690">
-    <img src="media/tasklist-drag.png" title="Tasklist dragging" width="698">
+    <img src="media/tasklist-hover.png" alt="Tasklist hover" width="690">
+    <img src="media/tasklist-drag.png" alt="Tasklist dragging" width="698">
 
 
     <p>This feature was built by <a href="https://github.com/skalnik">@skalnik</a>, <a href="https://github.com/jessicard">@jessicard</a>, and <a href="https://github.com/dgraham">@dgraham</a>. <a href="https://github.com/aymannadeem">@aymannadeem</a> was in charge of the product direction. Check out the <a href="https://github.com/blog/2179-drag-and-drop-tasks-in-markdown-task-lists">blog post</a> announcing the feature.</p>
 
     <h3>File Uploads</h3>
-    <p>Adding files to a repository on GitHub can be difficult. GitHub has great workflows for adding and editing single documents, even allowing users to create Pull Requests from these edits. Oddly, there was no simply way of dragging and dropping files into a repository.</p>
+    <p>Adding files to a repository on GitHub can be difficult. GitHub has great workflows for adding and editing single files, even allowing users to create pull requests from these edits. It’s a powerful way of collaborating on GitHub without having to leave your browser. However, there was no simple way of dragging and dropping files into a repository.</p>
 
-    <img src="media/upload-blank-slate.png" title="Repo blank slate" width="980">
+    <img src="media/upload-blank-slate.png" alt="Repo blank slate" width="980">
 
-    <p>For many users, a user interface will always be more accessible than a command line. Perhaps we could cater to those users.</p>
+    <p>This is the blank slate that most users see when they first create repository. We offer instructions for interacting with your repository via command line, but for many users, a user interface will always be more approachable and accessible. We should make adding files as easy as editing them.</p>
     <h4>Exploration</h4>
 
+    <p>Since we’re adding files to a repository, my first explorations started with dragging and dropping files onto the file tree. I thought we could be clever and use the file tree’s background itself as both the drop target and the progress bar. In practice, this was a bit frustrating to use since the file tree didn’t have a fixed size. If a repository only had a single file in it, we would havea a much smaller drop target. This was easy to miss, and hard to discover, especially for a feature that should be optimized for empty or nearly-empty repositories.</p>
 
-    <p>My first explorations started with dragging and dropping files onto the file tree. I thought we could be clever and use the file tree’s background as both the drop target and the progress bar. In practice, it was a bit frustrating that the file tree didn’t have a fixed size. If a repository only had a single file in it, we would only have about a 20px drop target. Easy to miss, and hard to discover, especially for a feature that should be optimized for empty or nearly-empty repositories.</p>
+    <img src="media/upload-file-drop.png" alt="Upload file drop" width="790">
+    <img src="media/upload-file-progress.png" alt="Upload file progress" width="790">
 
-    <img src="media/upload-file-drop.png" title="Upload file drop" width="790">
-    <img src="media/upload-file-progress.png" title="Upload file progress" width="790">
-    <img src="media/upload-file-drop-bad.png" title="Upload file drop" width="790">
+    <div class="caption">
+      <img src="media/upload-file-drop-bad.png" alt="Upload file drop" width="790">
+      A nearly empty repository gives users a tiny drop target
+    </div>
 
     <h4>Final approach</h4>
-    <p>The next exploration moved to a full-window’d drop target. This allowed users to more easily drop their files anywhere in the code view regardless of the number of files their repository has.</p>
+    <p>The next approach moved the drop target to the full browser window. This allows users to more easily drop their files anywhere in the code view regardless of the size of their repository.</p>
 
-    <img class="rounded" src="media/upload.gif" title="Upload file" width="1320">
+    <img class="rounded" src="media/upload.gif" alt="Upload file" width="1320">
 
     <p>While this was certainly better for users familiar with dragging and dropping, it wasn’t very discoverable or accessible.</p>
     <p>This led the team to add an explicit <span class="highlight">upload</span> button that would present an entirely new view with both a drop target and file chooser.</p>
 
-    <img src="media/upload-page-empty.png" title="Empty file upload page" width="790">
-    <img src="media/upload-page-full.png" title="Uploading file upload page" width="790">
+    <img src="media/upload-page-empty.png" alt="Empty file upload page" width="790">
+    <img src="media/upload-page-full.png" alt="Uploading file upload page" width="790">
 
-
-    <p>In addition to a progress bar, we now had a consistent place for error messages and other edge cases. We could also allow users to stage their files and delete any errant uploads before opening a Pull Request.</p>
+    <p>In addition to a progress bar, we now had a consistent place for error messages and other edge cases. We could also allow users to stage their files and delete any errant uploads before showing them the familiar git workflows of committing directly to the branch or opening a pull request.</p>
 
     <p>Simply adding an upload button to our code view revealed a bit of design debt. We were quickly running out of space to add these buttons, and our design was suffering as a result. A small side-project revealed a couple optimizations.</p>
 
     <div class="caption">
-      <img src="media/code-header-before.png" title="Code header before" width="980">
+      <img src="media/code-header-before.png" alt="Code header before" width="980">
       Before
     </div>
     <br>
     <div class="caption">
-      <img src="media/code-header-after.png" title="Code header after" width="1000">
+      <img src="media/code-header-after.png" alt="Code header after" width="1000">
       After
     </div>
 
@@ -121,68 +123,79 @@
       <li>We could free up some space in the interface for additional future features.</li>
     </ol>
 
-    <p><a href="https://github.com/blog/2105-upload-files-to-your-repositories">This feature</a> was written about on GitHub’s blog. Early explorations were with the help of <a href="https://github.com/mdo">@mdo</a> and <a href="https://github.com/jasonlong">@jasonlong</a>. The feature was built by <a href="https://github.com/skalnik">@skalnik</a> and <a href="https://github.com/dgraham">@dgraham</a>.
+    <p><a href="https://github.com/blog/2105-upload-files-to-your-repositories">This feature</a> was written about on GitHub’s blog. Early explorations were made with the help of <a href="https://github.com/mdo">@mdo</a> and <a href="https://github.com/jasonlong">@jasonlong</a>. The feature was built by <a href="https://github.com/skalnik">@skalnik</a> and <a href="https://github.com/dgraham">@dgraham</a> with myself handling the user interface, overall experience, and the CSS transitions (I’m quite proud of those).</p>
 
     <h3>Protected branches</h3>
 
-    <p>Since a lot of GitHub’s userbase was becoming part of a larger team, we started building features that allowed for more granular permissions where possible. Too often in organizations large and small, someone might accidentally push directly to the wrong branch, <span class="highlight">master</span>, for example. In worst-case scenarios, this could result in lost work via force push.</p>
+    <p>Since a lot of GitHub’s userbase has started to become part of larger teams, we began looking seriously at features that allowed for more granular permissions where possible. Too often in organizations large and small, a collaborator might accidentally commit to the wrong branch, <span class="highlight">master</span>, for example. In worst-case scenarios, this could result in lost work via force push.</p>
 
-    <p>Protected Branches allow for repository administrators to block pushing to certain branches. This required adding a setting page that allowed for protected branch management.</p>
+    <p>Protected Branches allow for repository administrators to block committing to certain branches. This required adding a settings page that allowed for protected branch management.</p>
 
-    <img src="media/protected-branches.png" title="Branch selection" width="980">
+    <img src="media/protected-branches.png" alt="Branch selection" width="980">
 
     <p>In addition to blocking pushing directly to the protected branch, administrators can require status checks. These statuses are bots that can check for all sorts of things—code quality and linting, integration tests, regressions, etc.</p>
 
     <p>When these status checks fail, you can disable merging to the protected branch.</p>
 
-    <img src="media/protected-branches-status.png" title="Status" width="758">
+    <img src="media/protected-branches-status.png" alt="Status" width="758">
 
-    <p>Since both our settings page user interface language and our merge area were well established, most of the design work for protected branches was focused on writing clear copy that was balanced and discoverable. This copy writing extended to each edge case—a rogue status test, for example.</p>
+    <p>Since both our settings page user interface language and our merge area were well established, most of the design work for protected branches was focused on writing clear copy that was balanced and discoverable. This copy writing extended to each edge case—a rogue status test, for example. <a href="http://nicolefenton.com/writing-is-design/">Design is writing</a>, after all.</p>
 
-    <p>Protected branches was one of the first features I worked on at GitHub. The details are fuzzy, but it was mostly built by <a href="https://github.com/aroben">@aroben</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/nakajima">@nakajima</a> with product direction being provided by <a href="https://github.com/bleikamp">@bleikamp</a>. I think ✌️. Check out the <a href="https://github.com/blog/2051-protected-branches-and-required-status-checks">blog post announcing the feature</a>.</p>
+    <p>Protected branches was one of the first features I worked on at GitHub. It was built by a ton of people, <a href="https://github.com/aroben">@aroben</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/nakajima">@nakajima</a> to name a few, with product direction being provided by <a href="https://github.com/bleikamp">@bleikamp</a>. Check out the <a href="https://github.com/blog/2051-protected-branches-and-required-status-checks">blog post announcing the feature</a>.</p>
 
     <h3>Saved Replies</h3>
 
-    <p>When a large number of GitHub power users started to talk about their desire for re-usable snippets of text throughout <span class="highlight">dotcom</span>, we thought this might be an opportunity a new feature. Saved replies allow you to create any number of canned responses. These could aid in better bug filing or issue triage, for example. Or perhaps you’re just sick of responding to that <em>same</em> feature request or bug.</p>
+    <p>When a large number of GitHub power users started to talk about their desire for re-usable snippets of text throughout GitHub, we thought this might be an opportunity for a new feature. Saved replies allow you to create any number of canned responses. These could aid in better responses to bug reports or issue triage, for example. Or perhaps you’re just sick of responding to that <em>same</em> feature request or bug.</p>
 
-    <p>With any sufficiently complex product, there are a lot of questions that need to be answered, even for what seems to be a simple feature. Who owns saved replies? Do they belong to the repo? Do they belong to the user? Maybe they should be organization-wide. How will they get saved? Should we just put a Markdown file in the repo directory like we did with Issue and Pull Request templates? Maybe these should be saved to the database.</p>
+    <p>Like any project at GitHub, there are a lot of questions that need to be answered, even for what seems to be a simple feature.</p>
 
-    <p>Ultimately, I argued users would get the most utility out of their saved replies being stored in the database at the user level. This way, we could easily test their usage and they’d follow users around to any repo, regardless of organizational ownership. Managing your saved replies would show up in your user settings.</p>
+    <ol>
+      <li>Who owns saved replies?</li>
+      <li>Do they belong to the repo?</li>
+      <li>Do they belong to the user?</li>
+      <li>Maybe they should be organization-wide.</li>
+      <li>How will they get saved?</li>
+      <li>Should we just put a Markdown file in the repo directory like we did with Issue and Pull Request templates?</li>
+      <li>Maybe these should be saved to the database.</li>
+      <li>Where do users add their saved replies?</li>
+      <li>Where do users manage saved replies?</li>
+    </ol>
 
-    <p>Like Protected Branches, much of this design system already existed, making for short work of adding the settings page.</p>
+    <p>I’m sure you get the idea. Ultimately, I argued users would get the most utility out of their saved replies being stored in the database at the user level. This way, we could easily test their usage and saved replies would follow users around to any repository, regardless of ownership. Managing your saved replies would show up in your user settings.</p>
 
-    <img src="media/saved-reply-settings.png" width="980">
+    <p>Like Protected Branches, much of this design system already existed, making short work of adding the settings page.</p>
 
-    <p>Since we’d added the Markdown toolbar to all our comment areas, it made sense to add saved replies as another GitHub-specific button.</p>
+    <img src="media/saved-reply-settings.png" alt="Saved reply settings" width="980">
 
-    <img src="media/saved-reply-toolbar.png" width="731">
+    <p>Since we’d added the Markdown toolbar to all our comment areas, it made sense to access saved replies as another GitHub-specific button.</p>
 
-    <p>I worked hard to introduce the feature with its blank slate. When folks started to add their saved replies, I wanted to make sure they were able to easily add saved replies from the toolbar, providing a shortcut to the settings page.
+    <img src="media/saved-reply-toolbar.png" alt="Saved reply toolbar" width="731">
+
+    <p>This posed a problem for first-time users of the feature. I crafted a blank slate that helped explain what the feature was and offered folks a way to create their first saved reply. This brought the user to their settings page where further information was provided should they need it.</p>
 
     <div class="caption">
-      <img src="media/saved-reply-empty.png" width="730">
+      <img src="media/saved-reply-empty.png" alt="Empty saved reply" width="730">
       Empty saved replies
     </div>
 
-    <img src="media/saved-reply-full.png" width="730">
+    <img src="media/saved-reply-full.png" alt="Saved replies" width="730">
 
     <p><a href="https://github.com/blog/2135-saved-replies">Saved replies</a> was built by <a href="https://github.com/dgraham">@dgraham</a> with <a href="https://github.com/aymannadeem">@aymannadeem</a> providing product direction.</p>
 
     <h3>Octicons</h3>
-    <p>GitHub.com and every other GitHub property (Atom, GitHub Desktop, GitHub Universe, etc.) uses an icon library called <a href="http://octicons.github.com/">Octicons</a>. These are little 16x16px vectors that are <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivered via SVG</a>. This allows for resolution-independence as well as coloring on the fly via CSS. We’ve open sourced the set if you want to poke around.</p>
+    <p>GitHub.com and every other GitHub property (Atom, GitHub Desktop, GitHub Universe, etc.) each use an icon library called <a href="http://octicons.github.com/">Octicons</a>. These are little <a href="https://github.com/primer/octicons">open source</a> 16x16px vectors that are <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivered via SVG</a>. This allows for resolution-independence as well as coloring on the fly via CSS.</p>
 
     <h4>Why redesign Octicons?</h4>
-    <p>This set of icons includes all the metaphors familiar to you as a user of GitHub—things like forking, branching, pull requests. Perhaps some are less familiar to you. We sought to kill all the icons that were rarely used and to repurpose others.</p>
-    <p>This was an opportunity to pare down the icon set. We could also explore making some of their visuals a bit more harmonious. We lost a bit of consistency over the years. Perhaps it was time to try to get some back.</p>
-    <p>Prior to 3.0, Octicons were pretty chunky, especially when paired with system fonts, with different stroke weights appearing throughout the set. Corner radii were inconsistent. Nested corners were the same radius as their parents, leaving things feeling unnatural. Some icons suffered from legibility issues.</p>
+    <p>Prior to <span class="highlight">3.0</span>, Octicons were pretty chunky, especially when paired with system fonts. Different stroke weights appeared throughout the set. Corner radii were inconsistent. Nested corners were the same radius as their parents, leaving things feeling unnatural. Some icons suffered from legibility issues.</p>
+    <p>Over the years the icon set had grown to include icons that were rarely used and possibly made sense with another metaphor entirely. This was an opportunity to pare down the collection. We could also explore making some of their visuals a bit more harmonious. We lost a bit of consistency over the years. It was time to try to get some back.</p>
 
     <div class="caption">
-      <img src="media/octicons-line-weights.png" width="490">
+      <img src="media/octicons-line-weights.png" alt="Octicon line weights" width="490">
       Inconsistent stroke weights
     </div>
     <br>
     <div class="caption">
-      <img src="media/octicons-corner-radius.png" width="640">
+      <img src="media/octicons-corner-radius.png" alt="Octicon corner radius" width="640">
       Inconsistent corner radii
     </div>
 
@@ -190,65 +203,62 @@
     <p>In early style explorations, it became obvious that there wasn’t a ton we were going to be able to change within the core Git icons. Thinning them to 1px left them fragile, unreadable. Since we’ve built a brand around these metaphors, changing them wildly was out of the question. These icons would have to stay put.</p>
 
     <div class="caption">
-      <img src="media/octicons-thin-git.png" width="152">
+      <img src="media/octicons-thin-git.png" alt="Thin git icons" width="152">
       Thin git icons
     </div>
 
     <div class="caption">
-      <img src="media/octicons-square-git.png" width="162">
+      <img src="media/octicons-square-git.png" alt="Square git icons" width="162">
       Square git icons
     </div>
 
     <p>Previous efforts had normalized all strokes to 2px based on these icons. This made all the icons really thick, leaving little room for detail on inner shapes.</p>
 
     <div class="caption">
-      <img src="media/octicons-chunky-issues.png" width="486">
+      <img src="media/octicons-chunky-issues.png" alt="Chunky issues" width="486">
       Chunky issues
     </div>
-
-    <p>And since we’re on a grid of 16, single pixel shapes are impossible to center-align without them favoring the right or left side.</p>
 
     <h4>Final stylings</h4>
     <p>These explorations led to a loose rule of 1px outer strokes, supported by a 2px inner stroke. Some of these strokes would have to be fussed over, optically, to keep things from appearing too razor-thin.</p>
     <p>There were some exceptions to this rule. File-types, for example, were really muddied by 2px inner strokes.</p>
 
     <div class="caption">
-      <img src="media/octicons-file-icons.png" width="78">
+      <img src="media/octicons-file-icons.png" alt="File icons" width="78">
       File icons exploration
     </div>
 
     <p>We also standardized on 1px corner radii to soften the overall appearance of the iconset. We were careful to never double those corners on the inside, leaving the edges hard. The calendar icon shows these rules well.</p>
 
     <div class="caption">
-      <img src="media/octicons-corner-radius-detail.png" width="208">
+      <img src="media/octicons-corner-radius-detail.png" alt="Corner radius detail" width="208">
       Corner radius detail
     </div>
 
     <h4>Context vs. Consistency</h4>
-    <p>When building icon sets, it’s easy to fall into the trap of working on them all within a single canvas. This can be a form of tunnel vision. It certainly means a more harmonious set, but it can easily create a worse experience when they’re viewed in context of a large app like GitHub. Our folder icons, for example, needed to be filled so users could more easily discern between files and folders.</p>
-    <p>Similarly, the sizing of certain icons needed to be revisited once they were shown in context. Strokes, baselines, and overall metaphors needed to be changed as well.</p>
+    <p>When building icon sets, it’s easy to fall into the trap of working on them all within a single canvas. This can be a form of tunnel vision. It certainly means a more harmonious set, but it can easily create a worse experience when they’re viewed in context of a large app like GitHub. Our folder icons, for example, needed to be filled so users could more easily discern between files and folders, even though this means the overall icon set is less harmonious when each icon is viewed side-by-side.</p>
+    <p>Similarly, the sizing of certain icons needed to be revisited once they were shown in context. Strokes, baselines, and overall metaphors needed to be considered in this context as well.</p>
 
     <h4>Practical Changes</h4>
-    <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub.com. We were able to swap our global notifications icon from an inbox icon (aka “Robot Bikini Top”) to a more common bell shape. We also embraced a redrawn gear, shying away from our ‘tools’ icon for settings and the like.</p>
-    <p>This was but one step toward a more cohesive, harmonious GitHub experience.</p>
+    <p>Taking a fresh look at our icon set allowed us the opportunity to revisit a couple metaphors used throughout GitHub. We were able to swap our global notifications icon from an inbox icon (aka “Robot Bikini Top”) to the more common bell shape. We also embraced a redrawn gear, shying away from using our ‘tools’ icon for settings and the like.</p>
 
     <div class="caption">
-      <img src="media/octicons-before.png" width="342">
+      <img src="media/octicons-before.png" alt="Octicons before" width="342">
       Before
     </div>
     <br>
     <div class="caption">
-      <img src="media/octicons-after.png" width="344">
+      <img src="media/octicons-after.png" alt="Octicons after" width="344">
       After
     </div>
 
-    <p><a href="https://github.com/jonrohan">@jonrohan</a> did lots of testing with me in determining the best way of <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivering Octicons as SVG</a> on <span class="highlight">dotcom</a>.</p>
+    <p>This was but one step toward a more cohesive, harmonious GitHub experience. <a href="https://github.com/jonrohan">@jonrohan</a> did lots of testing with me in determining the best way of <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivering Octicons as SVG</a> on GitHub.</p>
 
     <h3>Code review</h3>
 
-    <p>By far the largest project I worked on at GitHub was code review. Prior to this feature, code review was an informal thing that happened in pull requests. Say you wanted to make some changes to your app’s code. You’d make your changes in a new branch, and then create a pull request to merge those changes into master. Prior to protected branches, there was really nothing stopping you from merging those changes. Social conventions steered people toward asking someone to view your pull request and leave comments. These comments couldn’t keep folks from merging into master, regardless of the code quality.</p>
+    <p>By far the largest project I worked on at GitHub was code review. Prior to this feature, code review was an informal process that happened in pull requests. Say you wanted to make some changes to your app’s code. You’d make your changes in a new branch, and then create a pull request to merge those changes into <span class="highlight">master</span>. Prior to protected branches, there was really nothing stopping anyone from merging those changes without oversight. Social conventions steered people toward asking someone to view your changes and leave comments, but these comments couldn’t keep folks from merging into master, regardless of the code quality.</p>
 
-    <p>When building first-class code review, we wanted to do a few things:</p>
+    <p>We could fix this with a first-class code review process. We wanted to do a few things:</p>
 
     <ol>
       <li>Allow reviewers to explicitly approve, request changes, or simply comment on pull requests.</li>
@@ -257,46 +267,58 @@
       <li>More easily facilitate code-based conversations</li>
     </ol>
 
-    <p>The first thing we needed to do was provide a user interface to actually leave the review. In pull requests we had the ability to leave comments on individual lines of code. Doing so would send a notification to anyone participating in the pull request. This ended up being super noisy even in tiny pull requests. Apart from adding an explicit approval, change request, or comment, we wanted to provide the ability to leave an overall comment. We originally attempted to put this whole form at the bottom of the `files changed` tab. Conceptually, this seemed to make sense. Users would read from top to bottom, and then leave their overall review.</p>
+    <p>The first thing we needed to do was provide a user interface to actually leave the review. In pull requests we already had the ability to leave comments on individual lines of code. Doing so would send a notification to anyone participating in the pull request. This ended up being super noisy even in pull requests with few changes.</p>
 
-    <img src="media/code-review-footer.png" width="803">
+    <p>We wanted to add on top of this informal process by adding an explicit approval. We also needed the ability to request changes on specific lines of code. Further, people could add an additional overall comment. We first needed a place to do this. My original approach was to put a new form at the bottom of the “Files changed” tab. Conceptually, this seemed to make sense, since users would read from top to bottom, and then leave their overall review at the end.</p>
 
-    <p>In practice, this proved to be a little cumbersome. Not everyone’s code review process is that linear. After building an early version, we found that users often write a few comments, move onto another task, and then return to the pull request later. The review footer was often missed or ignored entirely, especially if the diff was a particularly long one.</p>
+    <img src="media/code-review-footer.png" alt="Code review footer" width="803">
 
-    <p>Instead, we moved the act of signoff into a popover that lived in our already-sticky header. Instead of showing our approve, request changes, or commenting options in a drop down combo box, we’d make it a permanent fixture. This made code review more discoverable, and allowed us to more easily disable those options if needed.</p>
+    <p>In practice, this proved to be a little cumbersome. Not everyone’s code review process is that linear. After building an early version, we found that users often write a few comments, move onto another task, and then return to the pull request later. The review footer was often missed or ignored entirely, especially if the diff was a long one.</p>
 
-    <img src="media/code-review-popover.png" width="450">
+    <p>Instead, we moved the act of signoff into a popover that lived in our already-sticky header. Instead of showing our approve, request changes, or commenting options in a drop down combo box, we’d make it a permanent fixture. This made code review more discoverable, and allowed us to more easily disable those options if needed depending on the user’s permission level.</p>
 
-    <p>To cut down on the noise that multiple comments made, we decided not to submit the comment immediately. This proved to be slightly tricky, since we’d be changing behavior slightly. We’d need to show that comments were in a pending state.</p>
+    <img src="media/code-review-popover.png" alt="Code review popover" width="450">
 
-    <img src="media/code-review-pending.png" width="550">
+    <p>To cut down on the noise that commenting on a line of code made, we decided not to submit comment immediately. Instead, we’d batch these up into a pending state before submitting them together with the entire review. This proved to be slightly tricky, since we’d be changing behavior slightly. We’d need to show that comments were in a pending state.</p>
 
-    <p>Now that users were submitting reviews, we needed a way to thread them into the conversation view. We originally took an aggressive approach, only showing the comments and the line numbers where they occurred. It was an intersting goal, but it ended up messing up the scanability of a conversation.</p>
+    <img src="media/code-review-pending.png" alt="Pending code review" width="550">
+
+    <p>Since users were now submitting entire review objects with 3 potential states, and an arbitrary number of comments, we needed a way to thread them into the conversation view. I originally took an aggressive approach, only showing the comments and the line numbers where they occurred. It was an interesting goal, but it ended up reducing the overall readability of a conversation. There was just too much clicking required to tell what the hell was going on.</p>
 
     <div class="caption">
-      <img src="media/code-review-timeline.png" width="694">
+      <img src="media/code-review-timeline.png" alt="Code review timeline event" width="694">
       Not the most readable review.
     </div>
 
-    <p>Instead, we needed to show more context for where the conversation was taking place. We also needed a way to quickly reply right inline with that original conversation. In internally-shipped versions of code review, the only way to reply to a code review was to then leave your own review. This was super cumbersome. We’d always had a version of replying to line comments, but their positioning was only inferred. With code review, we also built a first-class version of replies that follow the original comment around, regardless of context.</p>
+    <p>Instead, we needed to show more context for where the conversation was taking place. We also needed a way to quickly reply right inline with comments. In internally-shipped versions of code review, the only way to reply to a review was to then leave your own review. This was super cumbersome. We’d always had a version of replying to line comments, but their positioning was only inferred. With code review, we also built a first-class version of replies that follow the original comment around, regardless of context.</p>
 
-    <img src="media/code-review-timeline-actual.png" width="730">
+    <img src="media/code-review-timeline-actual.png" alt="Actual code review timeline event" width="730">
 
-    <p>The final piece in code review was allowing or disallowing merging based on the status of a code review. For the default, it was decided that in order for a pull request to merge, it would require at least one approved review and no reviews requesting changes. In terms of our user interface, this would require another section in our merge area. There were a ton of permutations in this section, since pull requests may require statuses on top of reviews. This needed to be accounted for in the design exploration.</p>
+    <p>The final piece in code review was allowing or disallowing merging based on the status of review. For the default, it was decided that in order for a pull request to merge, it would require at least one approved review and no reviews requesting changes. In terms of our user interface, this would require another section in our merge area. There were a ton of permutations in this section already, since pull requests may already require statuses on top of reviews. This needed to be accounted for in the design exploration.</p>
 
-    <img src="media/code-review-merge.png" width="759">
+    <div class="caption">
+      <img src="media/code-review-merge.png" alt="Code review merge area" width="759">
+      A simple version of the merge area
+    </div>
 
-    <p>Since we were making pretty substantial workflow changes, we needed a way to announce these. GitHub has a nice history of blogging and making announcements, but often our users miss these. I proposed an interstitial that folks could silence once they understood the changes. This included a large banner explaining what code review is, as well as smaller tutorial popovers explaining that comments were now batched.</p>
+    <p>Since we were making pretty substantial workflow changes, we needed a way to announce them. GitHub has a nice history of blogging and making announcements, but often our users miss these. I proposed an interstitial that folks could dismiss once they understood the changes. This included a large banner explaining what code review is, as well as smaller tutorial popovers explaining that comments were now batched.</p>
 
-    <img src="media/code-review-announce.png" width="592">
+    <img src="media/code-review-announce.png" alt="Code review announcement" width="592">
 
-    <p>Code review was built by <a href="https://github.com/dgraham">@dgraham</a>, <a href="https://github.com/nplasterer">@nplasterer</a>, <a href="https://github.com/jessicard">@jessicard</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/skalnik">@skalnik</a>, with design direction being provided by <a href="https://github.com/connors">@connors</a> and <a href="https://github.com/fabianperez">@fabianperez</a>. It seemed the feature touched just about every single part of the GitHub codebase. It’s no small miracle that the feature worked as well as it did. The effort the team put in to make sure it shipped was amazing.</p>
+    <p>Code review was built by <a href="https://github.com/dgraham">@dgraham</a>, <a href="https://github.com/nplasterer">@nplasterer</a>, <a href="https://github.com/jessicard">@jessicard</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/skalnik">@skalnik</a>, with design direction &amp; collaboration being provided by <a href="https://github.com/connors">@connors</a> and <a href="https://github.com/fabianperez">@fabianperez</a>. It seemed the feature touched just about every single part of the GitHub codebase. It’s no small miracle that the feature worked as well as it did. The effort the team put in to make sure it shipped was nothing short of amazing.</p>
 
     <hr>
 
-    <p>Working on GitHub was an amazing experience. It was my first foray into using <a href="http://githubengineering.com/deploying-branches-to-github-com/">chat ops to deploy</a> to a massive userbase. Since GitHub used GitHub to build GitHub, it was both exciting and frustrating to be fully immersed in the product you’re building. Helping build even the smallest feature at such a massive scale was often nerve-wracking, but fulfilling.</p>
+    <p>Working on GitHub was an amazing experience. It was my first foray in using <a href="http://githubengineering.com/deploying-branches-to-github-com/">chat ops to deploy</a> live changes to a massive userbase. Since GitHub uses GitHub to build GitHub, it’s exciting (and sometimes frustrating) to be fully immersed in the product you’re building. Helping build even the smallest feature at such a massive scale was often nerve-wracking, but fulfilling.</p>
 
-    <p>This post serves as a greatest-hits, so to speak, of my time at GitHub. Countless of tiny refinements are made by each of GitHub’s talented designers and engineers each day.</p>
+    <p>This post serves as a greatest-hits, so to speak, of my time at GitHub. Countless of tiny refinements are made by each of GitHub’s talented designers and engineers every day. This post also only highlights actual directions that were explored. As an example, a feature like Code Review often results in a Sketch file with a ton of revisions and exploration. It can also spawn a number of prototypes that are simply too ephemeral to capture here.</p>
+
+    <div class="background">
+      <div class="caption">
+        <img src="media/code-review-exploration.png" alt="Code review exploration" width="1777">
+        A snapshot of Code Review’s exploration
+      </div>
+    </div>
 
     <hr>
 
