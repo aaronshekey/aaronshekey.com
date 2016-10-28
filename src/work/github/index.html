@@ -14,7 +14,18 @@
 
     <p>I had the opportunity to work full-time as a remote Product Designer at GitHub from March 2015 to October 2016. This is a collection of the work that I was able to help ship during my time as a Hubber™.</p>
 
-    <h3>Markdown Toolbar</h3>
+    <h5>Table of contents</h5>
+    <ol>
+      <li><a href="#markdown-toolbar">Markdown toolbar</a></li>
+      <li><a href="#tasklists">Re-orderable task lists</a></li>
+      <li><a href="#file-uploads">File uploads</a></li>
+      <li><a href="#protected-branches">Protected branches</a></li>
+      <li><a href="#saved-replies">Saved replies</a></li>
+      <li><a href="#octicons">Octicons</a></li>
+      <li><a href="#code-review">Code review</a></li>
+    </ol>
+
+    <h3 id="markdown-toolbar">Markdown toolbar</h3>
 
     <p>In early conversations with GitHub, I’d shared my desire to help simplify some of their core experiences. Increasingly, GitHub is used by non-programmers and programmers alike. Issue triage and project management are often equally as important as the code itself, especially as an organization grows.</p>
 
@@ -45,7 +56,7 @@
 
     <p>The heavy lifting on this feature was done by <a href="http://github.com/skalnik">@skalnik</a> and <a href="http://github.com/probablycorey">@probablycorey</a>. I drew pretty pictures and provided the UI work, and helped build proof of concept prototypes. Have a look at the <a href="https://github.com/blog/2097-improved-commenting-with-markdown">product release blog post</a>.</p>
 
-    <h3>Re-orderable Task Lists</h3>
+    <h3 id="tasklists">Re-orderable task lists</h3>
 
     <p>After our markdown toolbar shipped, many users would soon discover our task list feature.</p>
 
@@ -73,7 +84,7 @@
 
     <p>This feature was built by <a href="https://github.com/skalnik">@skalnik</a>, <a href="https://github.com/jessicard">@jessicard</a>, and <a href="https://github.com/dgraham">@dgraham</a>. <a href="https://github.com/aymannadeem">@aymannadeem</a> was in charge of the product direction. Check out the <a href="https://github.com/blog/2179-drag-and-drop-tasks-in-markdown-task-lists">blog post</a> announcing the feature.</p>
 
-    <h3>File Uploads</h3>
+    <h3 id="file-uploads">File uploads</h3>
     <p>Adding files to a repository on GitHub can be difficult. GitHub has great workflows for adding and editing single files, even allowing users to create pull requests from these edits. It’s a powerful way of collaborating on GitHub without having to leave your browser. However, there was no simple way of dragging and dropping files into a repository.</p>
 
     <img src="media/upload-blank-slate.png" alt="Repo blank slate" width="980">
@@ -125,7 +136,7 @@
 
     <p><a href="https://github.com/blog/2105-upload-files-to-your-repositories">This feature</a> was written about on GitHub’s blog. Early explorations were made with the help of <a href="https://github.com/mdo">@mdo</a> and <a href="https://github.com/jasonlong">@jasonlong</a>. The feature was built by <a href="https://github.com/skalnik">@skalnik</a> and <a href="https://github.com/dgraham">@dgraham</a> with myself handling the user interface, overall experience, and the CSS transitions (I’m quite proud of those).</p>
 
-    <h3>Protected branches</h3>
+    <h3 id="protected-branches">Protected branches</h3>
 
     <p>Since a lot of GitHub’s userbase has started to become part of larger teams, we began looking seriously at features that allowed for more granular permissions where possible. Too often in organizations large and small, a collaborator might accidentally commit to the wrong branch, <span class="highlight">master</span>, for example. In worst-case scenarios, this could result in lost work via force push.</p>
 
@@ -143,7 +154,7 @@
 
     <p>Protected branches was one of the first features I worked on at GitHub. It was built by a ton of people, <a href="https://github.com/aroben">@aroben</a>, <a href="https://github.com/rsanheim">@rsanheim</a>, and <a href="https://github.com/nakajima">@nakajima</a> to name a few, with product direction being provided by <a href="https://github.com/bleikamp">@bleikamp</a>. Check out the <a href="https://github.com/blog/2051-protected-branches-and-required-status-checks">blog post announcing the feature</a>.</p>
 
-    <h3>Saved Replies</h3>
+    <h3 id="saved-replies">Saved replies</h3>
 
     <p>When a large number of GitHub power users started to talk about their desire for re-usable snippets of text throughout GitHub, we thought this might be an opportunity for a new feature. Saved replies allow you to create any number of canned responses. These could aid in better responses to bug reports or issue triage, for example. Or perhaps you’re just sick of responding to that <em>same</em> feature request or bug.</p>
 
@@ -182,7 +193,7 @@
 
     <p><a href="https://github.com/blog/2135-saved-replies">Saved replies</a> was built by <a href="https://github.com/dgraham">@dgraham</a> with <a href="https://github.com/aymannadeem">@aymannadeem</a> providing product direction.</p>
 
-    <h3>Octicons</h3>
+    <h3 id="octicons">Octicons</h3>
     <p>GitHub.com and every other GitHub property (Atom, GitHub Desktop, GitHub Universe, etc.) each use an icon library called <a href="http://octicons.github.com/">Octicons</a>. These are little <a href="https://github.com/primer/octicons">open source</a> 16x16px vectors that are <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivered via SVG</a>. This allows for resolution-independence as well as coloring on the fly via CSS.</p>
 
     <h4>Why redesign Octicons?</h4>
@@ -254,7 +265,7 @@
 
     <p>This was but one step toward a more cohesive, harmonious GitHub experience. <a href="https://github.com/jonrohan">@jonrohan</a> did lots of testing with me in determining the best way of <a href="https://github.com/blog/2112-delivering-octicons-with-svg">delivering Octicons as SVG</a> on GitHub.</p>
 
-    <h3>Code review</h3>
+    <h3 id="code-review">Code review</h3>
 
     <p>By far the largest project I worked on at GitHub was code review. Prior to this feature, code review was an informal process that happened in pull requests. Say you wanted to make some changes to your app’s code. You’d make your changes in a new branch, and then create a pull request to merge those changes into <span class="highlight">master</span>. Prior to protected branches, there was really nothing stopping anyone from merging those changes without oversight. Social conventions steered people toward asking someone to view your changes and leave comments, but these comments couldn’t keep folks from merging into master, regardless of the code quality.</p>
 
