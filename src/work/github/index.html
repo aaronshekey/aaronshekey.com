@@ -15,7 +15,7 @@
     <p>I had the opportunity to work full-time as a remote Product Designer at GitHub from March 2015 to October 2016. This is a collection of the work that I was able to help ship during my time as a Hubber™.</p>
 
     <h5>Table of contents</h5>
-    <ol>
+    <ol class="contents">
       <li><a href="#markdown-toolbar">Markdown toolbar</a></li>
       <li><a href="#tasklists">Re-orderable task lists</a></li>
       <li><a href="#file-uploads">File uploads</a></li>
@@ -135,6 +135,10 @@
     </ol>
 
     <p><a href="https://github.com/blog/2105-upload-files-to-your-repositories">This feature</a> was written about on GitHub’s blog. Early explorations were made with the help of <a href="https://github.com/mdo">@mdo</a> and <a href="https://github.com/jasonlong">@jasonlong</a>. The feature was built by <a href="https://github.com/skalnik">@skalnik</a> and <a href="https://github.com/dgraham">@dgraham</a> with myself handling the user interface, overall experience, and the CSS transitions (I’m quite proud of those).</p>
+
+    <p>
+      <blockquote class="twitter-tweet long" data-lang="en"><p lang="en" dir="ltr">github file upload, omg the end is near.</p>&mdash; undefined (@korrek_penderis) <a href="https://twitter.com/korrek_penderis/status/700588325501931520">February 19, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p>
 
     <h3 id="protected-branches">Protected branches</h3>
 
@@ -275,7 +279,7 @@
       <li>Allow reviewers to explicitly approve, request changes, or simply comment on pull requests.</li>
       <li>Batch up individual review comments into a single review notification.</li>
       <li>Disallow merging based on reviews requesting changes.</li>
-      <li>More easily facilitate code-based conversations</li>
+      <li>More easily facilitate code-based conversations.</li>
     </ol>
 
     <p>The first thing we needed to do was provide a user interface to actually leave the review. In pull requests we already had the ability to leave comments on individual lines of code. Doing so would send a notification to anyone participating in the pull request. This ended up being super noisy even in pull requests with few changes.</p>
