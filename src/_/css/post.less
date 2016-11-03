@@ -142,7 +142,8 @@ li {
   margin-bottom: 0;
 }
 
-em {
+em,
+.summary {
   font-style: italic;
 }
 
@@ -178,68 +179,41 @@ hr,
 svg,
 .caption,
 .twitter-tweet {
-  margin-left: 14%;
-
-  @media (max-width: 810px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img,
-.caption,
 svg {
-  max-width: 72%;
-
-  @media (max-width: 810px) {
-    display: block;
-    max-width: 93%;
-  }
+  max-width: 100%;
+  display: block;
 }
 
-img {
-  display: block;
-
-  &.rounded {
-    border-radius: 8px;
-  }
+.rounded {
+  border-radius: 6px;
 }
 
 .caption {
-  display: inline-block;
-  max-width: 72%;
-  margin-top: @margin;
-  margin-bottom: @margin;
+  display: block;
   font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.2em;
   text-align: center;
+  margin-bottom: @margin;
 
   img {
-    max-width: 100%;
-    display: block;
-    margin-left: 0;
     margin-bottom: @margin / 4;
-  }
-
-  @media (max-width: 810px) {
-    display: block;
-    max-width: 93%;
-
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;
-    }
   }
 }
 
 // Let's add some overrides to positioning depending on context
-
 p + img,
 img + p,
+p + .caption,
 .caption + p,
+ol + .caption,
 .caption + ol,
+ul + .caption,
 .caption + ul {
   margin-top: @margin * 2;
 }
@@ -302,7 +276,6 @@ hr {
 }
 
 .summary {
-  font-style: italic;
   color: #9b9b9b;
 }
 
@@ -358,39 +331,8 @@ blockquote {
     line-height: 1.6;
 
     p {
-      margin-right: 14%;
       margin-bottom: @margin;
     }
-  }
-}
-
-.browser {
-	margin: 5em auto;
-	width: 90%;
-	max-width: 800px;
-
-  img {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-.site-embed {
-	width: 100%;
-	height: 0;
-	padding-top: 60.681034%;
-	position: relative;
-	overflow: hidden;
-	overflow-y: scroll;
-
-  img {
-    margin: 0;
-  	width: 100%;
-  	max-width: 100%;
-  	position: absolute;
-  	top: 0;
-  	left: 0;
   }
 }
 
@@ -412,6 +354,7 @@ blockquote {
 
 .annotated {
   position: relative;
+  display: inline-block;
 
   .annotation {
     position: absolute;
