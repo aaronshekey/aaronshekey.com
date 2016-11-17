@@ -66,7 +66,8 @@ module.exports = function(grunt) {
         },
         files: {
           'build/_/css/home.css': 'src/_/css/home.less',
-          'build/_/css/post.css': 'src/_/css/post.less'
+          'build/_/css/post.css': 'src/_/css/post.less',
+          'build/_/css/resume.css': 'src/_/css/resume.less'
         }
       },
     },
