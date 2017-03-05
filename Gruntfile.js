@@ -84,5 +84,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['clean', 'copy', 'less', 'cssmin', 'includes']);
+  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'includes']);
   grunt.registerTask('deploy', ['rsync:production']);
 };
