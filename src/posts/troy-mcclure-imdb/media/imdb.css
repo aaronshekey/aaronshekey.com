@@ -45,12 +45,12 @@
 }
 
 #imdb-content hr {
-	border: 0;
-	width: auto;
-	color: #e8e8e8;
-	background-color: #e8e8e8;
-	height: 1px;
-	margin: 1em 0;
+  border: 0;
+  width: auto;
+  color: #e8e8e8;
+  background-color: #e8e8e8;
+  height: 1px;
+  margin: 1em 0;
 }
 
 #imdb-content p {
