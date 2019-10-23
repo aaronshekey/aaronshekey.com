@@ -39,12 +39,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    watch: {
-      build: {
-        files: ['src/**/*'],
-        tasks: ['default']
-      },
-    },
     rsync: {
       options: {
         exclude: [".DS_Store"],
@@ -80,6 +74,22 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      scripts: {
+        files: ['src/**/*'],
+        tasks: ['clean', 'copy', 'less', 'cssmin', 'includes'],
+      },
+    },
+    concurrent: {
+      options: {
+          logConcurrentOutput: true
+      },
+
+      serve: [
+          'connect',
+          'watch',
+      ],
+    }
   });
 
   // Load plugins
@@ -91,9 +101,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-rsync');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'copy', 'less', 'cssmin', 'includes', 'connect']);
+  grunt.registerTask('default', ['concurrent:serve']);
   grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'includes']);
   grunt.registerTask('deploy', ['rsync:production']);
 };
