@@ -12,22 +12,23 @@
     <h2>Stack Overflow</h2>
     <p class="meta">2017—</p>
 
-    <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. Eventually, I'd create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
+    <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. Eventually, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
 
     <h5>Table of contents</h5>
     <ol class="contents">
       <li><a href="#documentation">Documentation</a></li>
+      <li><a href="#community">Community</a></li>
     </ol>
 
     <h3 id="documentation">Documentation</h3>
 
-    <p>Documentation was Stack Overflow's attempt to improve technical reference materials by focusing on real world examples. Instead of simply documenting an API's methods and parameters, Stack Overflow users could submit real-world examples of those APIs in use, each attempting to create <em>the</em> canonical example and gaining reputation for doing so. Just like answers to questions, examples could be upvoted—the best ones rising to the top.</p>
+    <p>Documentation was Stack Overflow’s attempt to improve technical reference materials by focusing on real world examples. Instead of simply documenting an API’s methods and parameters, Stack Overflow users could submit real-world examples of those APIs in use, each attempting to create <em>the</em> canonical example and gaining reputation for doing so. Just like answers to questions, examples could be upvoted—the best ones rising to the top.</p>
 
-    <p>At the time, I was coming off having written Hum, an iOS app for songwriting. Apple has amazing APIs in their iOS SDK, but many of their symbols <a href="https://nooverviewavailable.com">lack official documentation</a>. Additionally, this documentation fails to include rich examples, especially community-created examples to show how these methods are <em>actually</em> used. On top of an overall lack of documentation, the APIs often were half-implemented, and required workarounds found deep within Stack Overflow's question base.</p>
+    <p>At the time, I was coming off having written Hum, an iOS app for songwriting. Apple has amazing APIs in their iOS SDK, but many of their symbols <a href="https://nooverviewavailable.com">lack official documentation</a>. Additionally, this documentation fails to include rich examples, especially community-created examples to show how these methods are <em>actually</em> used. On top of an overall lack of documentation, the APIs often were half-implemented, and required workarounds found deep within Stack Overflow’s question base.</p>
 
     <p>Documentation was an initial success. However, after the gold rush of early adopters adding their own canonical examples, usage began to decline. Myself, product manager Vasudha, and research intern Horyun, were tasked with figuring out how to build the next phase of Documentation.</p>
 
-    <p>This meant doing basic research about what Documentation should be, who it'd be for, and what people expected Stack Overflow's version of Documentation would be. Horyun wrote in depth about her <a href="http://horyun.design/docs">research methodology</a>, and her <a href="https://blog.usejournal.com/life-as-a-stack-overflow-user-research-intern-ff9ce133996a">time at Stack Overflow</a>.</p>
+    <p>This meant doing basic research about what Documentation should be, who it’d be for, and what people expected Stack Overflow’s version of Documentation would be. Horyun wrote in depth about her <a href="http://horyun.design/docs">research methodology</a>, and her <a href="https://blog.usejournal.com/life-as-a-stack-overflow-user-research-intern-ff9ce133996a">time at Stack Overflow</a>.</p>
 
     <p>After initial rounds of research, we needed to test actual visuals of what this new version of Documentation might look like.</p>
 
@@ -63,9 +64,74 @@
       Documentation would support responsive layouts on day one.
     </div>
 
-    <p>These explorations all tested very well, but ultimately it would have been too much investment to build what Documentation truly required to succeed. The failure of Documentation changed Stack Overflow's approach to product development across the company, moving beyond “let's develop a new product and see how it goes” and into more robust research into product and market fit.</p>
+    <p>These explorations all tested very well, but ultimately it would have been too much investment to build what Documentation truly required to succeed. The failure of Documentation changed Stack Overflow’s approach to product development across the company, moving beyond “let’s develop a new product and see how it goes” and into more robust research into product and market fit.</p>
 
     <img src="media/documentation-sunset.png" alt="Sunset" width="1272">
+
+    <h3 id="community">Community</h3>
+
+    <p>Q&A being the bread and butter of Stack Overflow, I was delighted to be invited to move over to the Community team after Documentation was shuttered.</p>
+
+    <p>Since we weren’t building a new product, there were lots of opportunities for improvements, big and small. We discovered new ways of watching tags, filtering questions, making new users feel welcomed, and how to market our products.</p>
+
+    <h4>Custom questions lists</h4>
+
+    <p>Though most users end up on Stack Overflow by directly searching for their problem on Google, many of our users browse our questions lists based on their interests. The community team needed a way to introduce robust sorting, filtering, while showing power users the algorithm behind pre-baked lists like “Newest” or “Active”.</p>
+
+    <div class="background">
+      <div class="caption">
+        <img src="media/sorting-question-filtering.png" width="728">
+        At the top of each question list, we introduced sorting and filtering.
+      </div>
+
+      <div class="caption">
+        <img src="media/sorting-custom-questions.png" width="822">
+        If a user changes one of the sorting parameters, we give them the option to save their custom search.
+      </div>
+
+      <div class="caption">
+        <img src="media/sorting-editing-custom-sort.png" width="492">
+        Editing a custom search within a modal.
+      </div>
+
+      <div class="caption">
+        <img src="media/sorting-and-filtering.png" width="1236">
+        Early explorations of sorting and filtering popovers.
+      </div>
+    </div>
+
+    <p>Ultimately, a much simpler approach pitched by Lisa Park was best. We shipped a combined, Yelp-y set of filters and sorts in a single expandable view.</p>
+
+    <img src="media/sorting-combined.png" width="727">
+
+    <h4>Tag watching</h4>
+
+    <p>A powerful feature for those who browse Stack Overflow is watching tags. By watching tags, we weight questions in those tags and move them to the top of the lists. You can also receive an email digest of questions within those tags in varying frequency. We wanted to help surface its functionality.</p>
+
+    <div class="caption">
+      <img src="media/tag-watching-sidebar-elements.png" width="1296">
+      We added some tag management to the sidebar of question lists.
+    </div>
+
+    <div class="caption">
+      <img src="media/tag-watching-popover.png" width="324">
+      We surfaced the ability to watch or ignore a tag any time a tag is presented.
+    </div>
+
+    <div class="caption">
+      <img src="media/tags-header.png" width="729">
+      On the tag page itself, we also added some additional buttons for managing watching a tag.
+    </div>
+
+    <p>My favorite part of product design is balancing quick wins with long-running redesigns. Simultaneously, the Community team was tasked with converting the site to a responsive layout, adding a persistent sidebar navigation, and refactoring our community’s bunch of themes.</p>
+
+    <p>Like a lot of our peers, Stack Overflow built mobile-specific views of our product. At the time, this made more sense than a responsive layout, since unifying on a responsive layout would require a heavy refactor and would force our users to download way more bytes to resource-constrained mobile devices than we’d feel comfortable. However, over the years, maintaining separate mobile experiences became a maintenance burden. Often, the desktop views would receive security fixes and UX improvements that our mobile views would not.</p>
+
+    <p>We also introduced a left navigation to the side of all Q&A experiences. As we looked at introducing Teams in the context of Stack Overflow it became obvious that we needed to review our overall information architecture. Fellow designer Donna covered the details and rationale in her <a href="https://stackoverflow.blog/2018/02/08/information-architecture-navigating-stack-overflow-enterprise-stack-exchange-sites/">blog post</a>. By adding the left nav we were able to scale our navigation beyond the header, allowing us to convert a larger set of pages to a responsive layout.</p>
+
+    <p>While building new features, even ones that should be quick wins, theming was a consistent source of frustration to the product team. Like the early days of Reddit and MySpace, the themes varied wildly in their technical and visual execution. Some themes had rich illustrations, custom badges and image sprites, custom buttons, headers, and even animation. Theming a community was used as a test project for some new designers, and an exercise while onboarding others to the team.</p>
+
+    <p>I was tasked with figuring out how to unify the elements of a community that <em>could</em> be themed, allowing some themes to become more expressive, while others would be reined in. This required auditing all our CSS and radically simplifying how these theming variables are passed around our codebase. To put it politely, our CSS bundles had grown organically over the years. Unifying our themes was a worthy opportunity to refactor our theming CSS. We could ship a more consistent theming experience that wouldn’t get in the way of more rapidly shipping features.</p>
 
     <hr>
 
