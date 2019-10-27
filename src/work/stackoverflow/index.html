@@ -178,9 +178,9 @@
 
     <h4>Documentation</h4>
 
-    <img src="media/documentation.png" width="1262">
-
     <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>.</p>
+
+    <img src="media/documentation.png" width="1262">
 
     <p><a href="https://netlify.com">Netlify</a> allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
 
@@ -258,51 +258,11 @@
 
     <p>We have a long road to go on implementing Stacks across Stack Overflow. Sustained refactor has to happen in order to get our code coverage to the point where we can make larger, sweeping changes. Like atomic classes being an entry point into a design system, our design system is an entry point to a wider redesign of our product.</p>
 
-    <p>Sadly, it’s a common refrain that Stack Overflow isn’t a friendly product. While most of these issues can and should be solved by hard choices in Stack Overflow’s set of features, we can’t discount the effect that aesthetics alone can have on a product. Beyond strong community moderation and proper opinionated features like flagging, and automatic sentiment analysis, we can look at our product systemically to change our users’ overall perception.</p>
+    <p>Sadly, it’s a common refrain that Stack Overflow isn’t a friendly product. While most of these issues can and should be solved by hard choices in Stack Overflow’s set of features, we can’t discount the effect that aesthetics can have on a product. Beyond strong community moderation and proper opinionated features like flagging, and automatic sentiment analysis, we can look at our product systemically to change our users’ overall perception.</p>
 
     <img src="media/friendliness.png" width="1385">
 
     <p>A note for our users that may be reading this—this is merely an exploration of the profound effect of what redesigning the key elements within our design system can result in. Here we’ve changed the typeface, the overall padding scale, font sizing scale, and corner radii.</p>
-
-    <h4>Color modes</h4>
-
-    <p>Changing aesthetics isn’t merely a matter of taste or friendliness. At any scale, but especially at Stack Overflow’s, so called design "edge cases" can still mean huge numbers of users.</p>
-
-    <p>Within early versions of Stacks, every color was created by a set of variables at compile team. These are evaluated as Less variables. Throughout our product, we’ve specified single values for orange, blue, powder, green, red, and yellow. These color values are then transformed by Less functions like darken, lighten, and saturation.</p>
-
-    <p>Ultimately, at the system level, it’s Stacks’s responsibility to enable color features like dark mode, high contrast mode, and black and white variations of our color sets.</p>
-
-    <p>Naively, our entire color scale, represented as 10 steps between <code>color-050</code> through <code>color-900</code> was built linearly. Understandably, this resulted in a pretty uneven distribution of perceived darkness and lightness across the varying hues. Additionally, we’d need to transform this color scale to make sense in dark mode, and other more accessible explorations.</p>
-
-    <p>At the darker end of the spectrum, I found our colors were too close to black to distinguish each at the <code>900</code> level. <code>red-900</code> didn’t read as red when applied as a background. Shifting the darker end of the spectrum away from black allowed for keeping those colors discernible.</p>
-
-    <p>At the lighter end, I found our <code>050</code> variables were too close to white. Using Lyft’s color box allowed me to establish color stops that adhered to more standard easing curves that go well beyond a simple linear addition of black or white.</p>
-
-    <p>Since no color exists in a vacuum, and context is <em>everything</em>, colors were then hand-tuned to real-world applications. In our <code>s-notice</code> component, we wanted the brightest applications of our colors to still be legible as their base hues against most background colors.</p>
-
-    <p>[[Before and after of our color hues]]</p>
-
-    <h3 id="darkmode">Dark mode</h3>
-
-    <p>When initially exploring dark mode, I first naively simply reversed our black and white scale, swapping white for our darkest black and vice-versa. This resulted in a very high-contrast execution of dark mode. In practice, we found it much more appropriate to start with a mockup of what our dark mode should be. In actuality, it made much more sense for the darkest color in dark mode to be much less contrast than a hard switch from <code>#fff</code> to <code>#000</code>. After all, if we start with a deep black as our base color, we won’t be able to apply things like shadows. Our dark mode should feel like the lights have been turned off, not the complete absence of <em>all</em> light.</p>
-
-    <p>Once I established our baseline of contrast in dark mode, I needed to figure out how our colors would translate against this lower contrast dark background. Like the grayscale color sequence, I couldn’t simply reverse the color values. Additionally, I needed to shift the hues to maintain vibrance against the gray backgrounds if we were going to have a composition that made any sense.</p>
-
-    <p>[[dark exploration of orange]]</p>
-
-    <h3 id="cssvariables">CSS Variables</h3>
-
-    <p>After dropping support for Internet Explorer, Stacks was able to switch from compile-time Less variables for color, to native CSS variables that are evaluated at run time. This would allow Stack Overflow to assign colors based on dark mode media queries.</p>
-
-    <p>Frustratingly, this meant refactoring much of our codebase to no longer rely on Less’s color methods. We’d have to convert any reference to <code>darken</code>, <code>lighten</code>, or <code>fade</code> with actual color variables since Less can’t apply <code>darken</code> to a CSS variable.</p>
-
-    <p>For example, our primary buttons were originally expressed as <code>background-color: @blue-600</code>. On hover, we’d apply <code>background-color: darken(@blue-600, 10%)</code>. With CSS variables, we’d have to be much more explicit. Instead, we’d have to express our buttons as <code>background-color: var(--blue-600)</code> with hovering declared as <code>background-color: var(--blue-700)</code> since Less can’t compile what is only evaluated at runtime. Across Stacks, and the rest of the product’s CSS bundles, I’d have to make these choices hundreds of times to get our css to compile.</p>
-
-    <h3 id="conditionalcolorchanges">Conditional color changes</h3>
-
-    <p>Like all of our other conditional classes, I also built our system to allow for dark-mode overrides. In dark mode, sometimes the best application of color isn’t our best guess, since, like always, context is so important. Our entire color set is offered as <code>d:</code> conditional classes. If something is <code>bg-black-100</code> by default, we can switch the color by adding <code>d:bg-black-300</code> to choose a different color value in dark mode.</p>
-
-    <p>We also scoped our dark mode shift to a class on our <code>body</code>. Dark mode won’t be applied unless the <code>body</code> first has the class <code>has-darkmode</code>. Only then our colors are shifted. In a similar fashion, our body can also take the <code>has-highcontrast</code> class for low-sighted users.</p>
 
     <hr>
 
