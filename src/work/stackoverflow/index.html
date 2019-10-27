@@ -12,7 +12,7 @@
     <h2>Stack Overflow</h2>
     <p class="meta">2017—</p>
 
-    <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. Eventually, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
+    <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. After that, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
 
     <h5>Table of contents</h5>
     <ol class="contents">
@@ -129,7 +129,7 @@
     <p>After launching our code of conduct, we needed a way to show that a user was new to Stack Overflow. This meant exploring ways to unify identy across the product. We shipped the smallest version of this, the hand waving saying they’re a new contributor.</p>
 
     <div class="background">
-      <img src="media/identity.png" width="1339">
+      <img src="media/identity.png" width="1352">
     </div>
 
     <p>My favorite part of product design is balancing quick wins with long-running redesigns. Simultaneously, the Community team was tasked with converting the site to a responsive layout, adding a persistent sidebar navigation, and refactoring our community’s bunch of themes.</p>
@@ -154,27 +154,41 @@
 
     <h4>Atomic CSS</h4>
 
-    <p>Toward the end of my time at GitHub, Diana Mounter had introduced a robust set of "utility" CSS classes. With some skepticism, I found they were an amazing approach at scale. Designers and engineers didn’t need to worry about where to place CSS or how to extend existing components (if they existed)—we could just chain together classes in the view itself. Fixing a bug in a certain view meant we’d be much less likely to introduce a bug elsewhere in the product, since atomic classes were scoped only to that element on the page you were modifying.</p>
+    <p>Toward the end of my time at GitHub, <a href="https://primer.style">Primer</a> had introduced a set of “utility” CSS classes. These were tiny classes that modified individual CSS properties. Since I’d been writing semantic classes for nearly a decade, I approached them with some skepticism. I quickly changed my mind after using a small set of utility classes. Designers and engineers didn’t need to worry about where to place CSS or how to extend existing components (if they existed)—we could just chain together classes in the view itself. Fixing a bug in one context meant we’d be much less likely to introduce a bug elsewhere in the product, since these utility classes were scoped only to that element on the page you were modifying.</p>
 
-    <p>Taking inspiration from <a href="https://tailwindcss.com">Tailwind</a>, <a href="http://tachyons.io">Tachyons</a> and <a href="https://basscss.com">Basscss</a>, I created a set of atomic utility classes that could express the entirety of the CSS spec without having to introduce any redundant CSS. This set of immutable atomic classes with the DNA of Stack Overflow made for an incredibly flexible entry point to a design system.</p>
+    <p>Taking inspiration from <a href="https://tailwindcss.com">Tailwind</a>, <a href="http://tachyons.io">Tachyons</a> and <a href="https://basscss.com">Basscss</a>, I created a set of atomic utility classes that could express the <em>entirety</em> of the CSS spec without having to introduce any redundant CSS. This set of immutable atomic classes made for an incredibly flexible entry point to a design system.</p>
 
     <p><a href="http://johnpolacek.com/">John Polacek</a> has the greatest argument for atomic CSS that I’ve ever seen. This <a href="http://johnpolacek.com/rethinking/">slide deck</a> is just so good, I think you should stop reading this post and check it out immediately.</p>
 
-    <p>Instead of shipping a few rigid components to start, I started building a full set of atomic classes. Traditional design systems initially have trouble scaling, often starting with button components, and, if your organization recognizes the value of a design system, moves beyond to things like navigation patterns. Often, these components are too rigid, and have to little resources to provide for every edgecase in a component. This leads to engineers and designers being frustrated with technical constraints, leading them to reject the system altogether.</p>
+    <p>Atomic CSS was a wildly different entry point to a design system. Other failed design system efforts focused on cataloging existing components in hopes of replacing them as soon as possible. An atomic CSS library could be used by designers and engineers <em>immediately</em>.</p>
 
-    <p>Atomic CSS was a wildly different entry point. It allowed our engineers and designers to use it <em>immediately</em>. Chaining together atomic classes allowed folks to build components that didn’t exist, and easily extend the components that did. After all, every component is perfect in the vacuum of a page with a white background, but as soon as those components are used elsewhere, it’s often the case that a component may actually need a drop shadow, or a slightly different shade of gray as a background. Atomic classes solved some of the common workflow pain points that our full stack engineers were already having every day at Stack Overflow.</p>
+    <p>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-“ <br>Nope.<br>“Ok one designer &amp; a dev to build the-“<br>Nope.<br>“Ok a couple days blocked off-“<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*</p>&mdash; Allison Grayce (@allisongrayce) <a href="https://twitter.com/allisongrayce/status/1035650093276254208?ref_src=twsrc%5Etfw">August 31, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p>
 
-    <p>I was met with similar skepticism that I’d felt on the other side at GitHub. I had to pitch switching a decade’s worth of writing traditionally-scoped BEM-based CSS. Ultimately, the benefits of a fixed, immutable CSS bundle would sell our bottomline-conscious engineers on our architecture team. Meticulous documentation further convinced engineers dipping their toes into writing CSS atomically. Designers were eventually swayed by taking a half an hour to re-implement existing user interfaces with our work-in-progress atomic CSS library. Personally, it took me actually using an atomic CSS library to understand that it’s a worthy approach, and our crew at Stack Overflow was no different.</p>
+    <p>Design systems often initially have trouble scaling beyond simple button components. If your organization recognizes the value of a design system, moves beyond to things like navigation patterns. These components are commonly too rigid, and teams have too little resources to provide for every edge case. This leads to engineers and designers being frustrated with their technical constraints, abandoning the system altogether.</p>
+
+    <p>Chaining together our atomic classes allowed folks to build components that didn’t yet exist, and easily extend the components that did. Every component is designed in the perfect vacuum of an empty white page. As soon as those components are placed next to other components or different layouts, it’s often the case that a component may actually need a drop shadow, or a slightly different shade of gray as a background.</p>
+
+    <p>I was met with similar skepticism that I’d felt at GitHub as a consumer of Primer. I had to pitch shifting our front-end culture from a decade’s worth of traditionally-scoped BEM-based CSS to our new bundle of atomic classes. Ultimately, the benefits of a fixed, immutable CSS bundle would sell our bottomline-conscious engineers on our architecture team. Meticulous documentation further convinced engineers building their first features atomically. Designers got on board after a few demos where we just sat down for a half an hour and implemented their in-progress mockups.</p>
+
+    <p>Personally, it took me actually using an atomic CSS library to understand that it’s a worthy approach, and our crew at Stack Overflow was no different.</p>
 
     <p>[[demo difference between atomic and traditional css]]</p>
 
-    <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Eventually, as the needs of our documentation grew, we switched to the absolutely incredible Netlify.</p>
+    <h4>Documentation</h4>
 
-    <p>Netlify allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
+    <img src="media/documentation.png" width="1262">
+
+    <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>.</p>
+
+    <p><a href="https://netlify.com">Netlify</a> allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
+
+    <p>At any time, users can preview all our changes we’ve got queued up for release by visiting <a href="https://develop.stackoverflow.design">develop.stackoverflow.design</a>. Every release is accompanied by a product development-wide email with release notes.</p>
 
     <h4>Components</h4>
 
-    <p>Now, the problem with atomic CSS is you often repeat yourself chaining together pretty verbose strings of classes to create things like buttons. These were the first things we turned into components. This list quickly grew into form elements, popovers, tables, and links. Very quickly Stacks began taking shape as a true design system. Of course, any one of these components could be overridden using atomic styling. This is incredibly important for those edge cases that the design system couldn’t reliably predict or guard against in the first place.</p>
+    <p>Now, the problem with atomic CSS is you often repeat yourself chaining together pretty verbose strings of classes to create simple things like <a href="https://stackoverflow.design/product/components/buttons">buttons</a>. These were the first things we turned into components. This list quickly grew into <a href="https://stackoverflow.design/product/components/inputs">form</a> elements, <a href="https://stackoverflow.design/product/components/tables">tables</a>, and <a href="https://stackoverflow.design/product/components/links">links</a>. Very quickly Stacks began taking shape as a true design system. Of course, any one of these components could be overridden using atomic styling. This is incredibly important for those edge cases that the design system couldn’t reliably predict or guard against in the first place.</p>
 
     <p>We chose a modified BEM approach, for historical reasons. Our components are namespaced with the <code>s-</code> prefix. <code>s-btn</code> applies initial button styling, while modifiers are expressed as <code>s-btn__primary</code>. If there are child elements, they’re expressed as <code>s-btn--number</code> and so forth. This pattern has suited us well, since when you know the internal logic of the class naming system, you can tell at a glance how the markup is structured by the CSS alone.</p>
 
@@ -187,9 +201,9 @@
 
     <p>Eventually, each of our components will have stock interactions provided by a corresponding JavaScript controller. On Stacks, we chose <a href="https://stimulusjs.org">Stimulus</a> as a dependency for our handing events, and assigning data attributes across our markup, regardless of if it’s coming from legacy views, the odd angular view, or via AJAX. Regardless of how our DOM is loaded, our <a href="https://stimulusjs.org">Stimulus</a>-powered components will have the interactivity engineers and users expect.</p>
 
-    <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our popovers component, it allows us to assign positioning, wire up the originating element, and handle closing events.</p>
+    <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our <a href="https://stackoverflow.design/product/popovers">popovers</a> component, it allows our engineers to assign positioning, wire up the originating element, and handle closing events.</p>
 
-    <p>Our <a href="https://stimulusjs.org">Stimulus</a> controllers are written using TypeScript that is compiled to vanilla JS. All credit goes to three engineers, all named Benjamin. Benjamin Dumke Von Der Er vetted and chose <a href="https://stimulusjs.org">Stimulus</a> as a framework. Ben Kelly wrote our popovers component and helped further our decisions there. Benjamin Hodgson helped convert our JavaScript controllers to TypeScript.</p>
+    <p>Our <a href="https://stimulusjs.org">Stimulus</a> controllers are written using TypeScript that is compiled to vanilla JS. All credit goes to three engineers, all named Ben. <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> vetted and chose <a href="https://stimulusjs.org">Stimulus</a> as a framework. He also wrote our first controllers and figured out our deployment strategy. <a href="https://www.benkelly.me">Benjamine Kelly</a> wrote our popovers component and helped further our API design patterns. <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> helped convert our JavaScript controllers to TypeScript.</p>
 
     <h4>Icon set</h4>
 
@@ -214,23 +228,25 @@
 
     <h4>Conditional Classes</h4>
 
-    <p>We borrowed heavily from <a href="https://tailwindcss.com">Tailwind</a> when designing the classes for conditional classes. Since Stack Overflow is transitioning to responsive views across the product, we needed a way to quickly override styling at the breakpoints our product has unified on. We offer a large, medium, and small breakpoints. These pixel values have been abstracted, allowing folks to use predefined max-width media query breakpoints represented by t-shirt sizes. A common example would be to apply <code>.md:fd-column</code> to a flex container with <code>d-flex</code>. This means, “At the medium breakpoint and smaller, switch the grid from columns to rows by applying <code>.fd-column</code>.”</p>
+    <p>We borrowed heavily from <a href="https://tailwindcss.com">Tailwind</a> when designing the class names for conditional classes. Since Stack Overflow is transitioning to responsive views across the product, we needed a way to quickly override styling at various breakpoints. We offer a large, medium, and small breakpoints. These pixel values have been abstracted, allowing folks to use predefined max-width media query breakpoints represented by t-shirt sizes. A common example would be to apply <code>.md:fd-column</code> to a flex container with <code>d-flex</code>. This means, “At the medium breakpoint and smaller, switch the grid from columns to rows by applying <code>.fd-column</code>.”</p>
 
     <p>Additionally, we offer conditional classes for hover, focus, and printing. For print, this often means adding <code>p:d-none</code>, simply hiding an element when printing.</p>
 
     <h4>Legitimizing Stacks</h4>
 
-    <p>Like most design systems, Stacks started as a side project. In between project work, I was first able to systematize our icon set. I was then able to experiment with atomic CSS classes and begin documenting them in a private repo. This allowed me and other collaborators interested in the design system to share our ideas about how these classes would be named, and how folks might interact with any APIs we’d offer.</p>
+    <p>Like most design systems, Stacks started as a side project. In between normal product design feature work, I was first able to systematize our icon set. I was then able to experiment with atomic CSS classes and begin documenting them in a private repo. This allowed me and other collaborators interested in the design system to share our ideas about how these classes would be named, and how folks might interact with any APIs we’d offer.</p>
 
-    <p>Just prior to when frontend work on our newest flagship product, Teams, was slated to begin, Stacks dropped its first versions into production. This allowed each crew assigned to building Teams to rapidly build the onboarding, product, and admin views using a fixed atomic bundle. No new CSS had to be written or shipped— we only needed to chain our atomic classes together in the view themselves. Designers could assemble user interfaces in Codepens before the backends were ready.</p>
+    <p>Just prior to when frontend work on our newest flagship product, Teams, was slated to begin, Stacks dropped its first versions into production. This allowed each team assigned to building our new product to rapidly build the onboarding, questions, and admin views using our fixed atomic bundle. No new CSS had to be written or shipped—we only needed to chain our atomic classes together in the view themselves. Designers could assemble user interfaces in Codepens before the backends were ready.</p>
 
     <p>Stacks proved itself as a force multiplier very quickly in building the product, but soon after was put to the test in our marketing pages. Entire suites of marketing pages launched to talk about Teams without shipping a <em>new</em> line of CSS.</p>
+
+    <img src="media/marketing.png" width="1354">
 
     <p>For every hour that I’d spent systematizing things with Stacks, each engineer got at least an hour back. Stacks very quickly paid for itself, allowing me to more effectively argue moving from working as a product designer on <em>specific</em> features to working on Stacks itself. After a year of working on Stacks in a part-time fashion, I was able to convince management of its value. As of January 1, 2019, I’m Stack Overflow’s Design Systems Lead.</p>
 
     <h4>Figma</h4>
 
-    <p>Stack Overflow has traditionally employed "full stack" designers, meaning each designer we hired was also able to ship their own frontends. We’ve since started diversifying our skill levels, meaning that our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on Sketch. While I absolutely adore Sketch, I found the distributed document model of Figma incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Using the design surface as the presentation layer itself, was incredibly powerful. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
+    <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on Sketch. While I absolutely adore Sketch, I found the distributed document model of Figma incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
 
     <p>It took a lot of internal evangelizing to switch to Figma, but since delivering all our shared components from our design system to components in our <em>design</em> tool, the case was much easier to make. Product designers, regardless of their ability to code, can now drag components from our codebase to their canvases, quickly assembling their features for handoff to engineers.</p>
 
