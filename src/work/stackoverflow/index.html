@@ -269,7 +269,7 @@
 
     <p>Eventually, each of our components will have stock interactions provided by a corresponding JavaScript controller. On Stacks, we chose <a href="https://stimulusjs.org">Stimulus</a> as a dependency for our handing events, and assigning data attributes across our markup, regardless of if it’s coming from legacy views, the odd angular view, or via AJAX. Regardless of how our DOM is loaded, our <a href="https://stimulusjs.org">Stimulus</a>-powered components will have the interactivity engineers and users expect.</p>
 
-    <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our <a href="https://stackoverflow.design/product/popovers">popovers</a> component, it allows our engineers to assign positioning, wire up the originating element, and handle closing events.</p>
+    <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our <a href="https://stackoverflow.design/product/components/popovers">popovers</a> component, it allows our engineers to assign positioning, wire up the originating element, and handle closing events.</p>
 
     <p>Our <a href="https://stimulusjs.org">Stimulus</a> controllers are written using TypeScript that is compiled to vanilla JS. All credit goes to three engineers, all named Ben 😛. <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> vetted and chose <a href="https://stimulusjs.org">Stimulus</a> as a framework. He also wrote our first controllers and figured out our deployment strategy. <a href="https://www.benkelly.me">Benjamine Kelly</a> wrote our popovers component and helped further our API design patterns. <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> helped convert our JavaScript controllers to TypeScript.</p>
 
@@ -314,9 +314,12 @@
 
     <h4 id="figma">Figma</h4>
 
-    <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on Sketch. While I absolutely adore Sketch, I found the distributed document model of Figma incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
+    <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on <a href="https://sketch.com">Sketch</a>. While I absolutely adore Sketch, I found the distributed document model of <a href="https://figma.com">Figma</a> incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
 
-    <img src="media/figma.png" width="494">
+    <div class="caption">
+      <img src="media/figma.png" width="494">
+      The humble beginnings of our Figma components
+    </div>
 
     <p>It took a lot of internal evangelizing to switch to Figma, but since delivering all our shared components from our design system to components in our <em>design</em> tool, the case was much easier to make. Product designers, regardless of their ability to code, can now drag components from our codebase to their canvases, quickly assembling their features for handoff to engineers.</p>
 
@@ -336,7 +339,7 @@
 
     <p>Stacks’ largest influence is cultural. Our mindset has shifted from shipping single features within a product silo, to shipping larger components for all to use. As we move into 2020, I plan on continuing to advocate for Stacks, to pitch that our design system runs all of frontend at Stack Overflow.</p>
 
-    <p>Stacks is open source, and pull requests are welcome. If you want to see our approach to things, have a gander at our <a href="https://github.com/stackexchange/Stacks">repository</a> or our <a href="https://github.com/StackExchange/Stacks/projects/1">roadmap</a>.</p>
+    <p><a href="https://stackoverflow.design">Stacks</a> is open source—pull requests are welcome. If you want to see our approach to things, have a gander at our <a href="https://github.com/stackexchange/Stacks">repository</a> or our <a href="https://github.com/StackExchange/Stacks/projects/1">roadmap</a>.</p>
 
     <hr>
 
