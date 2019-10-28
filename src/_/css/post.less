@@ -197,6 +197,7 @@ ol,
 ul,
 blockquote,
 img,
+video,
 hr,
 svg,
 .caption,
@@ -206,7 +207,8 @@ svg,
 }
 
 img,
-svg {
+svg,
+video {
   max-width: 100%;
   display: block;
 }
@@ -235,6 +237,8 @@ svg {
 // Let's add some overrides to positioning depending on context
 p + img,
 img + p,
+p + video,
+video + p,
 p + .caption,
 .caption + p,
 ol + .caption,
@@ -248,11 +252,13 @@ p + h3,
 ol + h3,
 ul + h3,
 img + h3,
+video + h3
 .caption + h3,
 ol + h4,
 ul + h4,
 p + h4,
 img + h4,
+video + h4,
 .caption + h4 {
   margin-top: @margin * 3;
 }
