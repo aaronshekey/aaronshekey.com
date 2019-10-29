@@ -19,11 +19,13 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "^1.0.4",
+    "grunt-concurrent": "^3.0.0",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-less": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-includes": "^0.5.4",
     "grunt-rsync": "^3.0.0"
   }
