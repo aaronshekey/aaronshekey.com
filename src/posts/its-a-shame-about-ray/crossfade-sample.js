@@ -16,8 +16,8 @@
 
 var CrossfadeSample = function() {
   loadSounds(this, {
-    original: 'media/confetti-original.mp3',
-    aaron: 'media/confetti.mp3'
+    original: 'media/02confetti-original.mp3',
+    aaron: 'media/02confetti.mp3'
   });
   this.isPlaying = false;
 }
