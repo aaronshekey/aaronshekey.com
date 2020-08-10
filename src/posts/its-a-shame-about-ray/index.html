@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    include "header.html"
+
+    <link rel="stylesheet" href="/_/css/post.css">
+
+    <title>It’s a Shame About Ray - Aaron Shekey</title>
+  </head>
+  <body>
+    <h2>It’s a Shame About Ray</h2>
+    <p class="meta">August 2020</p>
+
+    <button>Previous Track</button>
+    <button onclick="sample.toggle();">Play / Pause</button>
+    <button>Next Track</button>
+
+    <p>
+      Original <input type="range" min="0" max="100" value="100" oninput="sample.crossfade(this);"> 30% worse
+    </p>
+
+    <ol>
+      <li><button>1 Rockin stroll</button></li>
+      <li><button>2 Confetti</button></li>
+      <li><button>3 It’s a Shame About Ray</button></li>
+      <li><button>4 Rudderless</button></li>
+      <li><button>5 My Drug Buddy</button></li>
+      <li><button>6 The Turnpike Down</button></li>
+      <li><button>7 Bit Part</button></li>
+      <li><button>8 Alison’s Starting to Happen</button></li>
+      <li><button>9 Hannah & Gabbi</button></li>
+      <li><button>10 Kitchen</button></li>
+      <li><button>11 Ceiling Fan in My Spoon</button></li>
+      <li><button>12 Frank Mills</button></li>
+    </ol>
+
+    <hr>
+
+    include "intro.html"
+    include "elsewhere.html"
+
+    include "footer.html"
+
+    <script src="shared.js"></script>
+    <script src="crossfade-sample.js"></script>
+    <script>
+      var sample = new CrossfadeSample();
+    </script>
+  </body>
+</html>
