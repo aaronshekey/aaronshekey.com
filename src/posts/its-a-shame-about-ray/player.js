@@ -36,7 +36,10 @@ class Track {
 
   disconnect() {
     this.originalAudioElement.pause();
+    this.originalAudioElement.currentTime = 0;
     this.coverAudioElement.pause();
+    this.coverAudioElement.currentTime = 0;
+    this.playing = false;
   }
 }
 
