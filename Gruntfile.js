@@ -79,7 +79,7 @@ module.exports = function(grunt) {
     purgecss: {
       my_target: {
         options: {
-          content: ['./src/index.html'],
+          content: ['./src/**/*.html'],
           whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500']
         },
         files: {
