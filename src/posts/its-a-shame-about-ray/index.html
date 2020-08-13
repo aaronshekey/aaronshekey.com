@@ -4,7 +4,7 @@
   <head>
     include "header.html"
 
-    <link rel="stylesheet" href="/_/css/post.css">
+    <link rel="stylesheet" href="/_/css/post.css" />
 
     <title>It’s a Shame About Ray - Aaron Shekey</title>
   </head>
@@ -14,17 +14,23 @@
 
     <p>
       <button>Previous Track</button>
-      <button onclick="sample.toggle();">Play / Pause</button>
+      <button id="play">Play / Pause</button>
       <button>Next Track</button>
-    <p>
+    </p>
+
+    <p></p>
 
     <p>
-      Original <input type="range" min="0" max="100" value="100" oninput="sample.crossfade(this);"> 30% worse
+      Original
+      <input type="range" min="0" max="100" value="100" oninput="sample.crossfade(this);" />
+      30% worse
     </p>
 
     <ol>
       <li><button>1 Rockin stroll</button></li>
       <li><button>2 Confetti</button></li>
+      <audio class="track-2 original" src="media/02confetti-original.mp3"></audio>
+      <audio class="track-2" src="media/02confetti.mp3"></audio>
       <li><button>3 It’s a Shame About Ray</button></li>
       <li><button>4 Rudderless</button></li>
       <li><button>5 My Drug Buddy</button></li>
@@ -37,17 +43,10 @@
       <li><button>12 Frank Mills</button></li>
     </ol>
 
-    <hr>
+    <hr />
 
-    include "intro.html"
-    include "elsewhere.html"
-
-    include "footer.html"
+    include "intro.html" include "elsewhere.html" include "footer.html"
 
     <script src="shared.js"></script>
-    <script src="crossfade-sample.js"></script>
-    <script>
-      var sample = new CrossfadeSample();
-    </script>
   </body>
 </html>
