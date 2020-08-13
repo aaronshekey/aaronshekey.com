@@ -28,5 +28,8 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-includes": "^0.5.4",
     "grunt-rsync": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt-purgecss": "^2.3.0"
   }
 }
