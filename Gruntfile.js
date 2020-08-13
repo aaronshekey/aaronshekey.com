@@ -39,20 +39,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    rsync: {
-      options: {
-        exclude: [".DS_Store"],
-        recursive: true
-      },
-      production: {
-        options: {
-          src: 'build/',
-          dest: '/srv/users/serverpilot/apps/aaronshekey/public',
-          host: 'serverpilot@45.55.179.159',
-          delete: false
-        }
-      }
-    },
     less: {
       build: {
         options: {
@@ -109,7 +95,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-rsync');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-concurrent');
@@ -118,5 +103,4 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['build', 'concurrent:serve']);
   grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes']);
-  grunt.registerTask('deploy', ['rsync:production']);
 };
