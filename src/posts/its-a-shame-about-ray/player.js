@@ -1,6 +1,6 @@
 class Track {
   constructor(trackNumber) {
-    this.audioContext = new AudioContext();
+    this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     this.playing = false;
     this.originalAudioElement = document.querySelector(`audio.track-${trackNumber}.original`);
     this.originalGainNode = this.audioContext.createGain();
