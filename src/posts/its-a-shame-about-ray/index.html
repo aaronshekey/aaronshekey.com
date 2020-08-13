@@ -22,17 +22,23 @@
 
     <p>
       Original
-      <input type="range" min="0" max="100" value="100" oninput="sample.crossfade(this);" />
+      <input id="crossfader" type="range" min="0" max="100" value="100" />
       30% worse
     </p>
 
     <ol>
-      <li><button>1 Rockin stroll</button></li>
-      <li><button>2 Confetti</button></li>
+      <li><button class="track" data-track="1">1 Rockin stroll</button></li>
+      <audio class="track-1 original" src="media/01rockinstroll-original.mp3"></audio>
+      <audio class="track-1 cover" src="media/01rockinstroll.mp3"></audio>
+      <li><button class="track" data-track="2">2 Confetti</button></li>
       <audio class="track-2 original" src="media/02confetti-original.mp3"></audio>
-      <audio class="track-2" src="media/02confetti.mp3"></audio>
-      <li><button>3 It’s a Shame About Ray</button></li>
-      <li><button>4 Rudderless</button></li>
+      <audio class="track-2 cover" src="media/02confetti.mp3"></audio>
+      <li><button class="track" data-track="3">3 It’s a Shame About Ray</button></li>
+      <audio class="track-3 original" src="media/03itsashameabouttay-original.mp3"></audio>
+      <audio class="track-3 cover" src="media/03itsashameaboutray.mp3"></audio>
+      <li><button class="track" data-track="4">4 Rudderless</button></li>
+      <audio class="track-4 original" src="media/04rudderless-original.mp3"></audio>
+      <audio class="track-4 cover" src="media/04rudderless.mp3"></audio>
       <li><button>5 My Drug Buddy</button></li>
       <li><button>6 The Turnpike Down</button></li>
       <li><button>7 Bit Part</button></li>
