@@ -2,82 +2,166 @@
 
 <html>
   <head>
-    include "header.html"
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+    <meta name="description" content="Aaron Shekey is a product designer and musician in Minneapolis, MN.">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/@stackoverflow/stacks/dist/css/stacks.min.css">
     <link rel="stylesheet" href="/_/css/home.css">
 
     <title>Aaron Shekey</title>
   </head>
-  <body>
-    <div class="container">
-      include "intro.html"
-    </div>
+  <body class="theme-system ff-roboto">
+    <ul class="list-reset fs-subheading ta-center my128">
+      <li class="d-inline-block mx24"><a class="fc-black-300 h:fc-black-500" href="/work/">Work</a></li>
+      <li class="d-inline-block mx24"><a class="fc-black-300 h:fc-black-500" href="/posts/">Posts</a></li>
+      <li class="d-inline-block mx24"><a class="fc-black-300 h:fc-black-500" href="/about">About</a></li>
+    </ul>
 
-    <div class="container posts">
-      <div class="post">
-        <h3><a href="https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/">Building dark mode on Stack Overflow</a></h3>
-        <p class="excerpt">Way too much detail on how I shipped dark mode to Stack Overflow.</p>
-        <p class="meta">March 2020</p>
+    <h1 class="fs-insane fw-medium ta-center fc-black-700 mb0 mtn48">Aaron Shekey</h1>
+    <p class="mx-auto wmx7 fs-headline2 fc-black-500 mtn12 mb128">I help design and create things like startups, websites, apps, songs, and records.</p>
+
+    <div class="mx-auto wmx11 d-flex jc-space-between ai-start">
+      <div class="wmx5 order-last">
+        <a class="d-flex fc-orange h:bg-orange h:fc-white p24 bar-lg mb48" href="/work/stackoverflow/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="37" viewBox="0 0 40 37">
+            <path d="M23.8 2L26.5 0L36.4 13.3L33.7 15.3L23.8 2ZM18.3 7.8L31 18.4L33.1 15.9L20.4 5.3L18.3 7.8ZM29.1 22.2L14.1 15.2L15.5 12.2L30.5 19.2L29.1 22.2ZM28.7844 23.041L28.0908 25.9902L12 23L12.6799 19.687L28.7844 23.041ZM12 30H28V27H12V30ZM31 24V33H9V24H5V37H35V24H31Z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb8">
+              <h2 class="fs-headline2 mb0 fw-medium">Stack Overflow</h2>
+              <div class="fs-subheading">2017—</div>
+            </div>
+            <div class="fs-title">I lead front-end at Stack Overflow by building its design system, and continually refactoring its user interface.</div>
+          </div>
+        </a>
+
+
+        <a class="d-flex fc-green h:bg-green h:fc-white p24 bar-lg mb48" href="/work/hum/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="43" viewBox="0 0 40 43">
+            <path d="M28.448 13.3233L12.6153 16.5023V0H6.10992V33.116C5.57815 33.2659 4.73004 33.4658 4.20216 33.7253C0.92034 35.3513 -0.799169 38.5303 0.363344 40.8367C1.52586 43.1431 5.13178 43.6908 8.4136 42.0648C10.9502 40.8117 12.5474 38.6321 12.6153 36.6333V22.6796L28.4461 19.5006V29.5065C27.9298 29.6564 27.0875 29.8505 26.5868 30.1023C23.3031 31.7283 21.5855 34.9073 22.748 37.2137C23.9105 39.5201 27.5145 40.0679 30.7983 38.4419C33.3814 37.1618 34.9961 34.915 35 32.8931V0H28.448V13.3233Z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb8">
+              <h2 class="fs-headline2 mb0 fw-medium">Hum</h2>
+              <div class="fs-subheading">2015—</div>
+            </div>
+            <div class="fs-title">I co-founded, designed, and built iPhone’s best app for songwriting.</div>
+          </div>
+        </a>
+
+
+        <a class="d-flex fc-blue h:bg-blue h:fc-white p24 bar-lg mb48" href="/work/github/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="39" viewBox="0 0 40 39">
+            <path d="M20 0C8.95 0 0 8.94697 0 19.9932C0 28.8402 5.725 36.3127 13.675 38.9618C14.675 39.1367 15.05 38.5369 15.05 38.0121C15.05 37.5373 15.025 35.9628 15.025 34.2884C10 35.2131 8.7 33.0638 8.3 31.9392C8.075 31.3644 7.1 29.59 6.25 29.1151C5.55 28.7403 4.55 27.8156 6.225 27.7906C7.8 27.7656 8.925 29.2401 9.3 29.8399C11.1 32.8639 13.975 32.0142 15.125 31.4893C15.3 30.1898 15.825 29.3151 16.4 28.8152C11.95 28.3154 7.3 26.591 7.3 18.9436C7.3 16.7693 8.075 14.9699 9.35 13.5704C9.15 13.0706 8.45 11.0213 9.55 8.2722C9.55 8.2722 11.225 7.74738 15.05 10.3215C16.65 9.87166 18.35 9.64673 20.05 9.64673C21.75 9.64673 23.45 9.87166 25.05 10.3215C28.875 7.72238 30.55 8.2722 30.55 8.2722C31.65 11.0213 30.95 13.0706 30.75 13.5704C32.025 14.9699 32.8 16.7443 32.8 18.9436C32.8 26.616 28.125 28.3154 23.675 28.8152C24.4 29.44 25.025 30.6396 25.025 32.514C25.025 35.1881 25 37.3374 25 38.0121C25 38.5369 25.375 39.1617 26.375 38.9618C34.5161 36.2144 39.9978 28.5828 40 19.9932C40 8.94697 31.05 0 20 0V0Z"/>
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb8">
+              <h2 class="fs-headline2 mb0 fw-medium">GitHub</h2>
+              <div class="fs-subheading">2016—2017</div>
+            </div>
+            <div class="fs-title">I helped build a bunch of features at GitHub, but most notably code review.</div>
+          </div>
+        </a>
+
+        <a class="d-flex fc-red h:bg-red h:fc-white p24 bar-lg" href="/work/adobe/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="31" viewBox="0 0 40 31">
+            <path d="M22.949 31L20.414 24.7542H14.183L20.021 11.4135L28.514 31H22.949ZM15.326 0H2V31L15.326 0ZM38 0H24.674L38 31V0Z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb8">
+              <h2 class="fs-headline2 mb0 fw-medium">Adobe</h2>
+              <div class="fs-subheading">2011—2015</div>
+            </div>
+            <div class="fs-title">I created Reflow, a forward-looking app for designing responsively.</div>
+          </div>
+        </a>
       </div>
-      <div class="post">
-        <h3><a href="/posts/custom-emojis/">Custom Emojis</a></h3>
-        <p class="excerpt">Let’s get one thing straight. The Party Parrot is played.</p>
-        <p class="meta">May 2019</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/parkmobile-user-experience/">ParkMobile User Experience</a></h3>
-        <p class="excerpt">Parking using ParkMobile’s app leaves a lot to be desired. I offer some sensible improvements to their app.</p>
-        <p class="meta">April 2019</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/video-conferencing-with-a-proper-camera/">Video Conferencing with a Proper Camera</a></h3>
-        <p class="excerpt">I’ve switched from a built-in webcam to a proper camera and lens. This is how I did it.</p>
-        <p class="meta">November 2018</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/write-what-you-want/">Write What You Want</a></h3>
-        <p class="excerpt">I’ve edited a bit of previously-unreleased score from Almost Famous from a high-quality source for your enjoyment.</p>
-        <p class="meta">February 2018</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/automatic-comping-in-logic-pro/">Automatic Comping in Logic Pro</a></h3>
-        <p class="excerpt">Comping audio is a time-consuming process. I’ve mocked up a dream feature for automatic comping based on pitch and rhythym in Apple’s Logic Pro X.</p>
-        <p class="meta">February 2017</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/cabronita-deluxe/">Cabronita Deluxe</a></h3>
-        <p class="excerpt">I recently designed a guitar from the ground up, based entirely on my own contradictory tastes. I’ve dubbed it the Cabronita Deluxe.</p>
-        <p class="meta">May 2016</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/diarrhea-is-the-new-fuck/">Diarrhea is the New Fuck</a></h3>
-        <p class="excerpt">In the spring of 2014, I fell head over heels for a band whose name I’d only laughed about. Until I heard them.</p>
-        <p class="meta">April 2016</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/troy-mcclure-imdb/">Troy McClure’s IMDb Profile</a></h3>
-        <p class="excerpt">As a huge Simpsons fan, I did my best to build an accurate IMDb profile for Troy McClure. This combines references from the TV show, comic books, and video games.</p>
-        <p class="meta">December 2015</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/americas-finest-news-source/">America’s Finest News Source</a></h3>
-        <p class="excerpt">The Onion is an unwavering bastion of emotional truth. With every week, good news or bad, it will deliver 12 headlines that perfectly tap into the emotional pulse of its readership. “America’s Finest News Source.” You’re god damned right.</p>
-        <p class="meta">October 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/subway/">Optimizing Subway</a></h3>
-        <p class="excerpt">At Subway’s scale, even tiny optimizations can have profound effects on the environment, the diner’s experience, and the franchise’s bottom line.</p>
-        <p class="meta">July 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/the-hot-dog-button/">The Hot Dog Button</a></h3>
-        <p class="excerpt">I recently had the privilege of remodeling my kitchen. It ended up being much more superficial than I’d originally hoped since appliance design has been hindered by total-nonsense features.</p>
-        <p class="meta">January 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/its-what-you-leave-out/">It’s What You Leave Out</a></h3>
-        <p class="excerpt">“It’s not what you put into it. It’s what you leave out … Yeah, that’s rock n’ roll.” This thinking can be applied to everything—rock n’ roll, software, even skylines.</p>
-        <p class="meta">September 2013</p>
+
+      <div class="wmx5 mt32">
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mt16 mb48 bar-lg" href="https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/">
+          <div class="fs-body3 mb4 fc-black-300">March 2020</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Building dark mode on Stack Overflow</h3>
+          <div class="fs-subheading fc-black-400">Way too much detail on how I shipped dark mode to Stack Overflow.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/custom-emojis/">
+          <div class="fs-body3 mb4 fc-black-300">May 2019</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Custom Emojis</h3>
+          <div class="fs-subheading fc-black-400">Let’s get one thing straight. The Party Parrot is played.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/parkmobile-user-experience/">
+          <div class="fs-body3 mb4 fc-black-300">April 2019</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">ParkMobile User Experience</h3>
+          <div class="fs-subheading fc-black-400">Parking using ParkMobile’s app leaves a lot to be desired. I offer some sensible improvements to their app.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/video-conferencing-with-a-proper-camera/">
+          <div class="fs-body3 mb4 fc-black-300">November 2018</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Video Conferencing with a Proper Camera</h3>
+          <div class="fs-subheading fc-black-400">I’ve switched from a built-in webcam to a proper camera and lens. This is how I did it.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/write-what-you-want/">
+          <div class="fs-body3 mb4 fc-black-300">February 2018</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Write What You Want</h3>
+          <div class="fs-subheading fc-black-400">I’ve edited a bit of previously-unreleased score from Almost Famous from a high-quality source for your enjoyment.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/automatic-comping-in-logic-pro/">
+          <div class="fs-body3 mb4 fc-black-300">February 2017</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Automatic Comping in Logic Pro</h3>
+          <div class="fs-subheading fc-black-400">Comping audio is a time-consuming process. I’ve mocked up a dream feature for automatic comping based on pitch and rhythym in Apple’s Logic Pro X.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/cabronita-deluxe/">
+          <div class="fs-body3 mb4 fc-black-300">May 2016</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Cabronita Deluxe</h3>
+          <div class="fs-subheading fc-black-400">I recently designed a guitar from the ground up, based entirely on my own contradictory tastes. I’ve dubbed it the Cabronita Deluxe.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/diarrhea-is-the-new-fuck/">
+          <div class="fs-body3 mb4 fc-black-300">April 2016</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Diarrhea is the New Fuck</h3>
+          <div class="fs-subheading fc-black-400">In the spring of 2014, I fell head over heels for a band whose name I’d only laughed about. Until I heard them.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/troy-mcclure-imdb/">
+          <div class="fs-body3 mb4 fc-black-300">December 2015</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Troy McClure’s IMDb Profile</h3>
+          <div class="fs-subheading fc-black-400">As a huge Simpsons fan, I did my best to build an accurate IMDb profile for Troy McClure. This combines references from the TV show, comic books, and video games.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/americas-finest-news-source/">
+          <div class="fs-body3 mb4 fc-black-300">October 2014</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">America’s Finest News Source</h3>
+          <div class="fs-subheading fc-black-400">The Onion is an unwavering bastion of emotional truth. With every week, good news or bad, it will deliver 12 headlines that perfectly tap into the emotional pulse of its readership. “America’s Finest News Source.” You’re god damned right.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/subway/">
+          <div class="fs-body3 mb4 fc-black-300">July 2014</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">Optimizing Subway</h3>
+          <div class="fs-subheading fc-black-400">At Subway’s scale, even tiny optimizations can have profound effects on the environment, the diner’s experience, and the franchise’s bottom line.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/the-hot-dog-button/">
+          <div class="fs-body3 mb4 fc-black-300">January 2014</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">The Hot Dog Button</h3>
+          <div class="fs-subheading fc-black-400">I recently had the privilege of remodeling my kitchen. It ended up being much more superficial than I’d originally hoped since appliance design has been hindered by total-nonsense features.</div>
+        </a>
+
+        <a class="d-block fc-black-700 h:bg-black-050 h:fc-black-900 p24 mb48 bar-lg" href="/posts/its-what-you-leave-out/">
+          <div class="fs-body3 mb4 fc-black-300">September 2013</div>
+          <h3 class="fs-headline1 mb4 fw-medium lh-sm">It’s What You Leave Out</h3>
+          <div class="fs-subheading fc-black-400">“It’s not what you put into it. It’s what you leave out … Yeah, that’s rock n’ roll.” This thinking can be applied to everything—rock n’ roll, software, even skylines.</div>
+        </a>
       </div>
     </div>
 
