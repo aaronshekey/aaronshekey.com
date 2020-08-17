@@ -59,6 +59,7 @@ const main = function () {
       }
       activeTrack = tracks[button.dataset.track];
       activeTrack.playOrPause();
+      activeTrack.adjustCrossfade(crossfader.value);
     });
   });
 
