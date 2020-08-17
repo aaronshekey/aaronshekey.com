@@ -1,5 +1,6 @@
 class Track {
   constructor(trackNumber) {
+    this.trackNumber = trackNumber;
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     this.playing = false;
     this.originalAudioElement = document.querySelector(`audio.track-${trackNumber}.original`);
@@ -46,20 +47,29 @@ class Track {
 const main = function () {
   const crossfader = document.querySelector("#crossfader");
   const playButton = document.querySelector("#play");
+  const previousButton = document.querySelector("#previous");
+  const nextButton = document.querySelector("#next");
   const tracks = {};
   tracks[1] = new Track(1);
   let activeTrack = tracks[1];
-  activeTrack.adjustCrossfade(crossfader.value);
+
+  const play = function (nextTrackNumber) {
+    activeTrack.disconnect();
+
+    console.log(nextTrackNumber);
+    if (!tracks[nextTrackNumber]) {
+      tracks[nextTrackNumber] = new Track(nextTrackNumber);
+    }
+    track = tracks[nextTrackNumber];
+    track.playOrPause();
+    track.adjustCrossfade(crossfader.value);
+
+    return track;
+  };
 
   document.querySelectorAll("button.track").forEach((button) => {
     button.addEventListener("click", () => {
-      activeTrack.disconnect();
-      if (!tracks[button.dataset.track]) {
-        tracks[button.dataset.track] = new Track(button.dataset.track);
-      }
-      activeTrack = tracks[button.dataset.track];
-      activeTrack.playOrPause();
-      activeTrack.adjustCrossfade(crossfader.value);
+      activeTrack = play(button.dataset.track);
     });
   });
 
@@ -69,6 +79,16 @@ const main = function () {
 
   crossfader.addEventListener("input", function () {
     activeTrack.adjustCrossfade(crossfader.value);
+  });
+
+  nextButton.addEventListener("click", function () {
+    const trackNumber = Math.min(activeTrack.trackNumber + 1, 10);
+    activeTrack = play(trackNumber);
+  });
+
+  previousButton.addEventListener("click", function () {
+    const trackNumber = Math.max(1, activeTrack.trackNumber - 1);
+    activeTrack = play(trackNumber);
   });
 };
 
