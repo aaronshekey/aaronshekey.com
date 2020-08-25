@@ -84,7 +84,7 @@ module.exports = function(grunt) {
       my_target: {
         options: {
           content: ['./src/**/*.html'],
-          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500']
+          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500', 'md:fd-column', 'md:ai-center', 'md:mb48', 'sm:mb48', 'sm:mt48', 'sm:fd-column', 'sm:mb24']
         },
         files: {
           'build/_/css/stacks.css': ['src/_/css/stacks.css']
