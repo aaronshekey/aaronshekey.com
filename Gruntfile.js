@@ -57,6 +57,7 @@ module.exports = function(grunt) {
           port: 3030, // custom port
           base: 'build/', // current directory for 'index.html' is root
           keepalive: true, // keep the server alive indefinitely
+          livereload: true,
         }
       }
     },
@@ -64,6 +65,9 @@ module.exports = function(grunt) {
       scripts: {
         files: ['src/**/*'],
         tasks: ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes'],
+        options: {
+          livereload: true,
+        },
       },
     },
     concurrent: {
