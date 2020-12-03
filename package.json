@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "grunt",
-    "build": "grunt build",
-    "deploy": "grunt deploy"
+    "build": "grunt build"
   },
   "description": "My personal website https://aaronshekey.com/",
   "bugs": {
@@ -26,7 +25,6 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-includes": "^0.5.4",
-    "grunt-rsync": "^3.0.0"
+    "grunt-includes": "^0.5.4"
   }
 }
