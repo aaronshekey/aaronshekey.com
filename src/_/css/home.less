@@ -8,10 +8,42 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 1627px;
+
+  @media (max-width: 980px) {
+    background-size: 1200px;
+  }
 }
 
-.fs-insane {
-  font-size: 11.07rem;
+.header {
+  height: 608px;
+  padding-top: 96px;
+
+  @media (max-width: 980px) {
+    padding-top: 64px;
+    height: 448px;
+  }
+
+  .header-text {
+    margin-top: 48px;
+    font-size: 11.07rem;
+
+    @media (max-width: 980px) {
+      margin-top: 32px;
+      font-size: 8rem;
+    }
+  }
+
+  .subheader-text {
+    font-size: 2.61538rem;
+    max-width: 56.7179487rem;
+    margin-top: -24px;
+
+    @media (max-width: 980px) {
+      font-size: 2rem;
+      max-width: 40rem;
+      margin-top: -12px;
+    }
+  }
 }
 
 .ff-roboto {
