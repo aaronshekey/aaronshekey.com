@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['src/**/*'],
-        tasks: ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes'],
+        tasks: ['clean', 'copy', 'less', 'cssmin', 'includes'],
         options: {
           livereload: true,
         },
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
       my_target: {
         options: {
           content: ['./src/**/*.html'],
-          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500', 'md:fd-column', 'md:ai-center', 'md:mb48', 'sm:mb48', 'sm:mt48', 'sm:fd-column', 'sm:mb24']
+          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500', 'md:fd-column', 'md:ai-center', 'md:mb48', 'md:mb64', 'md:ml0', 'sm:mb48', 'sm:mt48', 'sm:fd-column', 'sm:mb24', 'lg:order-last']
         },
         files: {
           'build/_/css/stacks.css': ['src/_/css/stacks.css']
@@ -106,5 +106,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['build', 'concurrent:serve']);
-  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes']);
+  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'includes']);
 };
