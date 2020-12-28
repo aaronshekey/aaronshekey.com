@@ -63,7 +63,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['src/**/*'],
-        tasks: ['clean', 'copy', 'less', 'cssmin', 'includes'],
+        tasks: ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'includes'],
         options: {
           livereload: true,
         },
@@ -105,5 +105,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['build', 'concurrent:serve']);
-  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes']);
+  grunt.registerTask('build', ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'includes']);
 };
