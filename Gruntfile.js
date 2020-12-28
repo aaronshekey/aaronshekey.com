@@ -83,7 +83,7 @@ module.exports = function(grunt) {
       my_target: {
         options: {
           content: ['./src/**/*.html'],
-          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500', 'md:fd-column', 'md:ai-center', 'md:mb48', 'md:mb64', 'md:ml0', 'sm:mb48', 'sm:mt48', 'sm:fd-column', 'sm:mb24', 'lg:order-last']
+          whitelist: ['h:fc-white', 'h:bg-black-050', 'h:fc-black-900', 'h:fc-black-500', 'md:order-first', 'md:fd-column', 'md:ai-center', 'md:jc-start', 'md:p0', 'md:mb32', 'md:order-last', 'md:ta-center', 'md:mr16', 'md:mb48', 'md:mt64', 'md:mb64', 'md:mb96', 'md:ml0', 'sm:ml12', 'sm:p12', 'sm:mb48', 'sm:mt48', 'sm:fd-column', 'sm:mb24', 'lg:order-last', 'h:bg-black-800', 'h:fc-white', 'h:fc-black-500', 'h:fc-black-900', 'h:bg-black-050', 'h:fc-black-700']
         },
         files: {
           'build/_/css/stacks.css': ['src/_/css/stacks.css']
@@ -105,5 +105,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['build', 'concurrent:serve']);
-  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'includes']);
+  grunt.registerTask('build', ['clean', 'copy', 'less', 'cssmin', 'purgecss', 'includes']);
 };
