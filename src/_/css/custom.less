@@ -1,0 +1,664 @@
+@blue: #73c8d8;
+@red: #f77a69;
+@green: #9fc44a;
+@orange: #fda34e;
+@margin: 64px;
+
+body.home {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1627px;
+
+  @media (max-width: 980px) {
+    background-size: 1200px;
+  }
+
+  @media (max-width: 698px) {
+    background-size: 1020px;
+  }
+
+  @media (max-width: 640px) {
+    background-size: 900px;
+  }
+}
+
+body.subpage {
+  @media (max-width: 980px) {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-position: center -60px;
+    background-size: 1200px;
+  }
+
+  @media (max-width: 698px) {
+    background-size: 1020px;
+  }
+
+  @media (max-width: 640px) {
+    background-size: 900px;
+  }
+}
+
+.header {
+  height: 608px;
+  padding-top: 96px;
+
+  @media (max-width: 980px) {
+    padding-top: 64px;
+    height: 448px;
+  }
+
+  @media (max-width: 698px) {
+    height: 383px;
+  }
+
+  @media (max-width: 640px) {
+    height: 335px;
+  }
+
+  .header-text {
+    margin-top: 48px;
+    font-size: 11.07rem;
+
+    @media (max-width: 980px) {
+      margin-top: 32px;
+      font-size: 8rem;
+    }
+
+    @media (max-width: 698px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: 448px) {
+      font-size: 4rem;
+    }
+  }
+
+  .subheader-text {
+    font-size: 2.61538rem;
+    max-width: 56.7179487rem;
+    margin-top: -24px;
+
+    @media (max-width: 980px) {
+      font-size: 2rem;
+      max-width: 40rem;
+      margin-top: -12px;
+    }
+
+    @media (max-width: 698px) {
+      font-size: 1.6rem;
+      max-width: 32rem;
+    }
+
+    @media (max-width: 448px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.subpage-header {
+  background-image: url("../img/background-subpage.png");
+  background-repeat: no-repeat;
+  background-size: 635px;
+  padding: 68px 48px 164px 116px;
+
+  @media (max-width: 980px) {
+    background-image: none;
+    height: 326px;
+  }
+
+  @media (max-width: 698px) {
+    height: 258px;
+  }
+
+  @media (max-width: 640px) {
+    height: 215px;
+  }
+}
+
+.subpage-header-text {
+  font-size: 4.8rem;
+  font-weight: 500;
+
+  @media (max-width: 980px) {
+    margin-top: 32px;
+    font-size: 8rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 698px) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 448px) {
+    font-size: 4rem;
+  }
+}
+
+.section-link {
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--black-300);
+
+  &:hover {
+    color: var(--black-500);
+  }
+
+  @media (max-width: 980px) {
+    color: var(--black-750);
+
+    &:hover {
+      color: var(--black-900);
+    }
+  }
+}
+
+body.section-posts .posts-link,
+body.section-work .work-link,
+body.section-about .about-link {
+  background: var(--black-750);
+  color: var(--white);
+}
+
+.ff-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fc-orange {
+  color: @orange;
+}
+
+.h\:fc-orange:hover {
+  color: @orange;
+}
+
+.h\:bg-orange:hover {
+  background-color: @orange;
+}
+
+.fc-green {
+  color: @green;
+}
+
+.h\:fc-green:hover {
+  color: @green;
+}
+
+.h\:bg-green:hover {
+  background-color: @green;
+}
+
+.fc-blue {
+  color: @blue;
+}
+
+.h\:fc-blue:hover {
+  color: @blue;
+}
+
+.h\:bg-blue:hover {
+  background-color: @blue;
+}
+
+.fc-red {
+  color: @red;
+}
+
+.h\:fc-red:hover {
+  color: @red;
+}
+
+.h\:bg-red:hover {
+  background-color: @red;
+}
+
+.post {
+  margin-top: 64px;
+  color: var(--black-500);
+  line-height: 1.9;
+
+  a {
+    color: @blue;
+    text-decoration: none;
+
+    &:hover {
+      color: @blue;
+      text-decoration: underline;
+    }
+
+    &.footnote {
+      font-size: .625em;
+      vertical-align: super;
+    }
+  }
+
+  &.post-stackoverflow a {
+    color: @orange;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  &.post-hum a {
+    color: @green;
+
+    &:hover {
+      color: @green;
+    }
+  }
+
+  &.post-adobe a {
+    color: @red;
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    line-height: 1em;
+    color: var(--black-700);
+  }
+
+  h1 {
+    font-size: 4.75em;
+    margin-bottom: .25em;
+
+    @media (max-width: 560px) {
+      font-size: 3.75em;
+    }
+  }
+
+  h2 {
+    font-size: 6em;
+    margin-bottom: 0;
+
+    @media (max-width: 480px) {
+      font-size: 4.8em;
+    }
+  }
+
+  h3 {
+    font-size: 3.375em;
+    margin-bottom: @margin;
+  }
+
+  h4 {
+    font-size: 2.8em;
+    margin-bottom: @margin;
+  }
+
+  h5 {
+    font-size: 2.2em;
+    margin-bottom: @margin;
+  }
+
+  p,
+  ul,
+  ol,
+  img {
+    font-size: 1.8em;
+    margin-bottom: @margin;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: @margin;
+
+    ol {
+      font-size: 1em;
+      padding-left: @margin/2;
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: @margin;
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  .contents li {
+    margin-bottom: 0;
+  }
+
+  em,
+  .summary {
+    font-style: italic;
+  }
+
+  // Let's give all these elements some structure
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ol,
+  ul,
+  blockquote {
+    max-width: 595px;
+
+    @media (max-width: 810px) {
+      width: 88%;
+    }
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ol,
+  ul,
+  blockquote,
+  img,
+  video,
+  hr,
+  svg,
+  .caption,
+  .twitter-tweet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+
+  .emoji-grid {
+    img {
+      display: inline-block;
+      margin: 14px;
+    }
+  }
+
+  .rounded {
+    border-radius: 6px;
+  }
+
+  .caption {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: @margin;
+
+    img {
+      margin-bottom: @margin / 4;
+    }
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  // Let's add some overrides to positioning depending on context
+  p + img,
+  img + p,
+  p + video,
+  video + p,
+  p + .caption,
+  .caption + p,
+  ol + .caption,
+  .caption + ol,
+  ul + .caption,
+  .caption + ul {
+    margin-top: @margin * 2;
+  }
+
+  p + h3,
+  ol + h3,
+  ul + h3,
+  img + h3,
+  video + h3,
+  .caption + h3,
+  ol + h4,
+  ul + h4,
+  p + h4,
+  img + h4,
+  video + h4,
+  .caption + h4 {
+    margin-top: @margin * 3;
+  }
+
+  .intro {
+    font-size: 1.8em;
+    margin-bottom: 5em;
+  }
+
+  .meta {
+    font-size: 1.25em;
+    font-style: italic;
+    color: var(--black-200);
+  }
+
+  .highlight {
+    font-family: monospace;
+    background: var(--black-075);
+    padding: .2em .3em;
+    border-radius: 4px;
+  }
+
+  .update {
+    color: var(--black-350);
+    font-style: italic;
+  }
+
+  .elsewhere {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 1.25em;
+
+    li {
+      display: inline;
+      margin-right: .7em;
+    }
+  }
+
+  hr {
+    border: 0;
+    max-width: 250px;
+    color: var(--black-500);
+    background-color: var(--black-500);
+    height: 2px;
+    margin-top: @margin * 4;
+    margin-bottom: @margin * 4;
+  }
+
+  .summary {
+    color: var(--black-350);
+  }
+
+  .divider {
+    text-align: center;
+    font-size: 2.5em;
+    font-style: normal;
+    margin: 2em auto 3.2em;
+  }
+
+  .background {
+    background-color: var(--black-050);
+    padding-top: @margin;
+    padding-bottom: @margin;
+    margin-top: @margin * 2;
+    margin-bottom: @margin * 2;
+
+    img {
+      margin-bottom: 0;
+    }
+
+    .caption img {
+      margin-bottom: @margin / 4;
+    }
+
+    @media (max-width: 810px) {
+      padding-left: 3.5%;
+      padding-right: 3.5%;
+      width: 100%;
+    }
+
+    .caption {
+      margin-bottom: @margin * 2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  svg {
+    margin-bottom: @margin;
+  }
+
+  blockquote {
+    display: block;
+    color: var(--black-600);
+    font-style: oblique;
+    font-size: 2.8em;
+    line-height: 1em;
+    margin-top: @margin * 2;
+    margin-bottom: @margin * 2;
+
+    &.medium {
+      font-size: 1.8em;
+    }
+
+    &.long {
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 1.6;
+
+      p {
+        margin-bottom: @margin;
+      }
+    }
+  }
+
+  code {
+    font-size: .7em;
+    padding: 3px;
+    background: var(--black-075);
+    border-radius: 3px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .player {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-top: @margin * 2;
+    margin-bottom: @margin * 2;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .annotated {
+    position: relative;
+    display: inline-block;
+
+    .annotation {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      animation: pulse 1.75s infinite ease-in-out;
+      background-color: rgba(241, 131, 43, .75);
+      box-shadow: 0 0 0 0 rgba(241, 131, 43, .5);
+      cursor: pointer;
+
+      .description {
+        z-index: 1000;
+        position: absolute;
+        bottom: 30px;
+        left: -2px;
+        white-space: nowrap;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: #3C4146;
+        color: white;
+        font-size: 16px;
+        display: none;
+
+        &:after {
+          border-left: solid transparent 6px;
+          border-right: solid transparent 6px;
+          border-top: solid #3C4146 6px;
+          bottom: -6px;
+          content: " ";
+          height: 0;
+          left: 6px;
+          position: absolute;
+          width: 0;
+        }
+
+        &.right {
+          left: auto;
+          right: -2px;
+
+          &:after {
+            left: auto;
+            right: 6px;
+          }
+        }
+      }
+
+      &:hover {
+        animation: none;
+        background-color: rgba(241, 131, 43, 1);
+
+        .description {
+          display: block;
+        }
+      }
+
+      @media (max-width: 810px) {
+        display: none;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(.9, .9);
+    }
+    70% {
+      transform: scale(1, 1);
+      box-shadow: 0 0 0 50px rgba(241, 131, 43, 0);
+    }
+    100% {
+      transform: scale(.9, .9);
+      box-shadow: 0 0 0 0 rgba(241, 131, 43, 0);
+    }
+  }
+}

@@ -4,87 +4,33 @@
   <head>
     include "header.html"
 
-    <link rel="stylesheet" href="/_/css/home.css">
-
     <title>Aaron Shekey</title>
   </head>
-  <body>
-    <div class="container">
-      include "intro.html"
+  <body class="home theme-system ff-roboto">
+    <div class="header mx-auto mb48 fc-black-750 theme-light__forced">
+      <ul class="list-reset fs-subheading ta-center">
+        <li class="d-inline-block mx16"><a class="p8 bar-md fc-black-800 h:bg-black-800 h:fc-white" href="/posts/">Posts</a></li>
+        <li class="d-inline-block mx16"><a class="p8 bar-md fc-black-800 h:bg-black-800 h:fc-white" href="/work/">Work</a></li>
+        <li class="d-inline-block mx16"><a class="p8 bar-md fc-black-800 h:bg-black-800 h:fc-white" href="/about">About</a></li>
+      </ul>
+
+      <h1 class="header-text fw-medium ta-center mb0">Aaron Shekey</h1>
+      <p class="subheader-text mx-auto ta-center">I help design and create things like startups, websites, apps, songs, and records.</p>
     </div>
 
-    <div class="container posts">
-      <div class="post">
-        <h3><a href="https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/">Building dark mode on Stack Overflow</a></h3>
-        <p class="excerpt">Way too much detail on how I shipped dark mode to Stack Overflow.</p>
-        <p class="meta">March 2020</p>
+    <div class="mx-auto wmx10 px16 d-flex jc-space-between ai-start md:fd-column md:ai-center">
+      <div class="wmx5 order-last md:order-first ml24 md:ml0 md:mb96">
+        <h2 class="fs-headline1 ml24 sm:ml12 mb32 fw-normal fc-black-400">Work</h2>
+        include "work.html"
       </div>
-      <div class="post">
-        <h3><a href="/posts/custom-emojis/">Custom Emojis</a></h3>
-        <p class="excerpt">Let’s get one thing straight. The Party Parrot is played.</p>
-        <p class="meta">May 2019</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/parkmobile-user-experience/">ParkMobile User Experience</a></h3>
-        <p class="excerpt">Parking using ParkMobile’s app leaves a lot to be desired. I offer some sensible improvements to their app.</p>
-        <p class="meta">April 2019</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/video-conferencing-with-a-proper-camera/">Video Conferencing with a Proper Camera</a></h3>
-        <p class="excerpt">I’ve switched from a built-in webcam to a proper camera and lens. This is how I did it.</p>
-        <p class="meta">November 2018</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/write-what-you-want/">Write What You Want</a></h3>
-        <p class="excerpt">I’ve edited a bit of previously-unreleased score from Almost Famous from a high-quality source for your enjoyment.</p>
-        <p class="meta">February 2018</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/automatic-comping-in-logic-pro/">Automatic Comping in Logic Pro</a></h3>
-        <p class="excerpt">Comping audio is a time-consuming process. I’ve mocked up a dream feature for automatic comping based on pitch and rhythym in Apple’s Logic Pro X.</p>
-        <p class="meta">February 2017</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/cabronita-deluxe/">Cabronita Deluxe</a></h3>
-        <p class="excerpt">I recently designed a guitar from the ground up, based entirely on my own contradictory tastes. I’ve dubbed it the Cabronita Deluxe.</p>
-        <p class="meta">May 2016</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/diarrhea-is-the-new-fuck/">Diarrhea is the New Fuck</a></h3>
-        <p class="excerpt">In the spring of 2014, I fell head over heels for a band whose name I’d only laughed about. Until I heard them.</p>
-        <p class="meta">April 2016</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/troy-mcclure-imdb/">Troy McClure’s IMDb Profile</a></h3>
-        <p class="excerpt">As a huge Simpsons fan, I did my best to build an accurate IMDb profile for Troy McClure. This combines references from the TV show, comic books, and video games.</p>
-        <p class="meta">December 2015</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/americas-finest-news-source/">America’s Finest News Source</a></h3>
-        <p class="excerpt">The Onion is an unwavering bastion of emotional truth. With every week, good news or bad, it will deliver 12 headlines that perfectly tap into the emotional pulse of its readership. “America’s Finest News Source.” You’re god damned right.</p>
-        <p class="meta">October 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/subway/">Optimizing Subway</a></h3>
-        <p class="excerpt">At Subway’s scale, even tiny optimizations can have profound effects on the environment, the diner’s experience, and the franchise’s bottom line.</p>
-        <p class="meta">July 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/the-hot-dog-button/">The Hot Dog Button</a></h3>
-        <p class="excerpt">I recently had the privilege of remodeling my kitchen. It ended up being much more superficial than I’d originally hoped since appliance design has been hindered by total-nonsense features.</p>
-        <p class="meta">January 2014</p>
-      </div>
-      <div class="post">
-        <h3><a href="/posts/its-what-you-leave-out/">It’s What You Leave Out</a></h3>
-        <p class="excerpt">“It’s not what you put into it. It’s what you leave out … Yeah, that’s rock n’ roll.” This thinking can be applied to everything—rock n’ roll, software, even skylines.</p>
-        <p class="meta">September 2013</p>
+
+      <div class="wmx5">
+        <h2 class="fs-headline1 ml24 sm:ml12 mb32 fw-normal fc-black-400">Posts</h2>
+        include "posts.html"
       </div>
     </div>
 
-    <div class="container">
-      include "elsewhere.html"
-    </div>
-
+    include "elsewhere.html"
     include "footer.html"
   </body>
 </html>

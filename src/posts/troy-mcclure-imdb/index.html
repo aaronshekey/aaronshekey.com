@@ -4,16 +4,20 @@
   <head>
     include "header.html"
 
-    <link rel="stylesheet" href="/_/css/post.css">
     <link rel="stylesheet" href="media/imdb.css">
 
     <title>Troy McClure - IMDb</title>
   </head>
-  <body>
-    <h2>Troy McClure’s IMDb Profile</h2>
-    <p class="meta">December 2015</p>
-    <p>As a huge Simpsons fan, I did my best to build an accurate IMDb profile for Troy McClure. This combines references from the TV show, comic books, and video games. This page’s <a href="https://github.com/aaronshekey/aaronshekey.com/">source is on GitHub</a>, so if you see something obviously wrong, submit a pull request and let’s fix it. If you work at IMDb, instead of suing me, you should actually build this as a badass easter egg.</p>
-    <p>Thanks to Mike McCarthy for emailing a few recent corrections, and making me notice I left out a few entries from the <a href="http://rubbercat.net/simpsons/news/2010/10/did-virtual-springfield-begat-google-street-view.html">Simpsons CD-ROM</a>.
+  <body class="subpage theme-system ff-roboto section-posts">
+    include "subheader.html"
+
+    <div class="post">
+      <h2>Troy McClure’s IMDb Profile</h2>
+      <p class="meta">December 2015</p>
+      <p>As a huge Simpsons fan, I did my best to build an accurate IMDb profile for Troy McClure. This combines references from the TV show, comic books, and video games. This page’s <a href="https://github.com/aaronshekey/aaronshekey.com/">source is on GitHub</a>, so if you see something obviously wrong, submit a pull request and let’s fix it. If you work at IMDb, instead of suing me, you should actually build this as a badass easter egg.</p>
+      <p>Thanks to Mike McCarthy for emailing a few recent corrections, and making me notice I left out a few entries from the <a href="http://rubbercat.net/simpsons/news/2010/10/did-virtual-springfield-begat-google-street-view.html">Simpsons CD-ROM</a>.
+
+    </div>
 
     <div id="imdb-wrapper">
       <div id="imdb-page">
@@ -41,7 +45,7 @@
         <div id="imdb-content">
           <div class="article">
             <div class="image">
-              <img src="media/troymcclure.png" width="214" id="name-poster">
+              <img src="media/troymcclure.png" width="214" id="name-poster" loading="lazy">
             </div>
 
             <div class="biography">
@@ -71,22 +75,22 @@
             <h2>Known For</h2>
 
             <div class="known">
-              <img src="media/contrabulous-fabtraption.jpg" width="148">
+              <img src="media/contrabulous-fabtraption.jpg" width="148" loading="lazy">
               <span class="title">The Contrabulous Fabtraption of Professor Horatio Hufnagel</span>
             </div>
 
             <div class="known">
-              <img src="media/half-assed.jpg" width="148">
+              <img src="media/half-assed.jpg" width="148" loading="lazy">
               <span class="title">The Half-Assed Approach to Foundation Repair</span>
             </div>
 
             <div class="known">
-              <img src="media/cant-believe.jpg" width="148">
+              <img src="media/cant-believe.jpg" width="148" loading="lazy">
               <span class="title">I Can’t Believe They Invented It!</span>
             </div>
 
             <div class="known">
-              <img src="media/fuzzy-bunnys.jpg" width="148">
+              <img src="media/fuzzy-bunnys.jpg" width="148" loading="lazy">
               <span class="title">Fuzzy Bunny’s Guide to You-Know-What</span>
             </div>
           </div>
@@ -1043,7 +1047,7 @@
         </div>
       </div>
     </div>
-    include "intro.html"
+
     include "elsewhere.html"
     include "footer.html"
   </body>
