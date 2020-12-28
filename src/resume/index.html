@@ -4,98 +4,209 @@
   <head>
     include "header.html"
 
-    <link rel="stylesheet" href="/_/css/resume.css">
-
     <title>Resume – Aaron Shekey</title>
   </head>
-  <body>
-    <div class="container">
-      <h1><a href="/">Aaron Shekey</a></h1>
-      <p class="intro">I’m a product designer and<br>musician in Minneapolis, MN.</p>
+  <body class="subpage theme-system ff-roboto section-about">
+    include "subheader.html"
+
+    <div class="mx-auto mt64 mb96 wmx5">
+        <h2 class="fs-headline1 mb24 fw-normal fc-black-750">Summary</h2>
+        <p class="fs-title fc-light mb96">I help design and create things like startups, websites, apps, songs, and records while sitting right between design and engineering. Nice to meet you!</p>
+
+        <h2 class="fs-headline1 mb32 fw-normal fc-black-750">Experience</h2>
+
+        <a class="d-flex fc-orange h:fc-orange mb48" href="/work/stackoverflow/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="37" viewBox="0 0 40 37">
+            <path d="M23.8 2L26.5 0L36.4 13.3L33.7 15.3L23.8 2ZM18.3 7.8L31 18.4L33.1 15.9L20.4 5.3L18.3 7.8ZM29.1 22.2L14.1 15.2L15.5 12.2L30.5 19.2L29.1 22.2ZM28.7844 23.041L28.0908 25.9902L12 23L12.6799 19.687L28.7844 23.041ZM12 30H28V27H12V30ZM31 24V33H9V24H5V37H35V24H31Z"></path>
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb0">
+              <h2 class="fs-headline2 mb0 fw-medium">Stack Overflow</h2>
+              <div class="fs-subheading">2017—</div>
+            </div>
+            <div class="fs-title mb16">Principal Product Designer, Design Systems</div>
+            <div class="fs-subheading">Shipped a ton of features on Stack Overflow before transitioning to designing, building, and assembling a team to create Stack Overflow’s design system Stacks.</div>
+          </div>
+        </a>
+
+        <a class="d-flex fc-green h:fc-green mb48" href="/work/hum/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="43" viewBox="0 0 40 43">
+            <path d="M28.448 13.3233L12.6153 16.5023V0H6.10992V33.116C5.57815 33.2659 4.73004 33.4658 4.20216 33.7253C0.92034 35.3513 -0.799169 38.5303 0.363344 40.8367C1.52586 43.1431 5.13178 43.6908 8.4136 42.0648C10.9502 40.8117 12.5474 38.6321 12.6153 36.6333V22.6796L28.4461 19.5006V29.5065C27.9298 29.6564 27.0875 29.8505 26.5868 30.1023C23.3031 31.7283 21.5855 34.9073 22.748 37.2137C23.9105 39.5201 27.5145 40.0679 30.7983 38.4419C33.3814 37.1618 34.9961 34.915 35 32.8931V0H28.448V13.3233Z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb0">
+              <h2 class="fs-headline2 mb0 fw-medium">Hum</h2>
+              <div class="fs-subheading">2015—</div>
+            </div>
+            <div class="fs-title mb16">Co-founder</div>
+            <div class="fs-subheading">Designed, built, and assembled a team around the world’s best app for songwriting. Featured as a Best New App by Apple.</div>
+          </div>
+        </a>
+
+        <a class="d-flex fc-blue h:fc-blue mb48" href="/work/github/">
+          <svg class="svg-icon fl-shrink0 mr12" width="40" height="39" viewBox="0 0 40 39">
+            <path d="M20 0C8.95 0 0 8.94697 0 19.9932C0 28.8402 5.725 36.3127 13.675 38.9618C14.675 39.1367 15.05 38.5369 15.05 38.0121C15.05 37.5373 15.025 35.9628 15.025 34.2884C10 35.2131 8.7 33.0638 8.3 31.9392C8.075 31.3644 7.1 29.59 6.25 29.1151C5.55 28.7403 4.55 27.8156 6.225 27.7906C7.8 27.7656 8.925 29.2401 9.3 29.8399C11.1 32.8639 13.975 32.0142 15.125 31.4893C15.3 30.1898 15.825 29.3151 16.4 28.8152C11.95 28.3154 7.3 26.591 7.3 18.9436C7.3 16.7693 8.075 14.9699 9.35 13.5704C9.15 13.0706 8.45 11.0213 9.55 8.2722C9.55 8.2722 11.225 7.74738 15.05 10.3215C16.65 9.87166 18.35 9.64673 20.05 9.64673C21.75 9.64673 23.45 9.87166 25.05 10.3215C28.875 7.72238 30.55 8.2722 30.55 8.2722C31.65 11.0213 30.95 13.0706 30.75 13.5704C32.025 14.9699 32.8 16.7443 32.8 18.9436C32.8 26.616 28.125 28.3154 23.675 28.8152C24.4 29.44 25.025 30.6396 25.025 32.514C25.025 35.1881 25 37.3374 25 38.0121C25 38.5369 25.375 39.1617 26.375 38.9618C34.5161 36.2144 39.9978 28.5828 40 19.9932C40 8.94697 31.05 0 20 0V0Z"/>
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb0">
+              <h2 class="fs-headline2 mb0 fw-medium">GitHub</h2>
+              <div class="fs-subheading">2015—2016</div>
+            </div>
+            <div class="fs-title mb16">Senior Product Designer</div>
+            <div class="fs-subheading">Pitched and designed features to help improve GitHub’s product, most notably code review, file uploads, markdown toolbar, and octicons</div>
+          </div>
+        </a>
+
+        <a class="d-flex fc-red h:fc-red mb48" href="/work/adobe/">
+          <svg class="svg-icon fl-shrink0 mt4 mr12" width="40" height="31" viewBox="0 0 40 31">
+            <path d="M22.949 31L20.414 24.7542H14.183L20.021 11.4135L28.514 31H22.949ZM15.326 0H2V31L15.326 0ZM38 0H24.674L38 31V0Z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb0">
+              <h2 class="fs-headline2 mb0 fw-medium">Adobe</h2>
+              <div class="fs-subheading">2011—2014</div>
+            </div>
+            <div class="fs-title mb16">Senior Product Designer</div>
+            <p class="fs-subheading">Conceived of Adobe Edge Reflow and designed the entire experience from sketches to final production assets.</p>
+            <p class="fs-subheading mb0">Concepted and designed the iPhone version of the Adobe Content Viewer while working directly with publishing clients Condé Nast, Hearst, and Bonnier.</p>
+          </div>
+        </a>
+
+        <div class="d-flex p24 sm:p12 bar-lg fc-black-600">
+          <svg class="svg-icon fl-shrink0 mt4 mr12" width="40" height="31" viewBox="0 0 40 31">
+            <path d="M22.396 0v18.138C20.45 15.003 16.56 8.73 16.11 8.064 13.221 3.65 11.2 2.796 8.688 2.796h-.295c-3.196.068-6.429 2.07-6.429 5.769 0 3.157 2.362 4.606 4.68 5.61l1.371.584c1.895.794 3.065 1.61 3.065 3.247 0 1.855-1.35 3.308-3.072 3.308a3.284 3.284 0 01-2.385-.967 3.083 3.083 0 01-.886-2.228v-.753l-.72.155-2.483.542-.534.113.071.545c.467 3.545 3.293 6.115 6.727 6.115 3.958 0 6.94-2.935 6.94-6.83 0-3.97-2.832-5.6-5.303-6.574l-1.424-.56C6.378 10.242 5.62 9.508 5.62 8.56c0-1.385 1.462-2.348 2.774-2.348 2.077 0 3.064.97 4.963 3.887.897 1.381 11.492 18.913 11.586 19.09L26.04 31V10.72l10.917 14.342L38 26.454V4.008h-3.64v11.42L23.45 1.362 22.397 0z" />
+          </svg>
+          <div>
+            <div class="d-flex jc-space-between ai-center mb0">
+              <h2 class="fs-headline2 mb0 fw-medium">Sevnthsin</h2>
+              <div class="fs-subheading">2008—2011</div>
+            </div>
+            <div class="fs-title mb16">Senior Designer</div>
+            <p class="fs-subheading">Led a team of designers while planning, concepting, and often developing rich interactive and mobile experiences.</p>
+            <p class="fs-subheading mb0">Worked with Target, JCPenney, Scion, AIGA, Rhymesayers, Health Partners, and Minnesota Timberwolves.</p>
+          </div>
+        </div>
+
+        <h2 class="fs-headline1 mt96 mb32 fw-normal fc-black-750">Press</h2>
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://www.newyorker.com/magazine/2015/09/14/omission">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">The New Yorker, September 7, 2015</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Writing by Omission</h3>
+          <div class="fs-body2 mt4 fc-black-400">John McPhee mentions my blog post “It’s What You Leave Out” to my complete dismay.</div>
+        </a>
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://www.buzzfeednews.com/article/carolineodonovan/after-a-big-bank-bought-simple-things-got-complicated">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">BuzzFeed News, September 22, 2017</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">After A Big Bank Bought Simple, Things Got Complicated For Customers</h3>
+          <div class="fs-body2 mt4 fc-black-400">Caroline O'Donovan interviewed me talking shit about my dumb bank, Simple.</div>
+        </a>
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://www.journalmpls.com/features/2015/06/minneapolis-residents-open-their-doors-with-airbnb/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">The Journal, June 22, 2015</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Minneapolis residents open their doors with Airbnb</h3>
+          <div class="fs-body2 mt4 fc-black-400">For a while there I was a pretty active Airbnb host. Eric Best interviewed me about it.</div>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="http://www.citypages.com/music/the-usual-things-reveal-the-details-of-their-backup-plan/431404413">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">City Pages, June 29, 2017</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">The Usual Things reveal the details of their ‘Backup Plan’</h3>
+          <div class="fs-body2 mt4 fc-black-400">Youa Vang interviewed my band about our album “Backup Plans” and we touch a bit on Hum.</div>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="http://www.dmcityview.com/the-sound/2015/02/04/business-as-usual/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">Cityview, February 4, 2015</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Business as usual</h3>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="http://www.dmcityview.com/the-sound/2015/02/04/business-as-usual/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">Iowa State Daily, February 5, 2015</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">The Usual Things hits stage for next performance</h3>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://isthmus.com/music/name-that-band/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">Isthmus, October 19, 2007</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Name that band! Stories behind Madison’s strangest pop monikers</h3>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://www.startribune.com/minneapolis-musicians-build-buzz-on-hum-a-new-songwriting-app/242272241/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">StarTribune, January 28, 2014</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Minneapolis musicians build buzz on Hum, a new songwriting app</h3>
+          <div class="fs-body2 mt4 fc-black-400">Chris Riemenschneider came to my house and interviewed me and Joseph about Hum.</div>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="http://www.citypages.com/music/hum-the-ultimate-smartphone-app-for-songwriters-6649776">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">City Pages, January 24, 2014</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Hum: The ultimate smartphone app for songwriters?</h3>
+          <div class="fs-body2 mt4 fc-black-400">Erik Thompson was kind enough to feature Hum on City Pages.</div>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://www.forbes.com/sites/amitchowdhry/2013/06/30/minneapolis-based-songwriter-music-app-company-hum-seeks-funding-on-kickstarter/?sh=14cfdff41048">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">Forbes, June 30, 2013</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Minneapolis-Based Songwriter Music App Company Hum Seeks Funding On Kickstarter</h3>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://issuu.com/umndesign/docs/emerging_fall_2014_print/5">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">UMN College of Design > Fall 2014</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Things that make you go Hum…</h3>
+          <div class="fs-body2 mt4 fc-black-400">I was featured in the University of Minnesota’s alumni magazine.</div>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://flypaper.soundfly.com/features/entrepreneurship-in-music-hum/">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">Flypaper, July 23, 2015</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Entrepreneurship in Music: Hum</h3>
+          <div class="fs-body2 mt4 fc-black-400">Jeremy Young interviewed me about Hum as part of a series on entrepreneurship in music.</div>
+        </a>
+
+        <h2 class="fs-headline1 mt96 mb32 fw-normal fc-black-750">Education</h2>
+
+        <div class="fs-body1 mb2 fc-black-300 lh-lg">2008</div>
+        <h3 class="fs-title fc-light mb0 fw-normal lh-sm">University of Minnesota Twin Cities</h3>
+        <div class="fs-body2 mt4 fc-black-400">Bachelor of science in Graphic Design</div>
+
+        <h2 class="fs-headline1 mt96 mb32 fw-normal fc-black-400">Patents</h2>
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://patents.google.com/patent/US9548042B2/en">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">2012</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Responsive document breakpoints systems and methods</h3>
+        </a>
+
+        <a class="d-block fc-light h:fc-black-700 mb48" href="https://patents.google.com/patent/US9147378B2/en">
+          <div class="fs-body1 mb2 fc-black-300 lh-lg">2013</div>
+          <h3 class="fs-title mb0 fw-normal lh-sm">Color selection interface</h3>
+        </a>
+
+        <h2 class="fs-headline1 mt96 mb32 fw-normal fc-black-750">Skills</h2>
+        <div class="fc-light fs-body3">
+          <h4 class="fw-normal mb12">Product</h4>
+          <ul class="mb32">
+            <li>Concept & strategy</li>
+            <li>Product roadmap</li>
+            <li>Feature design</li>
+          </ul>
+
+          <h4 class="fw-normal mb12">UI / UX</h4>
+          <ul class="mb32">
+            <li>Information architecture</li>
+            <li>Userflow</li>
+            <li>Wireframing</li>
+            <li>Visual design</li>
+          </ul>
+
+          <h4 class="fw-normal mb12">Tech</h4>
+          <ul class="mb32">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Objective-C, Swift</li>
+            <li>Rails, PHP, .NET</li>
+            <li>Git-based workflows</li>
+          </ul>
+
+          <h4 class="fw-normal mb12">Audio</h4>
+          <ul class="mb32">
+            <li>Songwriting</li>
+            <li>Performance</li>
+            <li>Engineering & Production</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="container history">
-      <div class="left">
-        <h2>Experience</h2>
-      </div>
-      <div class="right">
-        <h3>Stack Overflow</h3>
-        <p class="title">Principal Product Designer, Design Systems (2017–Present)</p>
-        <p>Shipped a ton of features on <a href="/work/stackoverflow/">Stack Overflow</a> before transitioning to designing, building, and assembling a team to create Stack Overflow’s design system <a href="https://stackoverflow.design">Stacks</a>.</p>
-
-        <h3><a href="/work/hum/">Hum</a></h3>
-        <p class="title">Co-Founder (2013–Present)</p>
-        <p>Designed, built, and assembled a team around the world’s best app for songwriting. Featured as a Best New App by Apple.</p>
-
-        <h3><a href="/work/github/">GitHub</a></h3>
-        <p class="title">Senior Product Designer (2015–2016)</p>
-        <p>Pitched and designed features to help improve GitHub’s product, most notably <a href="/work/github/#code-review">Code review, <a href="/work/github/#file-uploads">File uploads</a>, <a href="/work/github/#markdown-toolbar">Markdown toolbar</a>, and <a href="/work/github/#octicons">Octicons</a>.</p>
-
-        <h3><a href="/work/adobe/">Adobe</a></h3>
-        <p class="title">Senior Experience Designer (2011–2013)</p>
-        <p>Conceived of Adobe Edge Reflow and designed the entire experience from sketches to final production assets.</p>
-        <p>Concepted and designed the iPhone version of the Adobe Content Viewer while working directly with publishing clients Condé Nast, Hearst, and Bonnier.</p>
-
-        <h3>Sevnthsin</h3>
-        <p class="title">Senior Designer (2008-2011)</p>
-        <p>Led a team of designers while planning, concepting, and often developing rich interactive and mobile experiences.</p>
-        <p>Worked with Target, JCPenney, Scion, AIGA, Rhymesayers, Health Partners, and Minnesota Timberwolves.</p>
-      </div>
-    </div>
-
-    <div class="container history">
-      <div class="left">
-        <h2>Education</h2>
-      </div>
-
-      <div class="right">
-        <h3>University of Minnesota Twin Cities</h3>
-        <p class="title">Graphic Design (Bachelor of Science, 2008)</p>
-      </div>
-    </div>
-
-    <div class="container history">
-      <div class="left">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="right">
-        <h4>Product</h4>
-        <ul>
-          <li>Concept & strategy</li>
-          <li>Product roadmap</li>
-          <li>Feature design</li>
-        </ul>
-
-        <h4>UI / UX</h4>
-        <ul>
-          <li>Information architecture</li>
-          <li>Userflow</li>
-          <li>Wireframing</li>
-          <li>Visual design</li>
-        </ul>
-
-        <h4>Frontend</h4>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Objective-C, Swift</li>
-          <li>Rails, PHP</li>
-          <li>Git-based workflows</li>
-        </ul>
-
-        <h4>Audio</h4>
-        <ul>
-          <li>Songwriting</li>
-          <li>Performance</li>
-          <li>Engineering & Production</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container">
-      include "elsewhere.html"
-    </div>
-
+    include "elsewhere.html"
     include "footer.html"
   </body>
 </html>
