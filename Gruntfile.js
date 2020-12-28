@@ -45,8 +45,7 @@ module.exports = function(grunt) {
           paths: ['src/_/css/'],
         },
         files: {
-          'build/_/css/home.css': 'src/_/css/home.less',
-          'build/_/css/resume.css': 'src/_/css/resume.less'
+          'build/_/css/custom.css': 'src/_/css/custom.less',
         }
       },
     },
@@ -63,7 +62,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['src/**/*'],
-        tasks: ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'includes'],
+        tasks: ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'concat', 'includes'],
         options: {
           livereload: true,
         },
@@ -89,7 +88,13 @@ module.exports = function(grunt) {
           'build/_/css/stacks.css': ['./node_modules/@stackoverflow/stacks/dist/css/stacks.css']
         }
       }
-    }
+    },
+    concat: {
+      basic: {
+        src: ['build/_/css/*.css'],
+        dest: 'build/_/css/site.css',
+      }
+    },
   });
 
   // Load plugins
@@ -101,9 +106,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-purgecss');
 
   // Default task(s).
   grunt.registerTask('default', ['build', 'concurrent:serve']);
-  grunt.registerTask('build', ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'includes']);
+  grunt.registerTask('build', ['clean', 'copy', 'less', 'purgecss', 'cssmin', 'concat', 'includes']);
 };
