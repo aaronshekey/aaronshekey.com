@@ -4,350 +4,351 @@
   <head>
     include "header.html"
 
-    <link rel="stylesheet" href="/_/css/post.css">
-
     <title>Stack Overflow - Aaron Shekey</title>
   </head>
-  <body>
-    <h2>Stack Overflow</h2>
-    <p class="meta">2017—</p>
+  <body class="subpage theme-system ff-roboto section-work">
+    include "subheader.html"
 
-    <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. After that, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
+    <div class="post">
+      <h2>Stack Overflow</h2>
+      <p class="meta">2017—</p>
 
-    <h5>Table of contents</h5>
-    <ol class="contents">
-      <li><a href="#documentation">Documentation</a></li>
-      <li>
-        <a href="#community">Community</a>
-        <ol class="contents">
-          <li><a href="#custom-questions-lists">Custom questions lists</a></li>
-          <li><a href="#tag-watching">Tag watching</a></li>
-          <li><a href="#identity">Identity</a></li>
-          <li><a href="#responsive-design">Responsive design</a></li>
-          <li><a href="#community-theming">Community theming</a></li>
-        </ol>
-      </li>
-      <li>
-        <a href="#design-system">Design system</a>
-        <ol class="contents">
-          <li><a href="#atomic-css">Atomic CSS</a></li>
-          <li><a href="#stacks-documentation">Documentation</a></li>
-          <li><a href="#components">Components</a></li>
-          <li><a href="#icon-set">Icon set</a></li>
-          <li><a href="#conditional-classes">Conditional classes</a></li>
-          <li><a href="#legitimizing-stacks">Legitimizing Stacks</a></li>
-          <li><a href="#figma">Figma</a></li>
-          <li><a href="#designing-systemically">Designing systemically</a></li>
-        </ol>
-      </li>
-    </ol>
+      <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. After that, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
 
-    <h3 id="documentation">Documentation</h3>
+      <h5>Table of contents</h5>
+      <ol class="contents">
+        <li><a href="#documentation">Documentation</a></li>
+        <li>
+          <a href="#community">Community</a>
+          <ol class="contents">
+            <li><a href="#custom-questions-lists">Custom questions lists</a></li>
+            <li><a href="#tag-watching">Tag watching</a></li>
+            <li><a href="#identity">Identity</a></li>
+            <li><a href="#responsive-design">Responsive design</a></li>
+            <li><a href="#community-theming">Community theming</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#design-system">Design system</a>
+          <ol class="contents">
+            <li><a href="#atomic-css">Atomic CSS</a></li>
+            <li><a href="#stacks-documentation">Documentation</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#icon-set">Icon set</a></li>
+            <li><a href="#conditional-classes">Conditional classes</a></li>
+            <li><a href="#legitimizing-stacks">Legitimizing Stacks</a></li>
+            <li><a href="#figma">Figma</a></li>
+            <li><a href="#designing-systemically">Designing systemically</a></li>
+          </ol>
+        </li>
+      </ol>
 
-    <p>Documentation was Stack Overflow’s attempt to improve technical reference materials by focusing on real world examples. Instead of simply documenting an API’s methods and parameters, Stack Overflow users could submit real-world examples of those APIs in use, each attempting to create <em>the</em> canonical example and gaining reputation for doing so. Just like answers to questions, examples could be upvoted—the best ones rising to the top.</p>
+      <h3 id="documentation">Documentation</h3>
 
-    <p>At the time, I was coming off having written <a href="/work/hum/">Hum</a>, an iOS app for songwriting. Apple has amazing APIs in their iOS SDK, but many of their symbols <a href="https://nooverviewavailable.com">lack official documentation</a>. Additionally, this documentation fails to include rich examples, especially community-created examples to show how these methods are <em>actually</em> used. On top of an overall lack of documentation, the APIs often were half-implemented, and required workarounds found deep within Stack Overflow’s question base.</p>
+      <p>Documentation was Stack Overflow’s attempt to improve technical reference materials by focusing on real world examples. Instead of simply documenting an API’s methods and parameters, Stack Overflow users could submit real-world examples of those APIs in use, each attempting to create <em>the</em> canonical example and gaining reputation for doing so. Just like answers to questions, examples could be upvoted—the best ones rising to the top.</p>
 
-    <p>Documentation was an initial success. However, after the gold rush of early adopters adding their own canonical examples, usage began to decline. Myself, product manager Vasudha, and research intern Horyun, were tasked with figuring out how to build the next phase of Documentation.</p>
+      <p>At the time, I was coming off having written <a href="/work/hum/">Hum</a>, an iOS app for songwriting. Apple has amazing APIs in their iOS SDK, but many of their symbols <a href="https://nooverviewavailable.com">lack official documentation</a>. Additionally, this documentation fails to include rich examples, especially community-created examples to show how these methods are <em>actually</em> used. On top of an overall lack of documentation, the APIs often were half-implemented, and required workarounds found deep within Stack Overflow’s question base.</p>
 
-    <p>This meant doing basic research about what Documentation should be, who it’d be for, and what people expected Stack Overflow’s version of Documentation would be. Horyun wrote in depth about her <a href="http://horyun.design/docs">research methodology</a>, and her <a href="https://blog.usejournal.com/life-as-a-stack-overflow-user-research-intern-ff9ce133996a">time at Stack Overflow</a>.</p>
+      <p>Documentation was an initial success. However, after the gold rush of early adopters adding their own canonical examples, usage began to decline. Myself, product manager Vasudha, and research intern Horyun, were tasked with figuring out how to build the next phase of Documentation.</p>
 
-    <p>After initial rounds of research, we needed to test actual visuals of what this new version of Documentation might look like.</p>
+      <p>This meant doing basic research about what Documentation should be, who it’d be for, and what people expected Stack Overflow’s version of Documentation would be. Horyun wrote in depth about her <a href="http://horyun.design/docs">research methodology</a>, and her <a href="https://blog.usejournal.com/life-as-a-stack-overflow-user-research-intern-ff9ce133996a">time at Stack Overflow</a>.</p>
 
-    <div class="caption">
-      <img src="media/documentation-layouts.png" alt="Layouts" width="827">
-      We tested basic layouts before diving into full mockups
-    </div>
+      <p>After initial rounds of research, we needed to test actual visuals of what this new version of Documentation might look like.</p>
 
-    <p>We then moved on to testing mock layouts using pseudo documentation to gather what users valued from documentation around the web.</p>
-
-    <div class="caption">
-      <img src="media/documentation01.png" alt="Documentation sections" width="1124">
-      In these mockups, we established the page layout while also exploring individual sections that were editable.
-    </div>
-
-    <div class="caption">
-      <img src="media/documentation02.png" alt="Documentation editing" width="1124">
-      Early explorations on editing allowed for WYSIWYG-style editing of sections.
-    </div>
-
-    <div class="caption">
-      <img src="media/documentation04.png" alt="Documentation creation" width="1124">
-      Creating new topics would allow for template selection
-    </div>
-
-    <div class="caption">
-      <img src="media/documentation05.png" alt="Full documentation" width="1124">
-      A full pseudo layout with everything a topic might have.
-    </div>
-
-    <div class="caption">
-      <img src="media/documentation03.png" alt="Documentation responsiveness" width="829">
-      Documentation would support responsive layouts on day one.
-    </div>
-
-    <p>These explorations all tested very well, but ultimately it would have been too much investment to build what Documentation truly required to succeed. The failure of Documentation changed Stack Overflow’s approach to product development across the company, moving beyond “let’s develop a new product and see how it goes” and into more robust research into product and market fit.</p>
-
-    <img src="media/documentation-sunset.png" alt="Sunset" width="1272">
-
-    <h3 id="community">Community</h3>
-
-    <p>Q&A being the bread and butter of Stack Overflow, I was delighted to be invited to move over to the Community team after Documentation was shuttered.</p>
-
-    <p>Since we weren’t building a new product, there were lots of opportunities for improvements, big and small. We discovered new ways of watching tags, filtering questions, making new users feel welcomed, and how to market our products.</p>
-
-    <h4 id="custom-questions-lists">Custom questions lists</h4>
-
-    <p>Though most users end up on Stack Overflow by directly searching for their problem on Google, many of our users browse our questions lists based on their interests. The community team needed a way to introduce robust sorting, filtering, while showing power users the algorithm behind pre-baked lists like “Newest” or “Active”.</p>
-
-    <div class="background">
       <div class="caption">
-        <img src="media/sorting-question-filtering.png" width="768">
-        At the top of each question list, we introduced sorting and filtering.
+        <img src="media/documentation-layouts.png" alt="Layouts" width="827">
+        We tested basic layouts before diving into full mockups
+      </div>
+
+      <p>We then moved on to testing mock layouts using pseudo documentation to gather what users valued from documentation around the web.</p>
+
+      <div class="caption">
+        <img src="media/documentation01.png" alt="Documentation sections" width="1124">
+        In these mockups, we established the page layout while also exploring individual sections that were editable.
       </div>
 
       <div class="caption">
-        <img src="media/sorting-custom-questions.png" width="822">
-        If a user changes one of the sorting parameters, we give them the option to save their custom search.
+        <img src="media/documentation02.png" alt="Documentation editing" width="1124">
+        Early explorations on editing allowed for WYSIWYG-style editing of sections.
       </div>
 
       <div class="caption">
-        <img src="media/sorting-editing-custom-sort.png" width="492">
-        Editing a custom search within a modal.
+        <img src="media/documentation04.png" alt="Documentation creation" width="1124">
+        Creating new topics would allow for template selection
       </div>
 
       <div class="caption">
-        <img src="media/sorting-and-filtering.png" width="1236">
-        Early explorations of sorting and filtering popovers.
+        <img src="media/documentation05.png" alt="Full documentation" width="1124">
+        A full pseudo layout with everything a topic might have.
       </div>
-    </div>
 
-    <p>Ultimately, a much simpler approach pitched by <a href="https://www.lisahpark.com">Lisa Park</a> was best. We shipped a combined, Yelp-y set of filters and sorts in a single expandable view. <a href="https://stackoverflow.com/users/860000/brian-nickel?tab=profile">Brian Nickel</a> handled taking mockups and Codepens and fleshing out the backend to support them.</p>
-
-    <img src="media/sorting-combined.png" width="727">
-
-    <h4 id="tag-watching">Tag watching</h4>
-
-    <p>A powerful feature for those who browse Stack Overflow is watching tags. By watching tags, we weight questions in those tags and move them to the top of the lists. You can also receive an email digest of questions within those tags in varying frequency. We wanted to help surface its functionality.</p>
-
-    <div class="caption">
-      <img src="media/tag-watching-sidebar-elements.png" width="1296">
-      We added some tag management to the sidebar of question lists.
-    </div>
-
-    <div class="caption">
-      <img src="media/tag-watching-popover.png" width="324">
-      We surfaced the ability to watch or ignore a tag any time a tag is presented.
-    </div>
-
-    <div class="caption">
-      <img src="media/tags-header.png" width="769">
-      On the tag page itself, we also added some additional buttons for managing watching a tag.
-    </div>
-
-    <h4 id="identity">Identity</h4>
-
-    <p>After launching our code of conduct, we needed a way to show that a user was new to Stack Overflow. This meant exploring ways to unify identy across the product. We shipped the smallest version of this, the hand waving saying they’re a new contributor.</p>
-
-    <div class="background">
-      <img src="media/identity.png" width="1352">
-    </div>
-
-    <p>My favorite part of product design is balancing quick wins with long-running redesigns. Simultaneously, the Community team was tasked with converting the site to a responsive layout, adding a persistent sidebar navigation, and refactoring our community’s bunch of themes.</p>
-
-    <h4 id="responsive-design">Responsive design</h4>
-
-    <p>Like a lot of our peers, Stack Overflow built mobile-specific views of our product. At the time, this made more sense than a responsive layout, since unifying on a responsive layout would require a heavy refactor and would force our users to download way more bytes to resource-constrained mobile devices than we’d feel comfortable. However, over the years, maintaining separate mobile experiences became a maintenance burden. Often, the desktop views would receive security fixes and UX improvements that our mobile views would not.</p>
-
-    <p>We also introduced a left navigation to the side of all Q&A experiences. As we looked at introducing Teams in the context of Stack Overflow it became obvious that we needed to review our overall information architecture. Fellow designer <a href="http://www.donnachoi.com">Donna Choi</a> covered the details and rationale in her <a href="https://stackoverflow.blog/2018/02/08/information-architecture-navigating-stack-overflow-enterprise-stack-exchange-sites/">blog post</a>. By adding the left nav we were able to scale our navigation beyond the header, allowing us to convert a larger set of pages to a responsive layout.</p>
-
-    <video controls loop width="1422">
-      <source src="media/responsive.mp4"
-              type="video/mp4">
-    </video>
-
-    <p>Most of this work was designed by <a href="https://twitter.com/ludwiczakpawel">Paweł Ludwiczak</a> and executed by <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> with myself taking over long term maintenance and execution. <a href="https://stackoverflow.com/users/7782017/joe-friend?tab=profile">Joe Friend</a> managed the community and set expectations across the multiple teams at Stack Overflow.</p>
-
-    <h4 id="community-theming">Community theming</h4>
-
-    <p>While building new features, even ones that should be quick wins, theming was a consistent source of frustration to the product team. Like the early days of Reddit and MySpace, the themes varied wildly in their technical and visual execution. Some themes had rich illustrations, custom badges and image sprites, custom buttons, headers, and even animation. Theming a community was used as a test project for some new designers, and an exercise while onboarding others to the team.</p>
-
-    <p>I was tasked with figuring out how to unify the elements of a community that <em>could</em> be themed, allowing some themes to become more expressive, while others would be reined in. This required auditing all our CSS and radically simplifying how these theming variables are passed around our codebase. To put it politely, our CSS bundles had grown organically over the years. Unifying our themes was a worthy opportunity to refactor our theming CSS. We could ship a more consistent theming experience that wouldn’t get in the way of more rapidly shipping features.</p>
-
-    <div class="caption">
-      <div class="annotated">
-        <div class="annotation" style="top: 11.5%; left: 19%;">
-          <div class="description">
-            Custom SVG logo
-          </div>
-        </div>
-        <div class="annotation" style="top: 11.5%; left: 68%;">
-          <div class="description">
-            Optional custom auxilliary image
-          </div>
-        </div>
-        <div class="annotation" style="top: 48.2%; left: 47%;">
-          <div class="description">
-            Optional custom tags
-          </div>
-        </div>
-        <div class="annotation" style="top: 27%; left: 35%;">
-          <div class="description">
-            Optional custom question links
-          </div>
-        </div>
-        <div class="annotation" style="top: 17.5%; left: 60%;">
-          <div class="description">
-            Optional custom buttons
-          </div>
-        </div>
-        <div class="annotation" style="top: 40%; left: 14%;">
-          <div class="description">
-            Optional custom background image
-          </div>
-        </div>
-        <div class="annotation" style="bottom: 30%; left: 14%;">
-          <div class="description">
-            Optional custom footer background
-          </div>
-        </div>
-        <img src="media/theming.png" width="1433">
-      </div>
-    </div>
-
-    <p>Refactoring our themes took about <a href="https://meta.stackexchange.com/questions/309349/left-nav-responsive-design-and-theming-next-steps">nine months</a> of sustained effort with lots of back and forth with our community. Our codebase is now in a much better place for future feature work.</p>
-
-    <h3 id="design-system">Design System</h3>
-
-    <p>With community theming as an entry into systems work, I began to do a lot of thinking about what a potential design system might look like at Stack Overflow.</p>
-
-    <h4 id="atomic-css">Atomic CSS</h4>
-
-    <p>Toward the end of my time at GitHub, <a href="https://primer.style">Primer</a> had introduced a set of “utility” CSS classes. These were tiny classes that modified individual CSS properties. Since I’d been writing semantic classes for nearly a decade, I approached them with some skepticism. But! I quickly changed my mind after actually using them. Designers and engineers didn’t need to worry about where to place CSS or how to extend existing components (if they existed)—we could just chain together classes in the view itself. Fixing a bug in one context meant we’d be much less likely to introduce a bug elsewhere in the product, since these utility classes were scoped only to that element on the page you were modifying.</p>
-
-    <p>Taking inspiration from <a href="https://tailwindcss.com">Tailwind</a>, <a href="http://tachyons.io">Tachyons</a> and <a href="https://basscss.com">Basscss</a>, I created a set of atomic utility classes that could express the <em>entirety</em> of the CSS spec without having to introduce any redundant CSS. This set of immutable atomic classes made for an incredibly flexible entry point to a design system.</p>
-
-    <p><a href="http://johnpolacek.com/">John Polacek</a> has the greatest argument for atomic CSS that I’ve ever seen. This <a href="http://johnpolacek.com/rethinking/">slide deck</a> is just so good, I think you should stop reading this post and check it out immediately.</p>
-
-    <p>Atomic CSS was a wildly different entry point to a design system. Previous failed design system efforts at Stack Overflow focused on cataloging existing components in hopes of replacing them as soon as possible. An atomic CSS library could be used by designers and engineers <em>immediately</em>, shipping alongside existing components.</p>
-
-    <p>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-“ <br>Nope.<br>“Ok one designer &amp; a dev to build the-“<br>Nope.<br>“Ok a couple days blocked off-“<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*</p>&mdash; Allison Grayce (@allisongrayce) <a href="https://twitter.com/allisongrayce/status/1035650093276254208?ref_src=twsrc%5Etfw">August 31, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </p>
-
-    <p>Design systems often initially have trouble scaling beyond simple button components. If your organization recognizes the value of a design system, it then moves to things like navigation patterns. These components are commonly too rigid, and teams have too little resources to provide for every edge case. This leads to engineers and designers being frustrated with their technical constraints, abandoning the system altogether.</p>
-
-    <p>Chaining together our atomic classes allowed folks to build components that didn’t yet exist, and easily extend the components that did. Every component is designed in the perfect vacuum of an empty white page. As soon as those components are placed next to other components or different layouts, it’s often the case that a component may actually need a drop shadow, or a slightly different shade of gray as a background.</p>
-
-    <p>I was met with similar skepticism that I’d felt at GitHub as a consumer of Primer. I had to pitch shifting our front-end culture from a decade’s worth of traditionally-scoped BEM-based CSS to our new bundle of atomic classes. Ultimately, the benefits of a fixed, immutable CSS bundle would sell our bottomline-conscious engineers on our architecture team. Meticulous documentation further convinced engineers building their first features atomically. Designers got on board after a few demos where we just sat down for a half an hour and implemented their in-progress mockups.</p>
-
-    <p>Personally, it took me actually using an atomic CSS library to understand that it’s a worthy approach, and our crew at Stack Overflow was no different.</p>
-
-    <h4 id="stacks-documentation">Documentation</h4>
-
-    <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Myself and <a href="http://www.joshuahynes.com">Joshua Hynes</a> meticulously documented as much as we could, as quickly as we could.</p>
-
-    <img src="media/documentation.png" width="1262">
-
-    <p>Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>. Netlify allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
-
-    <p>At any time, users can preview all our changes we’ve got queued up for release by visiting <a href="https://develop.stackoverflow.design">develop.stackoverflow.design</a>. Every release is accompanied by a product development-wide email with release notes.</p>
-
-    <h4 id="components">Components</h4>
-
-    <p>Now, the problem with atomic CSS is you often repeat yourself chaining together pretty verbose strings of classes to create simple things like <a href="https://stackoverflow.design/product/components/buttons">buttons</a>. These were the first things we turned into components. This list quickly grew into <a href="https://stackoverflow.design/product/components/inputs">form</a> elements, <a href="https://stackoverflow.design/product/components/tables">tables</a>, and <a href="https://stackoverflow.design/product/components/links">links</a>. Very quickly Stacks began taking shape as a true design system. Of course, any one of these components could be overridden using atomic styling. This is incredibly important for those edge cases that the design system couldn’t reliably predict or guard against in the first place.</p>
-
-    <p>We chose a modified BEM approach, for historical reasons. Our components are namespaced with the <code>s-</code> prefix. <code>s-btn</code> applies initial button styling, while modifiers are expressed as <code>s-btn__primary</code>. If there are child elements, they’re expressed as <code>s-btn--number</code> and so forth. This pattern has suited us well, since when you know the internal logic of the class naming system, you can tell at a glance how the markup is structured by the CSS alone.</p>
-
-    <div class="background">
       <div class="caption">
-        <img src="media/components.png" width="1218">
-        A small subset of our original components
+        <img src="media/documentation03.png" alt="Documentation responsiveness" width="829">
+        Documentation would support responsive layouts on day one.
       </div>
+
+      <p>These explorations all tested very well, but ultimately it would have been too much investment to build what Documentation truly required to succeed. The failure of Documentation changed Stack Overflow’s approach to product development across the company, moving beyond “let’s develop a new product and see how it goes” and into more robust research into product and market fit.</p>
+
+      <img src="media/documentation-sunset.png" alt="Sunset" width="1272">
+
+      <h3 id="community">Community</h3>
+
+      <p>Q&A being the bread and butter of Stack Overflow, I was delighted to be invited to move over to the Community team after Documentation was shuttered.</p>
+
+      <p>Since we weren’t building a new product, there were lots of opportunities for improvements, big and small. We discovered new ways of watching tags, filtering questions, making new users feel welcomed, and how to market our products.</p>
+
+      <h4 id="custom-questions-lists">Custom questions lists</h4>
+
+      <p>Though most users end up on Stack Overflow by directly searching for their problem on Google, many of our users browse our questions lists based on their interests. The community team needed a way to introduce robust sorting, filtering, while showing power users the algorithm behind pre-baked lists like “Newest” or “Active”.</p>
+
+      <div class="background">
+        <div class="caption">
+          <img src="media/sorting-question-filtering.png" width="768">
+          At the top of each question list, we introduced sorting and filtering.
+        </div>
+
+        <div class="caption">
+          <img src="media/sorting-custom-questions.png" width="822">
+          If a user changes one of the sorting parameters, we give them the option to save their custom search.
+        </div>
+
+        <div class="caption">
+          <img src="media/sorting-editing-custom-sort.png" width="492">
+          Editing a custom search within a modal.
+        </div>
+
+        <div class="caption">
+          <img src="media/sorting-and-filtering.png" width="1236">
+          Early explorations of sorting and filtering popovers.
+        </div>
+      </div>
+
+      <p>Ultimately, a much simpler approach pitched by <a href="https://www.lisahpark.com">Lisa Park</a> was best. We shipped a combined, Yelp-y set of filters and sorts in a single expandable view. <a href="https://stackoverflow.com/users/860000/brian-nickel?tab=profile">Brian Nickel</a> handled taking mockups and Codepens and fleshing out the backend to support them.</p>
+
+      <img src="media/sorting-combined.png" width="727">
+
+      <h4 id="tag-watching">Tag watching</h4>
+
+      <p>A powerful feature for those who browse Stack Overflow is watching tags. By watching tags, we weight questions in those tags and move them to the top of the lists. You can also receive an email digest of questions within those tags in varying frequency. We wanted to help surface its functionality.</p>
+
+      <div class="caption">
+        <img src="media/tag-watching-sidebar-elements.png" width="1296">
+        We added some tag management to the sidebar of question lists.
+      </div>
+
+      <div class="caption">
+        <img src="media/tag-watching-popover.png" width="324">
+        We surfaced the ability to watch or ignore a tag any time a tag is presented.
+      </div>
+
+      <div class="caption">
+        <img src="media/tags-header.png" width="769">
+        On the tag page itself, we also added some additional buttons for managing watching a tag.
+      </div>
+
+      <h4 id="identity">Identity</h4>
+
+      <p>After launching our code of conduct, we needed a way to show that a user was new to Stack Overflow. This meant exploring ways to unify identy across the product. We shipped the smallest version of this, the hand waving saying they’re a new contributor.</p>
+
+      <div class="background">
+        <img src="media/identity.png" width="1352">
+      </div>
+
+      <p>My favorite part of product design is balancing quick wins with long-running redesigns. Simultaneously, the Community team was tasked with converting the site to a responsive layout, adding a persistent sidebar navigation, and refactoring our community’s bunch of themes.</p>
+
+      <h4 id="responsive-design">Responsive design</h4>
+
+      <p>Like a lot of our peers, Stack Overflow built mobile-specific views of our product. At the time, this made more sense than a responsive layout, since unifying on a responsive layout would require a heavy refactor and would force our users to download way more bytes to resource-constrained mobile devices than we’d feel comfortable. However, over the years, maintaining separate mobile experiences became a maintenance burden. Often, the desktop views would receive security fixes and UX improvements that our mobile views would not.</p>
+
+      <p>We also introduced a left navigation to the side of all Q&A experiences. As we looked at introducing Teams in the context of Stack Overflow it became obvious that we needed to review our overall information architecture. Fellow designer <a href="http://www.donnachoi.com">Donna Choi</a> covered the details and rationale in her <a href="https://stackoverflow.blog/2018/02/08/information-architecture-navigating-stack-overflow-enterprise-stack-exchange-sites/">blog post</a>. By adding the left nav we were able to scale our navigation beyond the header, allowing us to convert a larger set of pages to a responsive layout.</p>
+
+      <video controls loop width="1422">
+        <source src="media/responsive.mp4"
+                type="video/mp4">
+      </video>
+
+      <p>Most of this work was designed by <a href="https://twitter.com/ludwiczakpawel">Paweł Ludwiczak</a> and executed by <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> with myself taking over long term maintenance and execution. <a href="https://stackoverflow.com/users/7782017/joe-friend?tab=profile">Joe Friend</a> managed the community and set expectations across the multiple teams at Stack Overflow.</p>
+
+      <h4 id="community-theming">Community theming</h4>
+
+      <p>While building new features, even ones that should be quick wins, theming was a consistent source of frustration to the product team. Like the early days of Reddit and MySpace, the themes varied wildly in their technical and visual execution. Some themes had rich illustrations, custom badges and image sprites, custom buttons, headers, and even animation. Theming a community was used as a test project for some new designers, and an exercise while onboarding others to the team.</p>
+
+      <p>I was tasked with figuring out how to unify the elements of a community that <em>could</em> be themed, allowing some themes to become more expressive, while others would be reined in. This required auditing all our CSS and radically simplifying how these theming variables are passed around our codebase. To put it politely, our CSS bundles had grown organically over the years. Unifying our themes was a worthy opportunity to refactor our theming CSS. We could ship a more consistent theming experience that wouldn’t get in the way of more rapidly shipping features.</p>
+
+      <div class="caption">
+        <div class="annotated">
+          <div class="annotation" style="top: 11.5%; left: 19%;">
+            <div class="description">
+              Custom SVG logo
+            </div>
+          </div>
+          <div class="annotation" style="top: 11.5%; left: 68%;">
+            <div class="description">
+              Optional custom auxilliary image
+            </div>
+          </div>
+          <div class="annotation" style="top: 48.2%; left: 47%;">
+            <div class="description">
+              Optional custom tags
+            </div>
+          </div>
+          <div class="annotation" style="top: 27%; left: 35%;">
+            <div class="description">
+              Optional custom question links
+            </div>
+          </div>
+          <div class="annotation" style="top: 17.5%; left: 60%;">
+            <div class="description">
+              Optional custom buttons
+            </div>
+          </div>
+          <div class="annotation" style="top: 40%; left: 14%;">
+            <div class="description">
+              Optional custom background image
+            </div>
+          </div>
+          <div class="annotation" style="bottom: 30%; left: 14%;">
+            <div class="description">
+              Optional custom footer background
+            </div>
+          </div>
+          <img src="media/theming.png" width="1433">
+        </div>
+      </div>
+
+      <p>Refactoring our themes took about <a href="https://meta.stackexchange.com/questions/309349/left-nav-responsive-design-and-theming-next-steps">nine months</a> of sustained effort with lots of back and forth with our community. Our codebase is now in a much better place for future feature work.</p>
+
+      <h3 id="design-system">Design System</h3>
+
+      <p>With community theming as an entry into systems work, I began to do a lot of thinking about what a potential design system might look like at Stack Overflow.</p>
+
+      <h4 id="atomic-css">Atomic CSS</h4>
+
+      <p>Toward the end of my time at GitHub, <a href="https://primer.style">Primer</a> had introduced a set of “utility” CSS classes. These were tiny classes that modified individual CSS properties. Since I’d been writing semantic classes for nearly a decade, I approached them with some skepticism. But! I quickly changed my mind after actually using them. Designers and engineers didn’t need to worry about where to place CSS or how to extend existing components (if they existed)—we could just chain together classes in the view itself. Fixing a bug in one context meant we’d be much less likely to introduce a bug elsewhere in the product, since these utility classes were scoped only to that element on the page you were modifying.</p>
+
+      <p>Taking inspiration from <a href="https://tailwindcss.com">Tailwind</a>, <a href="http://tachyons.io">Tachyons</a> and <a href="https://basscss.com">Basscss</a>, I created a set of atomic utility classes that could express the <em>entirety</em> of the CSS spec without having to introduce any redundant CSS. This set of immutable atomic classes made for an incredibly flexible entry point to a design system.</p>
+
+      <p><a href="http://johnpolacek.com/">John Polacek</a> has the greatest argument for atomic CSS that I’ve ever seen. This <a href="http://johnpolacek.com/rethinking/">slide deck</a> is just so good, I think you should stop reading this post and check it out immediately.</p>
+
+      <p>Atomic CSS was a wildly different entry point to a design system. Previous failed design system efforts at Stack Overflow focused on cataloging existing components in hopes of replacing them as soon as possible. An atomic CSS library could be used by designers and engineers <em>immediately</em>, shipping alongside existing components.</p>
+
+      <p>
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-“ <br>Nope.<br>“Ok one designer &amp; a dev to build the-“<br>Nope.<br>“Ok a couple days blocked off-“<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*</p>&mdash; Allison Grayce (@allisongrayce) <a href="https://twitter.com/allisongrayce/status/1035650093276254208?ref_src=twsrc%5Etfw">August 31, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+
+      <p>Design systems often initially have trouble scaling beyond simple button components. If your organization recognizes the value of a design system, it then moves to things like navigation patterns. These components are commonly too rigid, and teams have too little resources to provide for every edge case. This leads to engineers and designers being frustrated with their technical constraints, abandoning the system altogether.</p>
+
+      <p>Chaining together our atomic classes allowed folks to build components that didn’t yet exist, and easily extend the components that did. Every component is designed in the perfect vacuum of an empty white page. As soon as those components are placed next to other components or different layouts, it’s often the case that a component may actually need a drop shadow, or a slightly different shade of gray as a background.</p>
+
+      <p>I was met with similar skepticism that I’d felt at GitHub as a consumer of Primer. I had to pitch shifting our front-end culture from a decade’s worth of traditionally-scoped BEM-based CSS to our new bundle of atomic classes. Ultimately, the benefits of a fixed, immutable CSS bundle would sell our bottomline-conscious engineers on our architecture team. Meticulous documentation further convinced engineers building their first features atomically. Designers got on board after a few demos where we just sat down for a half an hour and implemented their in-progress mockups.</p>
+
+      <p>Personally, it took me actually using an atomic CSS library to understand that it’s a worthy approach, and our crew at Stack Overflow was no different.</p>
+
+      <h4 id="stacks-documentation">Documentation</h4>
+
+      <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Myself and <a href="http://www.joshuahynes.com">Joshua Hynes</a> meticulously documented as much as we could, as quickly as we could.</p>
+
+      <img src="media/documentation.png" width="1262">
+
+      <p>Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>. Netlify allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
+
+      <p>At any time, users can preview all our changes we’ve got queued up for release by visiting <a href="https://develop.stackoverflow.design">develop.stackoverflow.design</a>. Every release is accompanied by a product development-wide email with release notes.</p>
+
+      <h4 id="components">Components</h4>
+
+      <p>Now, the problem with atomic CSS is you often repeat yourself chaining together pretty verbose strings of classes to create simple things like <a href="https://stackoverflow.design/product/components/buttons">buttons</a>. These were the first things we turned into components. This list quickly grew into <a href="https://stackoverflow.design/product/components/inputs">form</a> elements, <a href="https://stackoverflow.design/product/components/tables">tables</a>, and <a href="https://stackoverflow.design/product/components/links">links</a>. Very quickly Stacks began taking shape as a true design system. Of course, any one of these components could be overridden using atomic styling. This is incredibly important for those edge cases that the design system couldn’t reliably predict or guard against in the first place.</p>
+
+      <p>We chose a modified BEM approach, for historical reasons. Our components are namespaced with the <code>s-</code> prefix. <code>s-btn</code> applies initial button styling, while modifiers are expressed as <code>s-btn__primary</code>. If there are child elements, they’re expressed as <code>s-btn--number</code> and so forth. This pattern has suited us well, since when you know the internal logic of the class naming system, you can tell at a glance how the markup is structured by the CSS alone.</p>
+
+      <div class="background">
+        <div class="caption">
+          <img src="media/components.png" width="1218">
+          A small subset of our original components
+        </div>
+      </div>
+
+      <p>Eventually, each of our components will have stock interactions provided by a corresponding JavaScript controller. On Stacks, we chose <a href="https://stimulusjs.org">Stimulus</a> as a dependency for our handing events, and assigning data attributes across our markup, regardless of if it’s coming from legacy views, the odd angular view, or via AJAX. Regardless of how our DOM is loaded, our <a href="https://stimulusjs.org">Stimulus</a>-powered components will have the interactivity engineers and users expect.</p>
+
+      <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our <a href="https://stackoverflow.design/product/components/popovers">popovers</a> component, it allows our engineers to assign positioning, wire up the originating element, and handle closing events.</p>
+
+      <p>Our <a href="https://stimulusjs.org">Stimulus</a> controllers are written using TypeScript that is compiled to vanilla JS. All credit goes to three engineers, all named Ben 😛. <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> vetted and chose <a href="https://stimulusjs.org">Stimulus</a> as a framework. He also wrote our first controllers and figured out our deployment strategy. <a href="https://www.benkelly.me">Benjamine Kelly</a> wrote our popovers component and helped further our API design patterns. <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> helped convert our JavaScript controllers to TypeScript.</p>
+
+      <h4 id="icon-set">Icon set</h4>
+
+      <p>At GitHub, I learned the value of a system-wide icon set. Stack Overflow was no different. Users would be shown the same consistent metaphor across the product. We’d deliver these icons as SVG, directly injecting them into the page and allowing for their colors to come directly from the text color of their parent. I took the same approach at Stack Overflow with some important modifications.</p>
+
+      <img src="media/icons.png" width="1350">
+
+      <p>Our icons are drawn at native sizes of <code>16px</code> within an <code>18px</code> frame. We also have smaller variations of most our glyphs at <code>12px</code> within a <code>14px</code> frame. The API for adding them to the view is simple. We call <code>@Svg.IconName</code>. Optionally, we can add any classes that we need <code>@Svg.IconName.With("js-target d-flex")</code>.</p>
+
+      <p>Additionally, we can pass <code>@Svg.IconName.With("native")</code> to allow any native colors shine through. Some of our icons look like rich emojis unless we override them with the parent text color. This allows us to ship features like reactions.</p>
+
+      <div class="caption">
+        <img src="media/icons-recoloring.png" width="1108">
+        Icon recoloring shown in detail
+      </div>
+
+      <p>In the future, we plan to deliver spot illustration versions of most of the metaphors in our icon set. This will enable our metaphors to scale from <code>12px</code> up to <code>128px</code>, adopting the appropriate aesthetic at the proper scale and pixel-fitting. <a href="https://davidlongworth.com">David Longworth</a> helped breathe new life into our new, richer icons.</p>
+
+      <img src="media/icon-scaling.png" width="771">
+
+      <p>The icon set is an <a href="https://github.com/stackexchange/Stacks-Icons">open source repo</a> on GitHub and can be explored in our <a href="https://stackoverflow.design/resources/icons">documentation</a>.</p>
+
+      <h4 id="conditional-classes">Conditional classes</h4>
+
+      <p>We borrowed heavily from <a href="https://tailwindcss.com">Tailwind</a> when designing the class names for <a href="https://stackoverflow.design/product/guidelines/conditional-classes">conditional classes</a>. Since Stack Overflow is transitioning to responsive views across the product, we needed a way to quickly override styling at various breakpoints. We offer a large, medium, and small breakpoints. These pixel values have been abstracted, allowing folks to use predefined max-width media query breakpoints represented by t-shirt sizes. A common example would be to apply <code>.md:fd-column</code> to a flex container with <code>d-flex</code>. This means, “At the medium breakpoint and smaller, switch the grid from columns to rows by applying <code>.fd-column</code>.”</p>
+
+      <p>Additionally, we offer conditional classes for hover, focus, and printing. For print, this often means adding <code>p:d-none</code>, simply hiding an element when printing.</p>
+
+      <h4 id="legitimizing-stacks">Legitimizing Stacks</h4>
+
+      <p>Like most design systems, Stacks started as a side project. In between normal product design feature work, I was first able to systematize our icon set. I was then able to experiment with atomic CSS classes and begin documenting them in a private repo. This allowed me and other collaborators interested in the design system to share our ideas about how these classes would be named, and how folks might interact with any APIs we’d offer.</p>
+
+      <p>Just prior to when frontend work on our newest flagship product, Teams, was slated to begin, Stacks dropped its first versions into production. This allowed each team assigned to building our new product to rapidly build the onboarding, questions, and admin views using our fixed atomic bundle. No new CSS had to be written or shipped—we only needed to chain our atomic classes together in the view themselves. Designers could assemble user interfaces in Codepens before the backends were ready.</p>
+
+      <p>Stacks proved itself as a force multiplier very quickly in building the product, but soon after was put to the test in our marketing pages. Entire suites of marketing pages launched to talk about Teams without shipping a <em>new</em> line of CSS.</p>
+
+      <div class="caption">
+        <img src="media/marketing.png" width="1354">
+        Our marketing team was able to assemble new page layouts without shipping a ton of custom CSS.
+      </div>
+
+      <p>For every hour that I’d spent systematizing things with Stacks, each engineer got at least an hour back. Stacks very quickly paid for itself, allowing me to more effectively argue moving from working as a product designer on <em>specific</em> features to working on Stacks itself. After a year of working on Stacks in a part-time fashion, I was able to convince management of its value. As of January 1, 2019, I’m Stack Overflow’s Design Systems Lead.</p>
+
+      <h4 id="figma">Figma</h4>
+
+      <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on <a href="https://sketch.com">Sketch</a>. While I absolutely adore Sketch, I found the distributed document model of <a href="https://figma.com">Figma</a> incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
+
+      <div class="caption">
+        <img src="media/figma.png" width="494">
+        The humble beginnings of our Figma components
+      </div>
+
+      <p>It took a lot of internal evangelizing to switch to Figma, but since delivering all our shared components from our design system to components in our <em>design</em> tool, the case was much easier to make. Product designers, regardless of their ability to code, can now drag components from our codebase to their canvases, quickly assembling their features for handoff to engineers.</p>
+
+      <h4 id="designing-systemically">Designing systemically</h4>
+
+      <p>We have a long road to go on implementing Stacks across Stack Overflow. Sustained refactor has to happen in order to get our code coverage to the point where we can make larger, sweeping changes. Like atomic classes being an entry point into a design system, our design system is an entry point to a wider redesign of our product.</p>
+
+      <p>Sadly, it’s a common refrain that Stack Overflow isn’t a friendly product. While most of these issues can and should be solved by hard choices in Stack Overflow’s set of features, we can’t discount the effect that aesthetics can have on a product. Beyond strong community moderation and proper opinionated features like flagging, and automatic sentiment analysis, we can look at our product systemically to change our users’ overall perception.</p>
+
+      <img src="media/friendliness.png" width="1385">
+
+      <p>A note for our users that may be reading this—this is merely an exploration of the profound effect of what redesigning the key elements within our design system can result in. Here we’ve changed the typeface to Roboto, the overall padding scale, font sizing scale, and corner radii.</p>
+
+      <hr>
+
+      <p>Our design system continues to grow thanks to huge contributions from my fellow designers and engineers at Stack Overflow. Stacks includes incredibly robust <a href="https://stackoverflow.design/email/">email templates</a> created entirely by <a href="http://www.tedgoas.com">Ted Goas</a>. Ted and Donna also created strong, opinionated <a href="https://stackoverflow.design/content/">content guidelines</a> that inform our product’s design daily.</p>
+
+      <p><a href="https://nickcraver.com">Nick Craver</a>’s and <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a>’s efforts in actually delivering Stacks' CSS and JavaScript bundle can not be understated.</p>
+
+      <p>While the tech behind our design system can change at any time, my hope is Stacks’ lasting influence is cultural. Our mindset has shifted from shipping single features within a product silo, to shipping larger components for all to use. As we move beyond when this post was written in 2019, I plan on continuing to advocate for Stacks, to pitch that our design system unifies and runs all of frontend at Stack Overflow.</p>
+
+      <p><a href="https://stackoverflow.design">Stacks</a> is open source—pull requests are welcome. If you want to see our approach to things, have a gander at our <a href="https://github.com/stackexchange/Stacks">repository</a> or our <a href="https://github.com/StackExchange/Stacks/projects/1">roadmap</a>.</p>
+
+      <hr>
     </div>
 
-    <p>Eventually, each of our components will have stock interactions provided by a corresponding JavaScript controller. On Stacks, we chose <a href="https://stimulusjs.org">Stimulus</a> as a dependency for our handing events, and assigning data attributes across our markup, regardless of if it’s coming from legacy views, the odd angular view, or via AJAX. Regardless of how our DOM is loaded, our <a href="https://stimulusjs.org">Stimulus</a>-powered components will have the interactivity engineers and users expect.</p>
-
-    <p>Mostly, this just means that certain components have built-in logic for showing and hiding. In the case of our <a href="https://stackoverflow.design/product/components/popovers">popovers</a> component, it allows our engineers to assign positioning, wire up the originating element, and handle closing events.</p>
-
-    <p>Our <a href="https://stimulusjs.org">Stimulus</a> controllers are written using TypeScript that is compiled to vanilla JS. All credit goes to three engineers, all named Ben 😛. <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> vetted and chose <a href="https://stimulusjs.org">Stimulus</a> as a framework. He also wrote our first controllers and figured out our deployment strategy. <a href="https://www.benkelly.me">Benjamine Kelly</a> wrote our popovers component and helped further our API design patterns. <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> helped convert our JavaScript controllers to TypeScript.</p>
-
-    <h4 id="icon-set">Icon set</h4>
-
-    <p>At GitHub, I learned the value of a system-wide icon set. Stack Overflow was no different. Users would be shown the same consistent metaphor across the product. We’d deliver these icons as SVG, directly injecting them into the page and allowing for their colors to come directly from the text color of their parent. I took the same approach at Stack Overflow with some important modifications.</p>
-
-    <img src="media/icons.png" width="1350">
-
-    <p>Our icons are drawn at native sizes of <code>16px</code> within an <code>18px</code> frame. We also have smaller variations of most our glyphs at <code>12px</code> within a <code>14px</code> frame. The API for adding them to the view is simple. We call <code>@Svg.IconName</code>. Optionally, we can add any classes that we need <code>@Svg.IconName.With("js-target d-flex")</code>.</p>
-
-    <p>Additionally, we can pass <code>@Svg.IconName.With("native")</code> to allow any native colors shine through. Some of our icons look like rich emojis unless we override them with the parent text color. This allows us to ship features like reactions.</p>
-
-    <div class="caption">
-      <img src="media/icons-recoloring.png" width="1108">
-      Icon recoloring shown in detail
-    </div>
-
-    <p>In the future, we plan to deliver spot illustration versions of most of the metaphors in our icon set. This will enable our metaphors to scale from <code>12px</code> up to <code>128px</code>, adopting the appropriate aesthetic at the proper scale and pixel-fitting. <a href="https://davidlongworth.com">David Longworth</a> helped breathe new life into our new, richer icons.</p>
-
-    <img src="media/icon-scaling.png" width="771">
-
-    <p>The icon set is an <a href="https://github.com/stackexchange/Stacks-Icons">open source repo</a> on GitHub and can be explored in our <a href="https://stackoverflow.design/resources/icons">documentation</a>.</p>
-
-    <h4 id="conditional-classes">Conditional classes</h4>
-
-    <p>We borrowed heavily from <a href="https://tailwindcss.com">Tailwind</a> when designing the class names for <a href="https://stackoverflow.design/product/guidelines/conditional-classes">conditional classes</a>. Since Stack Overflow is transitioning to responsive views across the product, we needed a way to quickly override styling at various breakpoints. We offer a large, medium, and small breakpoints. These pixel values have been abstracted, allowing folks to use predefined max-width media query breakpoints represented by t-shirt sizes. A common example would be to apply <code>.md:fd-column</code> to a flex container with <code>d-flex</code>. This means, “At the medium breakpoint and smaller, switch the grid from columns to rows by applying <code>.fd-column</code>.”</p>
-
-    <p>Additionally, we offer conditional classes for hover, focus, and printing. For print, this often means adding <code>p:d-none</code>, simply hiding an element when printing.</p>
-
-    <h4 id="legitimizing-stacks">Legitimizing Stacks</h4>
-
-    <p>Like most design systems, Stacks started as a side project. In between normal product design feature work, I was first able to systematize our icon set. I was then able to experiment with atomic CSS classes and begin documenting them in a private repo. This allowed me and other collaborators interested in the design system to share our ideas about how these classes would be named, and how folks might interact with any APIs we’d offer.</p>
-
-    <p>Just prior to when frontend work on our newest flagship product, Teams, was slated to begin, Stacks dropped its first versions into production. This allowed each team assigned to building our new product to rapidly build the onboarding, questions, and admin views using our fixed atomic bundle. No new CSS had to be written or shipped—we only needed to chain our atomic classes together in the view themselves. Designers could assemble user interfaces in Codepens before the backends were ready.</p>
-
-    <p>Stacks proved itself as a force multiplier very quickly in building the product, but soon after was put to the test in our marketing pages. Entire suites of marketing pages launched to talk about Teams without shipping a <em>new</em> line of CSS.</p>
-
-    <div class="caption">
-      <img src="media/marketing.png" width="1354">
-      Our marketing team was able to assemble new page layouts without shipping a ton of custom CSS.
-    </div>
-
-    <p>For every hour that I’d spent systematizing things with Stacks, each engineer got at least an hour back. Stacks very quickly paid for itself, allowing me to more effectively argue moving from working as a product designer on <em>specific</em> features to working on Stacks itself. After a year of working on Stacks in a part-time fashion, I was able to convince management of its value. As of January 1, 2019, I’m Stack Overflow’s Design Systems Lead.</p>
-
-    <h4 id="figma">Figma</h4>
-
-    <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on <a href="https://sketch.com">Sketch</a>. While I absolutely adore Sketch, I found the distributed document model of <a href="https://figma.com">Figma</a> incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
-
-    <div class="caption">
-      <img src="media/figma.png" width="494">
-      The humble beginnings of our Figma components
-    </div>
-
-    <p>It took a lot of internal evangelizing to switch to Figma, but since delivering all our shared components from our design system to components in our <em>design</em> tool, the case was much easier to make. Product designers, regardless of their ability to code, can now drag components from our codebase to their canvases, quickly assembling their features for handoff to engineers.</p>
-
-    <h4 id="designing-systemically">Designing systemically</h4>
-
-    <p>We have a long road to go on implementing Stacks across Stack Overflow. Sustained refactor has to happen in order to get our code coverage to the point where we can make larger, sweeping changes. Like atomic classes being an entry point into a design system, our design system is an entry point to a wider redesign of our product.</p>
-
-    <p>Sadly, it’s a common refrain that Stack Overflow isn’t a friendly product. While most of these issues can and should be solved by hard choices in Stack Overflow’s set of features, we can’t discount the effect that aesthetics can have on a product. Beyond strong community moderation and proper opinionated features like flagging, and automatic sentiment analysis, we can look at our product systemically to change our users’ overall perception.</p>
-
-    <img src="media/friendliness.png" width="1385">
-
-    <p>A note for our users that may be reading this—this is merely an exploration of the profound effect of what redesigning the key elements within our design system can result in. Here we’ve changed the typeface to Roboto, the overall padding scale, font sizing scale, and corner radii.</p>
-
-    <hr>
-
-    <p>Our design system continues to grow thanks to huge contributions from my fellow designers and engineers at Stack Overflow. Stacks includes incredibly robust <a href="https://stackoverflow.design/email/">email templates</a> created entirely by <a href="http://www.tedgoas.com">Ted Goas</a>. Ted and Donna also created strong, opinionated <a href="https://stackoverflow.design/content/">content guidelines</a> that inform our product’s design daily.</p>
-
-    <p><a href="https://nickcraver.com">Nick Craver</a>’s and <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a>’s efforts in actually delivering Stacks' CSS and JavaScript bundle can not be understated.</p>
-
-    <p>While the tech behind our design system can change at any time, my hope is Stacks’ lasting influence is cultural. Our mindset has shifted from shipping single features within a product silo, to shipping larger components for all to use. As we move beyond when this post was written in 2019, I plan on continuing to advocate for Stacks, to pitch that our design system unifies and runs all of frontend at Stack Overflow.</p>
-
-    <p><a href="https://stackoverflow.design">Stacks</a> is open source—pull requests are welcome. If you want to see our approach to things, have a gander at our <a href="https://github.com/stackexchange/Stacks">repository</a> or our <a href="https://github.com/StackExchange/Stacks/projects/1">roadmap</a>.</p>
-
-    <hr>
-
-    include "intro.html"
     include "elsewhere.html"
     include "footer.html"
   </body>
