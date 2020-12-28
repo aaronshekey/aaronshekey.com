@@ -86,7 +86,7 @@ module.exports = function(grunt) {
           defaultExtractor: content => content.match(/[\w-:/]+(?<!:)/g) || [],
         },
         files: {
-          'build/_/css/stacks.css': ['src/_/css/stacks.css']
+          'build/_/css/stacks.css': ['./node_modules/@stackoverflow/stacks/dist/css/stacks.css']
         }
       }
     }
