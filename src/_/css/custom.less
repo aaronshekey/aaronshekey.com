@@ -227,6 +227,7 @@ body.section-about .about-link {
     text-decoration: none;
 
     &:hover {
+      color: @blue;
       text-decoration: underline;
     }
 
@@ -238,14 +239,26 @@ body.section-about .about-link {
 
   &.post-stackoverflow a {
     color: @orange;
+
+    &:hover {
+      color: @orange;
+    }
   }
 
   &.post-hum a {
     color: @green;
+
+    &:hover {
+      color: @green;
+    }
   }
 
   &.post-adobe a {
     color: @red;
+
+    &:hover {
+      color: @red;
+    }
   }
 
   h1,
@@ -592,15 +605,15 @@ body.section-about .about-link {
         white-space: nowrap;
         padding: 2px 8px;
         border-radius: 4px;
-        background: rgba(0,0,0,.7);
-        color: var(--white);
+        background: #3C4146;
+        color: white;
         font-size: 16px;
         display: none;
 
         &:after {
           border-left: solid transparent 6px;
           border-right: solid transparent 6px;
-          border-top: solid rgba(0,0,0,.7) 6px;
+          border-top: solid #3C4146 6px;
           bottom: -6px;
           content: " ";
           height: 0;
