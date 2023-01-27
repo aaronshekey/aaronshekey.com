@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://mastodon.social/.well-known/webfinger?resource=acct:aaronshekey@mastodon.social"
+  status = 200
