@@ -319,6 +319,14 @@ body.section-about .about-link {
     }
   }
 
+  &.post-github a {
+    color: @purple;
+
+    &:hover {
+      color: @purple;
+    }
+  }
+
   &.post-adobe a {
     color: @red;
 
@@ -385,7 +393,7 @@ body.section-about .about-link {
 
     ol {
       font-size: 1em;
-      padding-left: @margin/2;
+      padding-left: (@margin / 2);
       margin-bottom: 0;
     }
   }
@@ -418,6 +426,7 @@ body.section-about .about-link {
   h5,
   ol,
   ul,
+  pre,
   blockquote {
     max-width: 595px;
 
@@ -434,6 +443,7 @@ body.section-about .about-link {
   h5,
   ol,
   ul,
+  pre,
   blockquote,
   img,
   video,
@@ -470,8 +480,9 @@ body.section-about .about-link {
     text-align: center;
     margin-bottom: @margin;
 
-    img {
-      margin-bottom: @margin / 4;
+    img,
+    video {
+      margin-bottom: (@margin / 4);
     }
   }
 
@@ -489,8 +500,9 @@ body.section-about .about-link {
   ol + .caption,
   .caption + ol,
   ul + .caption,
-  .caption + ul {
-    margin-top: @margin * 2;
+  .caption + ul,
+  .caption + .caption {
+    margin-top: (@margin * 2);
   }
 
   p + h3,
@@ -503,9 +515,10 @@ body.section-about .about-link {
   ul + h4,
   p + h4,
   img + h4,
+  pre + h4,
   video + h4,
   .caption + h4 {
-    margin-top: @margin * 3;
+    margin-top: (@margin * 3);
   }
 
   .intro {
@@ -548,8 +561,8 @@ body.section-about .about-link {
     color: var(--black-500);
     background-color: var(--black-500);
     height: 2px;
-    margin-top: @margin * 4;
-    margin-bottom: @margin * 4;
+    margin-top: (@margin * 4);
+    margin-bottom: (@margin * 4);
   }
 
   .summary {
@@ -567,15 +580,15 @@ body.section-about .about-link {
     background-color: var(--black-050);
     padding-top: @margin;
     padding-bottom: @margin;
-    margin-top: @margin * 2;
-    margin-bottom: @margin * 2;
+    margin-top: (@margin * 2);
+    margin-bottom: (@margin * 2);
 
     img {
       margin-bottom: 0;
     }
 
     .caption img {
-      margin-bottom: @margin / 4;
+      margin-bottom: (@margin / 4);
     }
 
     @media (max-width: 810px) {
@@ -585,7 +598,7 @@ body.section-about .about-link {
     }
 
     .caption {
-      margin-bottom: @margin * 2;
+      margin-bottom: (@margin * 2);
 
       &:last-child {
         margin-bottom: 0;
@@ -603,8 +616,8 @@ body.section-about .about-link {
     font-style: oblique;
     font-size: 2.8em;
     line-height: 1em;
-    margin-top: @margin * 2;
-    margin-bottom: @margin * 2;
+    margin-top: (@margin * 2);
+    margin-bottom: (@margin * 2);
 
     &.medium {
       font-size: 1.8em;
@@ -629,12 +642,17 @@ body.section-about .about-link {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .s-code-block {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .player {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
-    margin-top: @margin * 2;
-    margin-bottom: @margin * 2;
+    margin-top: (@margin * 2);
+    margin-bottom: (@margin * 2);
 
     iframe {
       position: absolute;
