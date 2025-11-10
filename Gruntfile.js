@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: "build/_/css",
-						src: ["*.css", "!*.min.css"],
+						src: ["*.css", "!*.min.css", "!tailwind.css"],
 						dest: "build/_/css",
 						ext: ".css",
 					},
@@ -52,6 +52,12 @@ module.exports = function (grunt) {
 				},
 			},
 		},
+		shell: {
+			tailwind: {
+				command:
+					"npx tailwindcss -i src/_/css/tailwind.css -o build/_/css/tailwind.css --minify",
+			},
+		},
 		connect: {
 			server: {
 				options: {
@@ -69,6 +75,7 @@ module.exports = function (grunt) {
 					"clean",
 					"copy",
 					"less",
+					"shell:tailwind",
 					"purgecss",
 					"cssmin",
 					"concat",
@@ -118,6 +125,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-concurrent");
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-purgecss");
+	grunt.loadNpmTasks("grunt-shell");
 
 	// Default task(s).
 	grunt.registerTask("default", ["build", "concurrent:serve"]);
@@ -125,6 +133,7 @@ module.exports = function (grunt) {
 		"clean",
 		"copy",
 		"less",
+		"shell:tailwind",
 		"cssmin",
 		"concat",
 		"includes",

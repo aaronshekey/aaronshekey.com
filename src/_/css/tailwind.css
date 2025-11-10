@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/*
+  Tailwind CSS v4 Configuration
+
+  This file is processed by the Tailwind CLI during the build process.
+  The Tailwind classes are automatically detected from your HTML files
+  and only the used classes are included in the final output.
+
+  To customize Tailwind's default configuration, you can:
+  1. Add custom CSS properties and classes below
+  2. Use CSS @layer directives to organize your styles
+  3. Override Tailwind's default theme values
+
+  Example custom utilities:
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }
+*/
+
+/* Custom styles can go here */
