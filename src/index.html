@@ -1,28 +1,28 @@
 <!doctype html>
 
-<html lang="en" class="h-full overflow-hidden">
+<html lang="en" class="h-full">
     <head>
         include "header.html"
 
         <title>Aaron Shekey</title>
     </head>
-    <body class="bg-[#F4F2EA] lowercase h-full overflow-hidden">
-        <div class="flex items-center justify-center h-full">
-            <div class="flex gap-16 items-start">
+    <body class="bg-[#F4F2EA] lowercase h-full min-h-full">
+        <div class="grid place-items-center min-h-full">
+            <div
+                class="gap-8 lg:gap-16 xl:items-start items-center justify-center flex p-4 xl:flex-row flex-col py-8"
+            >
                 <div class="size-82.5">
                     <div
                         id="dvd-bouncer"
-                        class="size-82.5 flex relative items-center justify-center cursor-pointer"
-                        style="position: absolute; transition: none"
+                        class="size-82.5 flex items-center justify-center relative"
                     >
                         <div
-                            class="rounded-full bg-[#F5D77C] size-44.5 relative"
+                            class="rounded-full bg-[#F5D77C] size-44.5 grid place-items-center"
                         >
                             <img
                                 src="/_/img/avatar-web.png"
                                 width="122"
                                 height="187"
-                                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
                             />
                         </div>
                         <svg
@@ -84,205 +84,200 @@
                     </div>
                 </div>
 
-                <div class="w-60 mt-40">
-                    <h2 class="uppercase text-[#000000] text-xl">What</h2>
-                    <p class="text-[#000000]/60 text-base mt-8 leading-tight">
-                        I help design and create things like startups, websites,
-                        apps, and songs.
-                    </p>
-                    <p class="mt-4">
-                        <a href="/about" class="text-[#D4AB30]"
-                            >Read more &rarr;</a
+                <div
+                    class="flex lg:gap-16 gap-8 xl:mt-40 flex-col lg:flex-row items-center lg:items-start"
+                >
+                    <div class="w-60">
+                        <h2 class="uppercase text-[#000000] text-xl">What</h2>
+                        <p
+                            class="text-[#000000]/60 text-base lg:mt-8 mt-4 leading-tight"
                         >
-                    </p>
-                </div>
-                <div class="w-60 mt-40">
-                    <h2 class="uppercase text-[#000000] text-xl">Words</h2>
-
-                    <div class="grid gap-4 mt-8">
-                        <a href="/">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
+                            I help design and create things like startups,
+                            websites, apps, and songs.
+                        </p>
+                        <p class="mt-4">
+                            <a
+                                href="/about"
+                                class="text-[#D4AB30] hover:text-[#A18222]"
+                                >Read more &rarr;</a
                             >
-                                Why Halloween?
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                Short musings on why Halloween is the best
-                                holiday
-                            </p>
-                        </a>
-
-                        <a href="/">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
-                            >
-                                The worldview in everyday media
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                A small collection of random bits of popular
-                                culture that have had a profound effect on my
-                                worldview
-                            </p>
-                        </a>
-
-                        <a href="/">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
-                            >
-                                CSS in SVG in CSS: Shipping confetti to Stack
-                                Oerflow’s design system
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                Stack overflow celebrates site accomplishments
-                                with confetti in a bunch of places. This means
-                                it was time to formalize it in our design
-                                system.
-                            </p>
-                        </a>
-
-                        <a href="/words" class="text-[#D4AB30]"
-                            >Read more &rarr;</a
-                        >
+                        </p>
                     </div>
-                </div>
+                    <div class="w-60">
+                        <h2 class="uppercase text-[#000000] text-xl">Words</h2>
 
-                <div class="w-60 mt-40">
-                    <h2 class="uppercase text-[#000000] text-xl">Work</h2>
-                    <div class="grid gap-2 mt-8">
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
-                            >
-                                ngrok
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">2023–</p>
-                        </a>
+                        <div class="grid gap-4 lg:mt-8 mt-4">
+                            <a href="/" class="group">
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    Why Halloween?
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/60"
+                                >
+                                    Short musings on why Halloween is the best
+                                    holiday
+                                </p>
+                            </a>
 
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
-                            >
-                                Boox
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                2022–2023
-                            </p>
-                        </a>
+                            <a href="/" class="group">
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    The worldview in everyday media
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/60"
+                                >
+                                    A small collection of random bits of popular
+                                    culture that have had a profound effect on
+                                    my worldview
+                                </p>
+                            </a>
 
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
-                            >
-                                Stack Overflow
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                2017–2022
-                            </p>
-                        </a>
+                            <a href="/" class="group">
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    CSS in SVG in CSS: Shipping confetti to
+                                    Stack Overflow’s design system
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/60"
+                                >
+                                    Stack overflow celebrates site
+                                    accomplishments with confetti in a bunch of
+                                    places. This means it was time to formalize
+                                    it in our design system.
+                                </p>
+                            </a>
 
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
+                            <a
+                                href="/words"
+                                class="text-[#D4AB30] hover:text-[#A18222]"
+                                >Read more &rarr;</a
                             >
-                                GitHub
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                2015–2016
-                            </p>
-                        </a>
+                        </div>
+                    </div>
 
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
+                    <div class="w-60">
+                        <h2 class="uppercase text-[#000000] text-xl">Work</h2>
+                        <div class="grid gap-2 lg:mt-8 mt-4">
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
                             >
-                                Adobe
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">
-                                2011-2015
-                            </p>
-                        </a>
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    ngrok
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2023–
+                                </p>
+                            </a>
 
-                        <a
-                            href="/"
-                            class="flex justify-between items-center mt-8"
-                        >
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
                             >
-                                Hum
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">2013—</p>
-                        </a>
-                        <a href="/" class="flex justify-between items-center">
-                            <h4
-                                class="text-[#000000]/60 text-base leading-none"
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    Boox
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2022–2023
+                                </p>
+                            </a>
+
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
                             >
-                                The Usual Things
-                            </h4>
-                            <p class="text-[#000000]/40 text-xs mt-1">2008—</p>
-                        </a>
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    Stack Overflow
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2017–2022
+                                </p>
+                            </a>
+
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
+                            >
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    GitHub
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2015–2016
+                                </p>
+                            </a>
+
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
+                            >
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    Adobe
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2011-2015
+                                </p>
+                            </a>
+
+                            <a
+                                href="/"
+                                class="flex justify-between items-center mt-8 group"
+                            >
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    Hum
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2013—
+                                </p>
+                            </a>
+                            <a
+                                href="/"
+                                class="flex justify-between items-center group"
+                            >
+                                <h4
+                                    class="text-[#000000]/60 text-base leading-tight group-hover:text-[#000000]"
+                                >
+                                    The Usual Things
+                                </h4>
+                                <p
+                                    class="text-[#000000]/40 text-xs mt-1 group-hover:text-[#000000]/80"
+                                >
+                                    2008—
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            const dvdBouncer = document.getElementById("dvd-bouncer");
-
-            let x = 0;
-            let y = 0;
-            let dx = 2; // horizontal speed
-            let dy = 2; // vertical speed
-            let animationStarted = false;
-
-            function animate() {
-                // Update position
-                x += dx;
-                y += dy;
-
-                // Check boundaries and bounce
-                if (x <= 0 || x >= window.innerWidth - dvdBouncer.offsetWidth) {
-                    dx = -dx;
-                    x = Math.max(
-                        0,
-                        Math.min(x, window.innerWidth - dvdBouncer.offsetWidth),
-                    );
-                }
-
-                if (
-                    y <= 0 ||
-                    y >= window.innerHeight - dvdBouncer.offsetHeight
-                ) {
-                    dy = -dy;
-                    y = Math.max(
-                        0,
-                        Math.min(
-                            y,
-                            window.innerHeight - dvdBouncer.offsetHeight,
-                        ),
-                    );
-                }
-
-                // Apply position
-                dvdBouncer.style.left = x + "px";
-                dvdBouncer.style.top = y + "px";
-
-                requestAnimationFrame(animate);
-            }
-
-            // Start animation when user clicks on the logo
-            dvdBouncer.addEventListener("click", () => {
-                if (!animationStarted) {
-                    animationStarted = true;
-                    // Get current position as starting point
-                    const rect = dvdBouncer.getBoundingClientRect();
-                    x = rect.left;
-                    y = rect.top;
-                    // Set initial position
-                    dvdBouncer.style.left = x + "px";
-                    dvdBouncer.style.top = y + "px";
-                    animate();
-                }
-            });
-        </script>
     </body>
 </html>
