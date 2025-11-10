@@ -15,41 +15,18 @@ module.exports = function (grunt) {
 				},
 			},
 		},
-		cssmin: {
-			build: {
-				files: [
-					{
-						expand: true,
-						cwd: "build/_/css",
-						src: ["*.css", "!*.min.css", "!tailwind.css"],
-						dest: "build/_/css",
-						ext: ".css",
-					},
-				],
-			},
-		},
 		copy: {
 			build: {
 				files: [
 					{
 						expand: true,
 						cwd: "src",
-						src: ["**", "!**/_templates/**", "!_/css/*.less"],
+						src: ["**", "!**/_templates/**"],
 						dest: "build/",
 						flatten: false,
 						dot: true,
 					},
 				],
-			},
-		},
-		less: {
-			build: {
-				options: {
-					paths: ["src/_/css/"],
-				},
-				files: {
-					"build/_/css/custom.css": "src/_/css/custom.less",
-				},
 			},
 		},
 		shell: {
@@ -71,16 +48,7 @@ module.exports = function (grunt) {
 		watch: {
 			scripts: {
 				files: ["src/**/*"],
-				tasks: [
-					"clean",
-					"copy",
-					"less",
-					"shell:tailwind",
-					"purgecss",
-					"cssmin",
-					"concat",
-					"includes",
-				],
+				tasks: ["clean", "copy", "shell:tailwind", "concat", "includes"],
 				options: {
 					livereload: true,
 				},
@@ -93,19 +61,6 @@ module.exports = function (grunt) {
 
 			serve: ["connect", "watch"],
 		},
-		purgecss: {
-			my_target: {
-				options: {
-					content: ["./src/**/*.html"],
-					defaultExtractor: (content) => content.match(/[\w-:/]+(?<!:)/g) || [],
-				},
-				files: {
-					"build/_/css/stacks.css": [
-						"./node_modules/@stackoverflow/stacks/dist/css/stacks.css",
-					],
-				},
-			},
-		},
 		concat: {
 			basic: {
 				src: ["build/_/css/*.css"],
@@ -115,16 +70,13 @@ module.exports = function (grunt) {
 	});
 
 	// Load plugins
-	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-includes");
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-contrib-clean");
-	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-connect");
 	grunt.loadNpmTasks("grunt-concurrent");
 	grunt.loadNpmTasks("grunt-contrib-concat");
-	grunt.loadNpmTasks("grunt-purgecss");
 	grunt.loadNpmTasks("grunt-shell");
 
 	// Default task(s).
@@ -132,9 +84,7 @@ module.exports = function (grunt) {
 	grunt.registerTask("build", [
 		"clean",
 		"copy",
-		"less",
 		"shell:tailwind",
-		"cssmin",
 		"concat",
 		"includes",
 	]);
