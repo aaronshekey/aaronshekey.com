@@ -6,15 +6,16 @@
 
         <title>Aaron Shekey</title>
     </head>
-    <body class="bg-[#F4F2EA] lowercase h-full min-h-full">
-        <div class="grid place-items-center min-h-full">
+    <body
+        class="bg-[#F4F2EA] lowercase h-full min-h-screen grid place-items-center"
+    >
+        <div class="h-full min-h-screen">
             <div
                 class="gap-8 lg:gap-16 xl:items-start items-center justify-center flex p-4 xl:flex-row flex-col py-8"
             >
                 <div class="size-82.5">
                     <div
-                        id="dvd-bouncer"
-                        class="size-82.5 flex items-center justify-center relative"
+                        class="size-82.5 flex items-center justify-center scale-[95%] relative hover:scale-[100%] transition-transform duration-150 group"
                     >
                         <div
                             class="rounded-full bg-[#F5D77C] size-44.5 grid place-items-center"
@@ -23,6 +24,7 @@
                                 src="/_/img/avatar-web.png"
                                 width="122"
                                 height="187"
+                                class="group-hover:-rotate-3"
                             />
                         </div>
                         <svg
@@ -87,7 +89,7 @@
                 <div
                     class="flex lg:gap-16 gap-8 xl:mt-40 flex-col lg:flex-row items-center lg:items-start"
                 >
-                    <div class="w-60">
+                    <div class="lg:w-60 w-80 max-w-full">
                         <h2 class="uppercase text-[#000000] text-xl">What</h2>
                         <p
                             class="text-[#000000]/60 text-base lg:mt-8 mt-4 leading-tight"
@@ -103,7 +105,7 @@
                             >
                         </p>
                     </div>
-                    <div class="w-60">
+                    <div class="lg:w-60 w-80 max-w-full">
                         <h2 class="uppercase text-[#000000] text-xl">Words</h2>
 
                         <div class="grid gap-4 lg:mt-8 mt-4">
@@ -161,7 +163,7 @@
                         </div>
                     </div>
 
-                    <div class="w-60">
+                    <div class="lg:w-60 w-80 max-w-full">
                         <h2 class="uppercase text-[#000000] text-xl">Work</h2>
                         <div class="grid gap-2 lg:mt-8 mt-4">
                             <a
