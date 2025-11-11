@@ -6,18 +6,18 @@
 
     <title>Boox - Aaron Shekey</title>
   </head>
-  <body class="subpage theme-system ff-roboto section-work">
+  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference overflow-x-hidden">
     include "subheader.html"
 
-    <div class="post post-boox">
-      <h2>Boox</h2>
-      <p class="meta">2022—2023</p>
+    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm prose-code:font-normal">
+      <p class="font-sans text-sm mb-0">2022–2023</p>
+      <h2 class="mt-0">Boox</h2>
 
       <p>In 2022, I joined Boox, a sustainability startup with the mission of eliminating single-use packaging. I was their director of user experience.</p>
 
       <p>Boox’s first product is a reusable shipping box that, unlike cardboard, can be reused around 12 times. Besides reusability, Booxes are stronger, don’t require tape to assemble, fold flat, and can be created in a far wider selection of colors with far more flexible branding.</p>
 
-      <h5>Table of contents</h5>
+      <!-- <h5>Table of contents</h5>
       <ol class="contents">
         <li>
           <a href="#website">Website</a>
@@ -31,7 +31,7 @@
         <li>
           <a href="#scan-studio">Scan studio</a>
         </li>
-      </ol>
+      </ol> -->
 
       <h3 id="website">Website</h3>
 
@@ -44,15 +44,15 @@
         <li>Deploy on Shopify to offer some e-commerce features.</li>
       </ol>
 
-      <div class="caption">
-        <video class="rounded" src="media/website-desktop.mp4" width="1574" autoplay muted loop playsinline></video>
-        Boox’s website at desktop sizing
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <video class="rounded-lg mx-auto" src="media/website-desktop.mp4" width="1574" autoplay muted loop playsinline></video>
+        <figcaption class="text-center">Boox’s website at desktop sizing</figcaption>
+      </figure>
 
-      <div class="caption">
-        <video class="rounded" src="media/website-mobile.mp4" width="360" autoplay muted loop playsinline></video>
-        Boox’s website at mobile sizing
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <video class="rounded-lg mx-auto" src="media/website-mobile.mp4" width="360" autoplay muted loop playsinline></video>
+        <figcaption class="text-center">Boox’s website at mobile sizing</figcaption>
+      </figure>
 
       <h4>Explain the concept</h4>
 
@@ -60,10 +60,10 @@
 
       <p>With my rough art direction, we hired Jack Harvatt from <a href="https://harvatt.house">harvatt.house</a> to create the animation. We couldn’t be more pleased with the result. Once we had our hero asset, we exported a single asset that’d work throughout all the various responsive device sizes. This way, we could do all the necessary cropping within the browser.</p>
 
-      <div class="caption">
-        <video class="rounded" src="media/hero.mp4" width="1024" autoplay muted loop playsinline></video>
-        Harvatt’s hero animation loop
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <video class="rounded-lg mx-auto" src="media/hero.mp4" width="1024" autoplay muted loop playsinline></video>
+        <figcaption class="text-center">Harvatt’s hero animation loop</figcaption>
+      </figure>
 
       <h4>Boox can scale</h4>
 
@@ -101,15 +101,10 @@
 
       <p>We ultimately built a wizard that allows users to configure their return. When tapping each option, the onscreen Boox would reflect what they’d chosen.</p>
 
-      <div class="caption">
-        <img src="media/scan-default.png" width="360" loading="lazy">
-        Default scan wizard.
-      </div>
-
-      <div class="caption">
-        <img src="media/scan-return.png" width="360" loading="lazy">
-        Once they’ve told us what they're returning, we show where and how.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/scan-return.png" width="360" loading="lazy" class="mx-auto rounded-lg">
+        <figcaption class="text-center">Once they’ve told us what they're returning, we show where and how.</figcaption>
+      </figure>
 
       <h4>Explain the benefits</h4>
 
@@ -121,15 +116,14 @@
 
       <p>If the client was large enough, we’d allow full customization of the scan experience. We built our app to enable full white-labeling for various brands. We allowed for switching box colors, graphics, scan colors, fonts, spacing—everything you’d expect from a custom experience.</p>
 
-      <div class="caption background">
-        <div class="d-flex fw-wrap ai-start mb32 g16">
-          <img class="rounded" src="media/scan-goop.png" width="360" loading="lazy">
-          <img class="rounded" src="media/scan-rhode.png" width="360" loading="lazy">
-          <img class="rounded" src="media/scan-dore.png" width="360" loading="lazy">
+      <figure class="bg-[#E7E5D9] w-screen relative left-1/2 -translate-x-1/2 max-w-none p-4">
+        <div class="flex flex-wrap gap-4 items-start justify-around">
+          <img class="rounded-lg" src="media/scan-goop.png" width="360" loading="lazy">
+          <img class="rounded-lg" src="media/scan-rhode.png" width="360" loading="lazy">
+          <img class="rounded-lg" src="media/scan-dore.png" width="360" loading="lazy">
         </div>
-        Not only can we change colors and imagery, but we can also flatten the experience and put the return details inline.
-      </div>
-
+        <figcaption class="text-center">Not only can we change colors and imagery, but we can also flatten the experience and put the return details inline.</figcaption>
+      </figure>
 
       <h3 id="theming">Theming</h3>
 
@@ -139,15 +133,15 @@
 
       <p>To build our system, we isolated a few colors in our scan experience. We’d have colors for a brand, text, success, danger, and warnings. Each of these colors would have variations of lightness with 100 being the lightest, and 900 being the darkest.</p>
 
-      <div class="caption">
-        <img src="media/colors-default.png" width="524" loading="lazy">
-        Default Boox color guide
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none p-4 bg-white">
+        <img src="media/colors-default.png" width="524" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Default Boox color guide</figcaption>
+      </figure>
 
-      <p>In our configuration, we’d provide the middle value of <span>500</span> as individual <code>h</code>, <code>s</code>, and <code>l</code> values. Then, we’d operate on those individual values to re-assemble them as color gradations using CSS <code>calc</code> functions.</p>
+      <p>In our configuration, we’d provide the middle value of <code>500</code> as individual <code>h</code>, <code>s</code>, and <code>l</code> values. Then, we’d operate on those individual values to re-assemble them as color gradations using CSS <code>calc</code> functions.</p>
 
       <p>
-<pre class="s-code-block">
+<pre class="text-sm">
 :root {
   */ Determine the curve of color values between 0 and 1. More on this later */
   --step-100-value: 0.92;
@@ -203,26 +197,26 @@
 
       <p>We can do this with each of our hues, creating entire color palettes on the fly, while only tweaking a few CSS variables</p>
 
-      <div class="ws12 wmx100 mx-auto mb32">
+      <figure class="mx-auto">
         <p class="codepen" data-height="900" data-default-tab="result" data-slug-hash="MWQzvbL" data-preview="true" data-user="aaronshekey" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
           <span>See the Pen <a href="https://codepen.io/aaronshekey/pen/MWQzvbL">
           Newfangled Theming GUI</a> by Aaron Shekey (<a href="https://codepen.io/aaronshekey">@aaronshekey</a>)
           on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
         <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-      </div>
+      </figure>
 
-      <div class="caption">
-        <img src="media/colors-branded.png" width="524" loading="lazy">
-        A fully-customized color scheme
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none p-4 bg-white">
+        <img src="media/colors-branded.png" width="524" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">A fully-customized color scheme</figcaption>
+      </figure>
 
       <h4>Apply within Tailwind</h4>
 
       <p>All of Boox’s experiences are built using Tailwind. Thankfully, Tailwind allows for inclusion of arbitrary classes within its <code>@layer</code> utilities directive. We can assemble each of the colors we created using their nomenclature like so:</p>
 
       <p>
-<pre class="s-code-block">
+<pre class="text-sm">
 :root {
   /* Store our brand color as h, s, and l values */
   --theme-brand-h: 201;
@@ -255,15 +249,15 @@
 
       <p>Then, we can assemble each of these colors as components as needed. In the case of Boox, we built a small collection of form elements—buttons, inputs, checkboxes, etc.</p>
 
-      <div class="caption">
-        <img src="media/uikit-default.png" width="990" loading="lazy">
-        Default UI kit
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none p-4 bg-white">
+        <img src="media/uikit-default.png" width="990" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Default UI kit</figcaption>
+      </figure>
 
-      <div class="caption">
-        <img src="media/uikit-branded.png" width="958" loading="lazy">
-        Fully branded UI kit
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none p-4 bg-white">
+        <img src="media/uikit-branded.png" width="958" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Fully branded UI kit</figcaption>
+      </figure>
 
       <h3 id="scan-studio">Scan studio</h3>
 
@@ -271,19 +265,12 @@
 
       <p>This tightened up feedback loops, reducing the number of back-and-forth emails. If the scan experience could do it, the client could customize it.</p>
 
-      <div class="caption">
-        <img src="media/scan-studio.png" width="1584" loading="lazy">
-        The scan studio
-      </div>
-
-      <hr>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/scan-studio.png" width="1584" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">The scan studio</figcaption>
+      </figure>
 
       <p>My year at Boox led to a far more cohesive experience across their website and scan experiences. I worked closely with Matt Semmelhack, Bob Walton, and Paige Russell to collaborate on branding, copy, and overall direction. It was an absolute pleasure to design and build with them in this space.</p>
-
-      <hr>
     </div>
-
-    include "elsewhere.html"
-    include "footer.html"
   </body>
 </html>
