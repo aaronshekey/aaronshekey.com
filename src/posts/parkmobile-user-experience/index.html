@@ -6,57 +6,57 @@
 
     <title>ParkMobile User Experience - Aaron Shekey</title>
   </head>
-  <body class="subpage theme-system ff-roboto section-posts">
+  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference">
     include "subheader.html"
 
-    <div class="post">
-      <h2>ParkMobile User Experience</h2>
-      <p class="meta">April 2019</p>
+    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm">
+      <p class="font-sans text-sm mb-0">April, 2019</p>
+      <h2 class="mt-0">ParkMobile User Experience</h2>
 
       <p>I love paying for parking with my phone, but Minneapolis’s parking vendor <a href="https://parkmobile.io">ParkMobile</a>’s app leaves a lot to be desired. Let’s take a look at the most common flow that I use—plugging a parking meter via the app.</p>
 
       <h3>Current flow</h3>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original01.png" alt="Step 01" loading="lazy">
-        Space number entry
-      </div>
+        <figcaption>Space number entry</figcaption>
+      </figure>
 
       <p>So far, it’s pretty straightforward. Let’s use the keypad to type in the number assigned to the space I’m parked in.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original02.png" alt="Step 02" loading="lazy">
-        Space confirmation screen?
-      </div>
+        <figcaption>Space confirmation screen?</figcaption>
+      </figure>
 
       <p>This screen is where things start to go south. Firstly, that map is never accurate. Not sure this map is necessary at all. I bet you could kill it, since I’m likely to be standing next to the car. Secondly, there is no information about the rate at the space. How much does it cost per hour?</p>
       <p>Let’s choose a duration. Of course I want to choose a duration.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original03.png" alt="Step 03" loading="lazy">
-        What’s this now?
-      </div>
+        <figcaption>What’s this now?</figcaption>
+      </figure>
 
       <p>Why block my workflow and ask if I want to choose duration by the hour and minute or by the maximum parking time? Just let me choose the duration straight away. How much is the maximum parking time?</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original04.png" alt="Step 04" loading="lazy">
-        Ok, let’s choose a duration.
-      </div>
+        <figcaption>Ok, let’s choose a duration.</figcaption>
+      </figure>
 
       <p>Alright, after 3 screens, I can select how long I’d like to park.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original05.png" alt="Step 05" loading="lazy">
-        Confirm the duration?
-      </div>
+        <figcaption>Confirm the duration?</figcaption>
+      </figure>
 
       <p>My 15 minutes of parking is ready to go. I’ll press the continue button.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original06.png" alt="Step 06" loading="lazy">
-        Final confirmation.
-      </div>
+        <figcaption>Final confirmation.</figcaption>
+      </figure>
 
       <p>I can confirm the duration and the vehicle I’d like to park. Additionally, I can change my preferred payment method.</p>
       <p>This simple kiosk of an app takes 5 taps and way too many decisions to pay for parking. At this point, it’s often faster to just toss some quarters into the meter. This app should be <em>convenient</em>. We can do better.</p>
@@ -70,44 +70,39 @@
 
       <p>Nothing wrong with this screen, really. We could consider cleaning up some of the visuals, but fundamentally this is good. Moving on.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/improved02.png" alt="Step 02" loading="lazy">
-        Just let me do everything.
-      </div>
+        <figcaption>Just let me do everything.</figcaption>
+      </figure>
 
       <p>The original flow has so many taps, each representing a decision. Let’s get right to it in this second screen. We have our space number, so let’s show the maximum duration and the hourly parking rate.</p>
 
       <p>Let’s skip all the questions and just open the task to set the parking duration. I can change the duration by interacting with the sliders, or I can tap “Set maximum” to choose the max duration without asking each user to think about how long they want to park upfront. Pressing either “Set maximum” or “Set duration” will advance the user to the confirmation screen. No need for another interstitial.</p>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/improved03.png" alt="Step 03" loading="lazy">
-        Confirmation
-      </div>
+        <figcaption>Confirmation</figcaption>
+      </figure>
 
       <p>We can drop users directly into the final confirmation screen. From here, they can go back and edit any of the values they need, or change their vehicle.</p>
 
-      <div class="caption">
+      <figure>
         <img width="1066" src="media/flow.png" alt="Flow" loading="lazy">
-        Full flow comparison
-      </div>
+        <figcaption>Full flow comparison</figcaption>
+      </figure>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/original.gif" alt="Original Animated" loading="lazy">
-        Original animated
-      </div>
+        <figcaption>Original animated</figcaption>
+      </figure>
 
-      <div class="caption">
+      <figure>
         <img width="320" src="media/improved.gif" alt="Improved Animated" loading="lazy">
-        Improved animated
-      </div>
+        <figcaption>Improved animated</figcaption>
+      </figure>
 
       <p>With some tiny changes to the user experience of ParkMobile, we’re able to cut the initial cognitive load while reducing the number of steps from 6 to 3. For an app that drivers may interact with multiple times a day, these interactions add up.</p>
       <p>To the folks at ParkMobile, feel free to implement these ideas—or email me and tell me why they’ll never work. As a designer and iOS engineer, I’d happily help implement them. ✌️</p>
-
-      <hr>
     </div>
-
-    include "elsewhere.html"
-    include "footer.html"
   </body>
 </html>

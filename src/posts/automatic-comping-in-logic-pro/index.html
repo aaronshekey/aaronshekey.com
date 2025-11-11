@@ -6,12 +6,12 @@
 
     <title>Automatic Comping in Logic Pro - Aaron Shekey</title>
   </head>
-  <body class="subpage theme-system ff-roboto section-posts">
+  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference">
     include "subheader.html"
 
-    <div class="post">
-      <h2>Automatic Comping in Logic Pro</h2>
-      <p class="meta">February 2017</p>
+    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm">
+      <p class="font-sans text-sm mb-0">February, 2017</p>
+      <h2 class="mt-0">Automatic Comping in Logic Pro</h2>
 
       <p>Apple’s <a href="http://www.apple.com/logic-pro/">Logic Pro X</a> is an indispensable tool in my audio production workflow. After a song idea graduates from <a href="https://justhum.com/">Hum</a>, they end up in Logic to get fleshed out as a full demo. Drums, bass, keys, auxiliary guitars, and vocals are added.</p>
 
@@ -31,22 +31,22 @@
 
       <p>What if this could be simpler? With its Flex Time &amp; Pitch engine, Logic already knows the tempo and pitch data for each of those takes. Allow me to propose the notion of “Automatic comping”. Instead of auditioning each take, what if Logic built a best guess comp based on which notes are closest to the reference note? Here’s what comping looks like currently.</p>
 
-      <div class="caption">
+      <figure>
         <img src="media/uncomped.png" alt="Comping" width="1415" loading="lazy">
-        Selecting an area to comp is as easy as swiping on the take you want.
-      </div>
+        <figcaption>Selecting an area to comp is as easy as swiping on the take you want.</figcaption>
+      </figure>
 
       <p>Within the comping dropdown, we could select “Automatic comping (pitch)”. Logic will analyze the notes in each each phrase that was sung, and then comp based on which of those notes vary the least from the reference note.</p>
 
-      <div class="caption">
+      <figure>
         <img src="media/menu.png" alt="Menu" width="1415" loading="lazy">
-        A new type of comp could appear in this menu.
-      </div>
+        <figcaption>A new type of comp could appear in this menu.</figcaption>
+      </figure>
 
-      <div class="caption">
+      <figure>
         <img src="media/comped.png" alt="Automatically Comped" width="1415" loading="lazy">
-        Selecting a comp based on pitch would show the relative pitch of each note and select which is closest to the reference note.
-      </div>
+        <figcaption>Selecting a comp based on pitch would show the relative pitch of each note and select which is closest to the reference note.</figcaption>
+      </figure>
 
       <p>Here we have a strong starting point based on pitch. In the case of a more rhythmic instrument, bass, or drums, as an example, we could build a comp based on the transients.</p>
 
@@ -59,11 +59,6 @@
       <p>At its best, Logic gets out of the way, allowing the artist to focus on expressing their vision for the song. Less time spent on comping means more time experimenting, or hell, writing lyrics worth listening to. Or moving on to another song.</p>
 
       <p>Or maybe robots should just sing this shit in the first place? 🤔</p>
-
-      <hr>
     </div>
-
-    include "elsewhere.html"
-    include "footer.html"
   </body>
 </html>
