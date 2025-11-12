@@ -78,7 +78,7 @@
       </figure>
 
       <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
-        <img src="media/documentation05.png" alt="Full documentation" width="1124" loading="lazy" class="mx-auto">
+        <img src="media/documentation05.png" alt="Full documentation" width="1124" loading="lazy" class="mx-auto rounded-md">
         <figcaption class="text-center">A full pseudo layout with everything a topic might have.</figcaption>
       </figure>
 
@@ -169,13 +169,13 @@
 
       <p>We also introduced a left navigation to the side of all Q&A experiences. As we looked at introducing Teams in the context of Stack Overflow it became obvious that we needed to review our overall information architecture. Fellow designer <a href="http://www.donnachoi.com">Donna Choi</a> covered the details and rationale in her <a href="https://stackoverflow.blog/2018/02/08/information-architecture-navigating-stack-overflow-enterprise-stack-exchange-sites/">blog post</a>. By adding the left nav we were able to scale our navigation beyond the header, allowing us to convert a larger set of pages to a responsive layout.</p>
 
-<figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
-      <video controls loop width="1422" class="mx-auto">
-        <source src="media/responsive.mp4"
-                type="video/mp4">
-      </video>
+      <figure class="bg-[#f9f9f9] lg:p-8 p-4 relative w-screen left-1/2 -translate-x-1/2 max-w-none">
+          <video controls loop width="1422" class="mx-auto rounded-lg">
+              <source src="media/responsive.mp4"
+                      type="video/mp4">
+          </video>
+      </figure>
 
-</figure>
       <p>Most of this work was designed by <a href="https://twitter.com/ludwiczakpawel">Paweł Ludwiczak</a> and executed by <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> with myself taking over long term maintenance and execution. <a href="https://stackoverflow.com/users/7782017/joe-friend?tab=profile">Joe Friend</a> managed the community and set expectations across the multiple teams at Stack Overflow.</p>
 
       <h4 id="community-theming">Community theming</h4>
@@ -184,46 +184,49 @@
 
       <p>I was tasked with figuring out how to unify the elements of a community that <em>could</em> be themed, allowing some themes to become more expressive, while others would be reined in. This required auditing all our CSS and radically simplifying how these theming variables are passed around our codebase. To put it politely, our CSS bundles had grown organically over the years. Unifying our themes was a worthy opportunity to refactor our theming CSS. We could ship a more consistent theming experience that wouldn’t get in the way of more rapidly shipping features.</p>
 
-      <div class="caption">
-        <div class="annotated">
-          <div class="annotation" style="top: 11.5%; left: 19%;">
-            <div class="description">
-              Custom SVG logo
+      <figure class="bg-[#E7E5D9] lg:p-8 p-4 relative w-screen left-1/2 -translate-x-1/2 max-w-none">
+          <div class="relative mx-auto max-w-full w-[1433px]">
+            <img src="media/theming.png" loading="lazy" class="w-full h-auto" />
+            <div class="absolute top-[11.5%] left-[19%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">1</div>
+            </div>
+            <div class="absolute top-[11.5%] left-[68%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">2</div>
+            </div>
+            <div class="absolute top-[48.2%] left-[47%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">3</div>
+            </div>
+            <div class="absolute top-[27%] left-[35%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">4</div>
+            </div>
+            <div class="absolute top-[17.5%] left-[60%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">5</div>
+            </div>
+            <div class="absolute top-[40%] left-[14%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">6</div>
+            </div>
+            <div class="absolute bottom-[30%] left-[14%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">7</div>
             </div>
           </div>
-          <div class="annotation" style="top: 11.5%; left: 68%;">
-            <div class="description">
-              Optional custom auxilliary image
-            </div>
-          </div>
-          <div class="annotation" style="top: 48.2%; left: 47%;">
-            <div class="description">
-              Optional custom tags
-            </div>
-          </div>
-          <div class="annotation" style="top: 27%; left: 35%;">
-            <div class="description">
-              Optional custom question links
-            </div>
-          </div>
-          <div class="annotation" style="top: 17.5%; left: 60%;">
-            <div class="description">
-              Optional custom buttons
-            </div>
-          </div>
-          <div class="annotation" style="top: 40%; left: 14%;">
-            <div class="description">
-              Optional custom background image
-            </div>
-          </div>
-          <div class="annotation" style="bottom: 30%; left: 14%;">
-            <div class="description">
-              Optional custom footer background
-            </div>
-          </div>
-          <img src="media/theming.png" width="1433" loading="lazy">
-        </div>
-      </div>
+          <figcaption class="text-center">
+            1. Custom SVG logo, 2. Optional custom auxilliary image, 3. Optional custom tags, 4. Optional custom question links, 5. Optional custom buttons, 6. Optional custom background image, 7. Optional custom footer background
+          </figcaption>
+      </figure>
 
       <p>Refactoring our themes took about <a href="https://meta.stackexchange.com/questions/309349/left-nav-responsive-design-and-theming-next-steps">nine months</a> of sustained effort with lots of back and forth with our community. Our codebase is now in a much better place for future feature work.</p>
 
@@ -242,7 +245,8 @@
       <p>Atomic CSS was a wildly different entry point to a design system. Previous failed design system efforts at Stack Overflow focused on cataloging existing components in hopes of replacing them as soon as possible. An atomic CSS library could be used by designers and engineers <em>immediately</em>, shipping alongside existing components.</p>
 
       <p>
-        <blockquote><p lang="en" dir="ltr">Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-” <br>Nope.<br>“Ok one designer &amp; a dev to build the-”<br>Nope.<br>“Ok a couple days blocked off-”<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*</p>&mdash; Allison Grayce (@allisongrayce), August 31, 2018</a></blockquote>
+        <blockquote>
+          <p>Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-” <br>Nope.<br>“Ok one designer &amp; a dev to build the-”<br>Nope.<br>“Ok a couple days blocked off-”<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*&mdash; Allison Grayce (@allisongrayce), August 31, 2018</p></blockquote>
       </p>
 
       <p>Design systems often initially have trouble scaling beyond simple button components. If your organization recognizes the value of a design system, it then moves to things like navigation patterns. These components are commonly too rigid, and teams have too little resources to provide for every edge case. This leads to engineers and designers being frustrated with their technical constraints, abandoning the system altogether.</p>
@@ -257,10 +261,10 @@
 
       <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Myself and <a href="http://www.joshuahynes.com">Joshua Hynes</a> meticulously documented as much as we could, as quickly as we could.</p>
 
-  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
-    <img src="media/documentation.png" alt="Documentation" width="1262" loading="lazy" class="mx-auto">
-    <figcaption class="text-center">Documentation design system page.</figcaption>
-  </figure>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation.png" alt="Documentation" width="1262" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Documentation design system page.</figcaption>
+      </figure>
 
       <p>Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>. Netlify allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
 
