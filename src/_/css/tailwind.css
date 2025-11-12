@@ -5,6 +5,8 @@
   navigation: auto;
 }
 
+#logo { view-transition-name: logo; }
+
 @font-face {
 	font-family: "Roobert";
 	src: url("../fonts/RoobertPRO-Regular.woff2") format("woff2");
