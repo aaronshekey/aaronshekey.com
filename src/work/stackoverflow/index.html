@@ -6,16 +6,16 @@
 
     <title>Stack Overflow - Aaron Shekey</title>
   </head>
-  <body class="subpage theme-system ff-roboto section-work">
+  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference overflow-x-hidden">
     include "subheader.html"
 
-    <div class="post post-stackoverflow">
-      <h2>Stack Overflow</h2>
-      <p class="meta">2017—2022</p>
+    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm prose-code:font-normal">
+      <p class="font-sans text-sm mb-0">2017—2022</p>
+      <h2 class="mt-0">Stack Overflow</h2>
 
       <p>I joined Stack Overflow in the spring of 2017 as a product designer on their then in-beta product, Documentation. After that, I worked on various Q&A efforts. After that, I’d create and maintain their design system, <a href="https://stackoverflow.design">Stacks</a>.</p>
 
-      <h5>Table of contents</h5>
+      <!-- <h5>Table of contents</h5>
       <ol class="contents">
         <li><a href="#documentation">Documentation</a></li>
         <li>
@@ -41,7 +41,7 @@
             <li><a href="#designing-systemically">Designing systemically</a></li>
           </ol>
         </li>
-      </ol>
+      </ol> -->
 
       <h3 id="documentation">Documentation</h3>
 
@@ -55,41 +55,44 @@
 
       <p>After initial rounds of research, we needed to test actual visuals of what this new version of Documentation might look like.</p>
 
-      <div class="caption">
-        <img src="media/documentation-layouts.png" alt="Layouts" width="827" loading="lazy">
-        We tested basic layouts before diving into full mockups
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation-layouts.png" alt="Layouts" width="827" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">We tested basic layouts before diving into full mockups</figcaption>
+      </figure>
 
       <p>We then moved on to testing mock layouts using pseudo documentation to gather what users valued from documentation around the web.</p>
 
-      <div class="caption">
-        <img src="media/documentation01.png" alt="Documentation sections" width="1124" loading="lazy">
-        In these mockups, we established the page layout while also exploring individual sections that were editable.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation01.png" alt="Documentation sections" width="1124" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">In these mockups, we established the page layout while also exploring individual sections that were editable.</figcaption>
+      </figure>
 
-      <div class="caption">
-        <img src="media/documentation02.png" alt="Documentation editing" width="1124" loading="lazy">
-        Early explorations on editing allowed for WYSIWYG-style editing of sections.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation02.png" alt="Documentation editing" width="1124" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Early explorations on editing allowed for WYSIWYG-style editing of sections.</figcaption>
+      </figure>
 
-      <div class="caption">
-        <img src="media/documentation04.png" alt="Documentation creation" width="1124" loading="lazy">
-        Creating new topics would allow for template selection
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation04.png" alt="Documentation creation" width="1124" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Creating new topics would allow for template selection</figcaption>
+      </figure>
 
-      <div class="caption">
-        <img src="media/documentation05.png" alt="Full documentation" width="1124" loading="lazy">
-        A full pseudo layout with everything a topic might have.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation05.png" alt="Full documentation" width="1124" loading="lazy" class="mx-auto rounded-md">
+        <figcaption class="text-center">A full pseudo layout with everything a topic might have.</figcaption>
+      </figure>
 
-      <div class="caption">
-        <img src="media/documentation03.png" alt="Documentation responsiveness" width="829" loading="lazy">
-        Documentation would support responsive layouts on day one.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation03.png" alt="Documentation responsiveness" width="829" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Documentation would support responsive layouts on day one.</figcaption>
+      </figure>
 
       <p>These explorations all tested very well, but ultimately it would have been too much investment to build what Documentation truly required to succeed. The failure of Documentation changed Stack Overflow’s approach to product development across the company, moving beyond “let’s develop a new product and see how it goes” and into more robust research into product and market fit.</p>
 
-      <img src="media/documentation-sunset.png" alt="Sunset" width="1272" loading="lazy">
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation-sunset.png" alt="Sunset" width="1272" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Documentation was sunset in August of 2017.</figcaption>
+      </figure>
 
       <h3 id="community">Community</h3>
 
@@ -101,58 +104,62 @@
 
       <p>Though most users end up on Stack Overflow by directly searching for their problem on Google, many of our users browse our questions lists based on their interests. The community team needed a way to introduce robust sorting, filtering, while showing power users the algorithm behind pre-baked lists like “Newest” or “Active”.</p>
 
-      <div class="background">
-        <div class="caption">
-          <img src="media/sorting-question-filtering.png" width="768" loading="lazy">
-          At the top of each question list, we introduced sorting and filtering.
-        </div>
 
-        <div class="caption">
-          <img src="media/sorting-custom-questions.png" width="822" loading="lazy">
-          If a user changes one of the sorting parameters, we give them the option to save their custom search.
-        </div>
+          <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+            <img src="media/sorting-question-filtering.png" alt="Sorting question filtering" width="768" loading="lazy" class="mx-auto">
+            <figcaption class="text-center">At the top of each question list, we introduced sorting and filtering.</figcaption>
+          </figure>
 
-        <div class="caption">
-          <img src="media/sorting-editing-custom-sort.png" width="492" loading="lazy">
-          Editing a custom search within a modal.
-        </div>
 
-        <div class="caption">
-          <img src="media/sorting-and-filtering.png" width="1236" loading="lazy">
-          Early explorations of sorting and filtering popovers.
-        </div>
-      </div>
+          <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+            <img src="media/sorting-custom-questions.png" alt="Sorting custom questions" width="822" loading="lazy" class="mx-auto">
+            <figcaption class="text-center">If a user changes one of the sorting parameters, we give them the option to save their custom search.</figcaption>
+          </figure>
+
+          <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+            <img src="media/sorting-editing-custom-sort.png" alt="Sorting editing custom sort" width="492" loading="lazy" class="mx-auto">
+            <figcaption class="text-center">Editing a custom search within a modal.</figcaption>
+          </figure>
+
+          <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+            <img src="media/sorting-and-filtering.png" alt="Sorting and filtering" width="1236" loading="lazy" class="mx-auto">
+            <figcaption class="text-center">Early explorations of sorting and filtering popovers.</figcaption>
+          </figure>
 
       <p>Ultimately, a much simpler approach pitched by <a href="https://www.lisahpark.com">Lisa Park</a> was best. We shipped a combined, Yelp-y set of filters and sorts in a single expandable view. <a href="https://stackoverflow.com/users/860000/brian-nickel?tab=profile">Brian Nickel</a> handled taking mockups and Codepens and fleshing out the backend to support them.</p>
 
-      <img src="media/sorting-combined.png" width="727" loading="lazy">
+  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+    <img src="media/sorting-combined.png" alt="Sorting combined" width="727" loading="lazy" class="mx-auto">
+    <figcaption class="text-center">Combined sorting and filtering view.</figcaption>
+  </figure>
 
       <h4 id="tag-watching">Tag watching</h4>
 
       <p>A powerful feature for those who browse Stack Overflow is watching tags. By watching tags, we weight questions in those tags and move them to the top of the lists. You can also receive an email digest of questions within those tags in varying frequency. We wanted to help surface its functionality.</p>
 
-      <div class="caption">
-        <img src="media/tag-watching-sidebar-elements.png" width="1296" loading="lazy">
-        We added some tag management to the sidebar of question lists.
-      </div>
+  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+    <img src="media/tag-watching-sidebar-elements.png" alt="Tag watching sidebar elements" width="1296" loading="lazy" class="mx-auto">
+    <figcaption class="text-center">We added some tag management to the sidebar of question lists.</figcaption>
+  </figure>
 
-      <div class="caption">
-        <img src="media/tag-watching-popover.png" width="324" loading="lazy">
-        We surfaced the ability to watch or ignore a tag any time a tag is presented.
-      </div>
+  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+    <img src="media/tag-watching-popover.png" alt="Tag watching popover" width="324" loading="lazy" class="mx-auto">
+    <figcaption class="text-center">We surfaced the ability to watch or ignore a tag any time a tag is presented.</figcaption>
+  </figure>
 
-      <div class="caption">
-        <img src="media/tags-header.png" width="769" loading="lazy">
-        On the tag page itself, we also added some additional buttons for managing watching a tag.
-      </div>
+  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+    <img src="media/tags-header.png" alt="Tags header" width="769" loading="lazy" class="mx-auto">
+    <figcaption class="text-center">On the tag page itself, we also added some additional buttons for managing watching a tag.</figcaption>
+  </figure>
 
       <h4 id="identity">Identity</h4>
 
       <p>After launching our code of conduct, we needed a way to show that a user was new to Stack Overflow. This meant exploring ways to unify identy across the product. We shipped the smallest version of this, the hand waving saying they’re a new contributor.</p>
 
-      <div class="background">
-        <img src="media/identity.png" width="1352" loading="lazy">
-      </div>
+  <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+    <img src="media/identity.png" alt="Identity" width="1352" loading="lazy" class="mx-auto">
+    <figcaption class="text-center">Identity indicator for new contributors.</figcaption>
+  </figure>
 
       <p>My favorite part of product design is balancing quick wins with long-running redesigns. Simultaneously, the Community team was tasked with converting the site to a responsive layout, adding a persistent sidebar navigation, and refactoring our community’s bunch of themes.</p>
 
@@ -162,10 +169,12 @@
 
       <p>We also introduced a left navigation to the side of all Q&A experiences. As we looked at introducing Teams in the context of Stack Overflow it became obvious that we needed to review our overall information architecture. Fellow designer <a href="http://www.donnachoi.com">Donna Choi</a> covered the details and rationale in her <a href="https://stackoverflow.blog/2018/02/08/information-architecture-navigating-stack-overflow-enterprise-stack-exchange-sites/">blog post</a>. By adding the left nav we were able to scale our navigation beyond the header, allowing us to convert a larger set of pages to a responsive layout.</p>
 
-      <video controls loop width="1422">
-        <source src="media/responsive.mp4"
-                type="video/mp4">
-      </video>
+      <figure class="bg-[#f9f9f9] lg:p-8 p-4 relative w-screen left-1/2 -translate-x-1/2 max-w-none">
+          <video controls loop width="1422" class="mx-auto rounded-lg">
+              <source src="media/responsive.mp4"
+                      type="video/mp4">
+          </video>
+      </figure>
 
       <p>Most of this work was designed by <a href="https://twitter.com/ludwiczakpawel">Paweł Ludwiczak</a> and executed by <a href="https://twitter.com/balpha">Benjamin Dumke-von der Ehe</a> with myself taking over long term maintenance and execution. <a href="https://stackoverflow.com/users/7782017/joe-friend?tab=profile">Joe Friend</a> managed the community and set expectations across the multiple teams at Stack Overflow.</p>
 
@@ -175,46 +184,49 @@
 
       <p>I was tasked with figuring out how to unify the elements of a community that <em>could</em> be themed, allowing some themes to become more expressive, while others would be reined in. This required auditing all our CSS and radically simplifying how these theming variables are passed around our codebase. To put it politely, our CSS bundles had grown organically over the years. Unifying our themes was a worthy opportunity to refactor our theming CSS. We could ship a more consistent theming experience that wouldn’t get in the way of more rapidly shipping features.</p>
 
-      <div class="caption">
-        <div class="annotated">
-          <div class="annotation" style="top: 11.5%; left: 19%;">
-            <div class="description">
-              Custom SVG logo
+      <figure class="bg-[#E7E5D9] lg:p-8 p-4 relative w-screen left-1/2 -translate-x-1/2 max-w-none">
+          <div class="relative mx-auto max-w-full w-[1433px]">
+            <img src="media/theming.png" loading="lazy" class="w-full h-auto" />
+            <div class="absolute top-[11.5%] left-[19%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">1</div>
+            </div>
+            <div class="absolute top-[11.5%] left-[68%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">2</div>
+            </div>
+            <div class="absolute top-[48.2%] left-[47%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">3</div>
+            </div>
+            <div class="absolute top-[27%] left-[35%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">4</div>
+            </div>
+            <div class="absolute top-[17.5%] left-[60%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">5</div>
+            </div>
+            <div class="absolute top-[40%] left-[14%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">6</div>
+            </div>
+            <div class="absolute bottom-[30%] left-[14%] size-6">
+              <div class="absolute size-6 bg-orange-600 rounded-full"></div>
+              <div class="absolute size-6 bg-orange-600 rounded-full animate-ping"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-white text-sm">7</div>
             </div>
           </div>
-          <div class="annotation" style="top: 11.5%; left: 68%;">
-            <div class="description">
-              Optional custom auxilliary image
-            </div>
-          </div>
-          <div class="annotation" style="top: 48.2%; left: 47%;">
-            <div class="description">
-              Optional custom tags
-            </div>
-          </div>
-          <div class="annotation" style="top: 27%; left: 35%;">
-            <div class="description">
-              Optional custom question links
-            </div>
-          </div>
-          <div class="annotation" style="top: 17.5%; left: 60%;">
-            <div class="description">
-              Optional custom buttons
-            </div>
-          </div>
-          <div class="annotation" style="top: 40%; left: 14%;">
-            <div class="description">
-              Optional custom background image
-            </div>
-          </div>
-          <div class="annotation" style="bottom: 30%; left: 14%;">
-            <div class="description">
-              Optional custom footer background
-            </div>
-          </div>
-          <img src="media/theming.png" width="1433" loading="lazy">
-        </div>
-      </div>
+          <figcaption class="text-center">
+            1. Custom SVG logo, 2. Optional custom auxilliary image, 3. Optional custom tags, 4. Optional custom question links, 5. Optional custom buttons, 6. Optional custom background image, 7. Optional custom footer background
+          </figcaption>
+      </figure>
 
       <p>Refactoring our themes took about <a href="https://meta.stackexchange.com/questions/309349/left-nav-responsive-design-and-theming-next-steps">nine months</a> of sustained effort with lots of back and forth with our community. Our codebase is now in a much better place for future feature work.</p>
 
@@ -233,7 +245,8 @@
       <p>Atomic CSS was a wildly different entry point to a design system. Previous failed design system efforts at Stack Overflow focused on cataloging existing components in hopes of replacing them as soon as possible. An atomic CSS library could be used by designers and engineers <em>immediately</em>, shipping alongside existing components.</p>
 
       <p>
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-“ <br>Nope.<br>“Ok one designer &amp; a dev to build the-“<br>Nope.<br>“Ok a couple days blocked off-“<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*</p>&mdash; Allison Grayce (@allisongrayce) <a href="https://twitter.com/allisongrayce/status/1035650093276254208?ref_src=twsrc%5Etfw">August 31, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote>
+          <p>Manager:<br>“Oooh a design system! We need one!”<br><br>Designer:<br>“Right! I’ll need a team dedicated-” <br>Nope.<br>“Ok one designer &amp; a dev to build the-”<br>Nope.<br>“Ok a couple days blocked off-”<br>Nope.<br>“Ok I’ll try to do it when I can.”<br>Excellent!<br><br>*UI toolkit has only buttons, forever.*&mdash; Allison Grayce (@allisongrayce), August 31, 2018</p></blockquote>
       </p>
 
       <p>Design systems often initially have trouble scaling beyond simple button components. If your organization recognizes the value of a design system, it then moves to things like navigation patterns. These components are commonly too rigid, and teams have too little resources to provide for every edge case. This leads to engineers and designers being frustrated with their technical constraints, abandoning the system altogether.</p>
@@ -248,7 +261,10 @@
 
       <p>Once the designers were on board, we called the design system Stacks. We purchased our domain <a href="https://stackoverflow.design">stackoverflow.design</a> and released the first versions of our design system documentation on GitHub Pages. Myself and <a href="http://www.joshuahynes.com">Joshua Hynes</a> meticulously documented as much as we could, as quickly as we could.</p>
 
-      <img src="media/documentation.png" width="1262" loading="lazy">
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/documentation.png" alt="Documentation" width="1262" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Documentation design system page.</figcaption>
+      </figure>
 
       <p>Eventually, as the needs of our documentation grew, we switched to the absolutely incredible <a href="https://netlify.com">Netlify</a>. Netlify allows for way more flexibility, allowing us to rely on custom Jekyll plugins for things like inserting icons from our icon set. It also allows for their absolute-killer feature—branch previews. Every pull request we have on our design system is matched by a preview URL, allowing us to try wildly different ideas, making sure anyone of any technical skill level at Stack Overflow and our open source community can preview our new features.</p>
 
@@ -260,12 +276,10 @@
 
       <p>We chose a modified BEM approach, for historical reasons. Our components are namespaced with the <code>s-</code> prefix. <code>s-btn</code> applies initial button styling, while modifiers are expressed as <code>s-btn__primary</code>. If there are child elements, they’re expressed as <code>s-btn--number</code> and so forth. This pattern has suited us well, since when you know the internal logic of the class naming system, you can tell at a glance how the markup is structured by the CSS alone.</p>
 
-      <div class="background">
-        <div class="caption">
-          <img src="media/components.png" width="1218" loading="lazy">
-          A small subset of our original components
-        </div>
-      </div>
+      <figure class="bg-[#E7E5D9] p-4 lg:p-8 w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/components.png" alt="Components" width="1218" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">A small subset of our original components</figcaption>
+      </figure>
 
       <p>Eventually, each of our components will have stock interactions provided by a corresponding JavaScript controller. On Stacks, we chose <a href="https://stimulusjs.org">Stimulus</a> as a dependency for our handing events, and assigning data attributes across our markup, regardless of if it’s coming from legacy views, the odd angular view, or via AJAX. Regardless of how our DOM is loaded, our <a href="https://stimulusjs.org">Stimulus</a>-powered components will have the interactivity engineers and users expect.</p>
 
@@ -277,20 +291,26 @@
 
       <p>At GitHub, I learned the value of a system-wide icon set. Stack Overflow was no different. Users would be shown the same consistent metaphor across the product. We’d deliver these icons as SVG, directly injecting them into the page and allowing for their colors to come directly from the text color of their parent. I took the same approach at Stack Overflow with some important modifications.</p>
 
-      <img src="media/icons.png" width="1350" loading="lazy">
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/icons.png" alt="Icons" width="1350" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Icons set example.</figcaption>
+      </figure>
 
       <p>Our icons are drawn at native sizes of <code>16px</code> within an <code>18px</code> frame. We also have smaller variations of most our glyphs at <code>12px</code> within a <code>14px</code> frame. The API for adding them to the view is simple. We call <code>@Svg.IconName</code>. Optionally, we can add any classes that we need <code>@Svg.IconName.With("js-target d-flex")</code>.</p>
 
       <p>Additionally, we can pass <code>@Svg.IconName.With("native")</code> to allow any native colors shine through. Some of our icons look like rich emojis unless we override them with the parent text color. This allows us to ship features like reactions.</p>
 
-      <div class="caption">
-        <img src="media/icons-recoloring.png" width="1108" loading="lazy">
-        Icon recoloring shown in detail
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/icons-recoloring.png" alt="Icons recoloring" width="1108" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Icon recoloring shown in detail</figcaption>
+      </figure>
 
       <p>In the future, we plan to deliver spot illustration versions of most of the metaphors in our icon set. This will enable our metaphors to scale from <code>12px</code> up to <code>128px</code>, adopting the appropriate aesthetic at the proper scale and pixel-fitting. <a href="https://davidlongworth.com">David Longworth</a> helped breathe new life into our new, richer icons.</p>
 
-      <img src="media/icon-scaling.png" width="771" loading="lazy">
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/icon-scaling.png" alt="Icon scaling" width="771" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Icon scaling demonstration.</figcaption>
+      </figure>
 
       <p>The icon set is an <a href="https://github.com/stackexchange/Stacks-Icons">open source repo</a> on GitHub and can be explored in our <a href="https://stackoverflow.design/resources/icons">documentation</a>.</p>
 
@@ -308,10 +328,10 @@
 
       <p>Stacks proved itself as a force multiplier very quickly in building the product, but soon after was put to the test in our marketing pages. Entire suites of marketing pages launched to talk about Teams without shipping a <em>new</em> line of CSS.</p>
 
-      <div class="caption">
-        <img src="media/marketing.png" width="1354" loading="lazy">
-        Our marketing team was able to assemble new page layouts without shipping a ton of custom CSS.
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/marketing.png" alt="Marketing" width="1354" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Our marketing team was able to assemble new page layouts without shipping a ton of custom CSS.</figcaption>
+      </figure>
 
       <p>For every hour that I’d spent systematizing things with Stacks, each engineer got at least an hour back. Stacks very quickly paid for itself, allowing me to more effectively argue moving from working as a product designer on <em>specific</em> features to working on Stacks itself. After a year of working on Stacks in a part-time fashion, I was able to convince management of its value. As of January 1, 2019, I’m Stack Overflow’s Design Systems Lead.</p>
 
@@ -319,10 +339,10 @@
 
       <p>Stack Overflow has traditionally employed “full stack” designers, meaning each designer we hired was also able to build and ship their own frontends. We’ve since started diversifying our skill levels. Since then, our design system couldn’t <em>just</em> include code. At the time Stacks was built, we were largely standardized on <a href="https://sketch.com">Sketch</a>. While I absolutely adore Sketch, I found the distributed document model of <a href="https://figma.com">Figma</a> incredible for collaboration, especially after a brief stint freelancing for Black Pixel. Many presentations, including those with our clients were run using the Figma document itself. Since design systems is largely about having a single source of truth, I found Figma to be the closest equivalent to that. You can trade a single link back and forth like a Google Doc, and always be ensured you’re seeing the latest and greatest.</p>
 
-      <div class="caption">
-        <img src="media/figma.png" width="494" loading="lazy">
-        The humble beginnings of our Figma components
-      </div>
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/figma.png" alt="Figma" width="494" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">The humble beginnings of our Figma components</figcaption>
+      </figure>
 
       <p>It took a lot of internal evangelizing to switch to Figma, but since delivering all our shared components from our design system to components in our <em>design</em> tool, the case was much easier to make. Product designers, regardless of their ability to code, can now drag components from our codebase to their canvases, quickly assembling their features for handoff to engineers.</p>
 
@@ -332,11 +352,12 @@
 
       <p>Sadly, it’s a common refrain that Stack Overflow isn’t a friendly product. While most of these issues can and should be solved by hard choices in Stack Overflow’s set of features, we can’t discount the effect that aesthetics can have on a product. Beyond strong community moderation and proper opinionated features like flagging, and automatic sentiment analysis, we can look at our product systemically to change our users’ overall perception.</p>
 
-      <img src="media/friendliness.png" width="1385" loading="lazy">
+      <figure class="w-screen relative left-1/2 -translate-x-1/2 max-w-none">
+        <img src="media/friendliness.png" alt="Friendliness" width="1385" loading="lazy" class="mx-auto">
+        <figcaption class="text-center">Friendliness redesign exploration.</figcaption>
+      </figure>
 
       <p>A note for our users that may be reading this—this is merely an exploration of the profound effect of what redesigning the key elements within our design system can result in. Here we’ve changed the typeface to Roboto, the overall padding scale, font sizing scale, and corner radii.</p>
-
-      <hr>
 
       <p>Our design system continues to grow thanks to huge contributions from my fellow designers and engineers at Stack Overflow. Stacks includes incredibly robust <a href="https://stackoverflow.design/email/">email templates</a> created entirely by <a href="http://www.tedgoas.com">Ted Goas</a>. Ted and Donna also created strong, opinionated <a href="https://stackoverflow.design/content/">content guidelines</a> that inform our product’s design daily.</p>
 
@@ -345,11 +366,6 @@
       <p>While the tech behind our design system can change at any time, my hope is Stacks’ lasting influence is cultural. Our mindset has shifted from shipping single features within a product silo, to shipping larger components for all to use. As we move beyond when this post was written in 2019, I plan on continuing to advocate for Stacks, to pitch that our design system unifies and runs all of frontend at Stack Overflow.</p>
 
       <p><a href="https://stackoverflow.design">Stacks</a> is open source—pull requests are welcome. If you want to see our approach to things, have a gander at our <a href="https://github.com/stackexchange/Stacks">repository</a> or our <a href="https://github.com/StackExchange/Stacks/projects/1">roadmap</a>.</p>
-
-      <hr>
     </div>
-
-    include "elsewhere.html"
-    include "footer.html"
   </body>
 </html>
