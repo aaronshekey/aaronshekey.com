@@ -1,68 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en" class="antialiased">
-  <head>
-    include "header.html"
+    <head>
+        <!-- prettier-ignore-start -->
+        include "header.html"
+        <!-- prettier-ignore-end -->
 
-    <title>America’s Finest News Source - Aaron Shekey</title>
-  </head>
-  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference">
-    include "subheader.html"
+        <title>America’s Finest News Source - Aaron Shekey</title>
+    </head>
+    <body
+        class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference"
+    >
+        <!-- prettier-ignore-start -->
+        include "subheader.html"
+        <!-- prettier-ignore-end -->
 
-    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm">
-      <p class="font-sans text-sm mb-0">October, 2014</p>
-      <h2 class="mt-0">America’s Finest News Source</h2>
+        <div
+            class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm"
+        >
+            <p class="font-sans text-sm mb-0">October, 2014</p>
+            <h2 class="mt-0">America’s Finest News Source</h2>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="115" viewBox="0 0 39.8 41.83">
-        <path fill="#008240" d="M1.27,38c-0.6-.9,1.8-1.3,2.2-2.3,2.2-4.1-1.7-2.4-3.3-11.8-3.1-17.7,27.2-17.7,31.2-18.4,3.7-.6-0.1-5.5,2.9-5.5,1,0,0,2.5,1,2.9s1.6-2.3,2.6-1.5c1.4,1.2-1.3,2.3-.6,3,0.5,0.5,1.8-.5,2.3.2,0.8,1.1-1.3,1.9-3.1,2.2-6.7,1.1,7.6,30.3-15.6,34.3-6.1,1.1-9-4.2-13.6-1.6-1.1.6-1.9,3.1-2.6,2.1-0.4-.6.7-1.7,0-2.1-0.5-.3-1.2.9-1.7,0.5s0.2-1-.2-1.5S1.67,38.53,1.27,38Zm9-24.3C14,11,21,8.83,19.47,8.93c-5.1.2-15.5,4.4-16,10.8C3.37,21.73,6.67,16.43,10.27,13.73Zm6.5,8c6.6-9.1,16.5-12.4,15.3-13.6s-7.3.5-7.3,0.5c-9.2,3.2-19.2,9.2-19.8,16.8-0.2,2.2.4,6.3,3.2,8.1C10.17,34.73,13.47,26.33,16.77,21.73ZM24,36.33c8.6-3.1,8.5-14.2,7.1-11.1s-2.3,5.5-5.3,7.3a12.33,12.33,0,0,1-6.9,1.5c-2.4-.1-4.6-2-5.3,1S20.87,37.43,24,36.33Zm-6.9-6.2c2.5,0.4,10.4-1.4,13.1-10.8,2.7-9.7,1.3-7.7-6.6.5C19.27,24.33,15.87,29.93,17.07,30.13Z"/>
-      </svg>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="115"
+                viewBox="0 0 39.8 41.83"
+            >
+                <path
+                    fill="#008240"
+                    d="M1.27,38c-0.6-.9,1.8-1.3,2.2-2.3,2.2-4.1-1.7-2.4-3.3-11.8-3.1-17.7,27.2-17.7,31.2-18.4,3.7-.6-0.1-5.5,2.9-5.5,1,0,0,2.5,1,2.9s1.6-2.3,2.6-1.5c1.4,1.2-1.3,2.3-.6,3,0.5,0.5,1.8-.5,2.3.2,0.8,1.1-1.3,1.9-3.1,2.2-6.7,1.1,7.6,30.3-15.6,34.3-6.1,1.1-9-4.2-13.6-1.6-1.1.6-1.9,3.1-2.6,2.1-0.4-.6.7-1.7,0-2.1-0.5-.3-1.2.9-1.7,0.5s0.2-1-.2-1.5S1.67,38.53,1.27,38Zm9-24.3C14,11,21,8.83,19.47,8.93c-5.1.2-15.5,4.4-16,10.8C3.37,21.73,6.67,16.43,10.27,13.73Zm6.5,8c6.6-9.1,16.5-12.4,15.3-13.6s-7.3.5-7.3,0.5c-9.2,3.2-19.2,9.2-19.8,16.8-0.2,2.2.4,6.3,3.2,8.1C10.17,34.73,13.47,26.33,16.77,21.73ZM24,36.33c8.6-3.1,8.5-14.2,7.1-11.1s-2.3,5.5-5.3,7.3a12.33,12.33,0,0,1-6.9,1.5c-2.4-.1-4.6-2-5.3,1S20.87,37.43,24,36.33Zm-6.9-6.2c2.5,0.4,10.4-1.4,13.1-10.8,2.7-9.7,1.3-7.7-6.6.5C19.27,24.33,15.87,29.93,17.07,30.13Z"
+                />
+            </svg>
 
-      <p><a href="http://www.theonion.com/articles/not-knowing-what-else-to-do-woman-bakes-americanfl,221/">“Not Knowing What Else To Do, Woman Bakes American-Flag Cake”</a>. The real media reported the facts&mdash;the crumbling towers, the falling bodies, the ash-covered victims. The Onion reported the truth.</p>
+            <p>
+                <a
+                    href="http://www.theonion.com/articles/not-knowing-what-else-to-do-woman-bakes-americanfl,221/"
+                    >“Not Knowing What Else To Do, Woman Bakes American-Flag
+                    Cake”</a
+                >. The real media reported the facts&mdash;the crumbling towers,
+                the falling bodies, the ash-covered victims. The Onion reported
+                the truth.
+            </p>
 
-      <ul>
-        <li><a href="http://www.theonion.com/articles/hugging-up-76000-percent,8824/">“Hugging Up 76,000 Percent”</a></li>
-        <li><a href="http://www.theonion.com/articles/us-vows-to-defeat-whoever-it-is-were-at-war-with,219/">“U.S. Vows To Defeat Whoever It Is We're At War With”</a></li>
-        <li><a href="http://www.theonion.com/articles/massive-attack-on-pentagon-page-14-news,24970/">“Massive Attack On Pentagon Page 14 News”</a></li>
-        <li><a href="http://www.theonion.com/articles/dinty-moore-breaks-long-silence-on-terrorism-with,3300/">“Dinty Moore Breaks Long Silence On Terrorism With Full-Page Ad”</a></li>
-        <li><a href="http://www.theonion.com/articles/bush-sr-apologizes-to-son-for-funding-bin-laden-in,3301/">“Bush Sr. Apologizes To Son For Funding Bin Laden In ’80s”</a></li>
-      </ul>
+            <ul>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/hugging-up-76000-percent,8824/"
+                        >“Hugging Up 76,000 Percent”</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/us-vows-to-defeat-whoever-it-is-were-at-war-with,219/"
+                        >“U.S. Vows To Defeat Whoever It Is We're At War
+                        With”</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/massive-attack-on-pentagon-page-14-news,24970/"
+                        >“Massive Attack On Pentagon Page 14 News”</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/dinty-moore-breaks-long-silence-on-terrorism-with,3300/"
+                        >“Dinty Moore Breaks Long Silence On Terrorism With
+                        Full-Page Ad”</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/bush-sr-apologizes-to-son-for-funding-bin-laden-in,3301/"
+                        >“Bush Sr. Apologizes To Son For Funding Bin Laden In
+                        ’80s”</a
+                    >
+                </li>
+            </ul>
 
-      <p>These are a couple of The Onion’s headlines from their now legendary first issue following September 11th, 2001. It took them until the 26th to publish their next issue. It wasn’t until their publishing that I was able to begin to articulate the absurdity of it all. To find the humor in it. To hear the truth.</p>
-      <p>The humor wasn’t in the act of terror, of course. To me, any return to normalcy in the face of tragedy was where the humor was hiding. It felt self-centered, or sociopathic to live life normally in that following week. But The Onion offered a picture of the beige board room that planned the media campaign of Dinty Moore’s unabashed return to consumerism after a national tragedy. It slayed me.</p>
-      <p><a href="http://www.theonion.com/video/americans-observing-911-by-trying-not-to-masturbat,14366/">“Americans Observing 9/11 By Trying Not To Masturbate”</a>. Truth. I was 15 in 2001. The thought obviously crossed my mind, and so did other strange, furtive insecurities. In an effort to give the event the respect it needed, folks were delaying their return to normalcy. Lorne Michaels asked then New York City mayor Giuliani on SNL’s return if it was ok to “be funny”.</p>
-      <p>Yes, it was ok to be funny. Though incredibly funny in that first issue, The Onion dared to be something every other outlet was not&mdash;normal. When all you saw was the absurdity of the facts presented on television or, you know, in real newspapers, The Onion did what it always does, it reported the emotional truth.</p>
-      <p>“There’s truth in every joke” is absolutely untrue, and anyone who enjoys a non-sequitur or a false narrative understands this. Yet, in the case of The Onion, I think it holds up. There’s something to that platitude. The Onion’s truth, while humorous, is the only one commenting on my actual emotions.</p>
-      <p><a href="http://www.theonion.com/articles/fuck-everything-nation-reports,30743/">“Fuck Everything, Nation Reports”</a>. “Just fuck it all to hell,” the sub headline read. This was in the wake of the Sandy Hook shooting that left 26 dead at an elementary school. This was no time for facts. The Onion was reporting the truth.</p>
+            <p>
+                These are a couple of The Onion’s headlines from their now
+                legendary first issue following September 11th, 2001. It took
+                them until the 26th to publish their next issue. It wasn’t until
+                their publishing that I was able to begin to articulate the
+                absurdity of it all. To find the humor in it. To hear the truth.
+            </p>
+            <p>
+                The humor wasn’t in the act of terror, of course. To me, any
+                return to normalcy in the face of tragedy was where the humor
+                was hiding. It felt self-centered, or sociopathic to live life
+                normally in that following week. But The Onion offered a picture
+                of the beige board room that planned the media campaign of Dinty
+                Moore’s unabashed return to consumerism after a national
+                tragedy. It slayed me.
+            </p>
+            <p>
+                <a
+                    href="http://www.theonion.com/video/americans-observing-911-by-trying-not-to-masturbat,14366/"
+                    >“Americans Observing 9/11 By Trying Not To Masturbate”</a
+                >. Truth. I was 15 in 2001. The thought obviously crossed my
+                mind, and so did other strange, furtive insecurities. In an
+                effort to give the event the respect it needed, folks were
+                delaying their return to normalcy. Lorne Michaels asked then New
+                York City mayor Giuliani on SNL’s return if it was ok to “be
+                funny”.
+            </p>
+            <p>
+                Yes, it was ok to be funny. Though incredibly funny in that
+                first issue, The Onion dared to be something every other outlet
+                was not&mdash;normal. When all you saw was the absurdity of the
+                facts presented on television or, you know, in real newspapers,
+                The Onion did what it always does, it reported the emotional
+                truth.
+            </p>
+            <p>
+                “There’s truth in every joke” is absolutely untrue, and anyone
+                who enjoys a non-sequitur or a false narrative understands this.
+                Yet, in the case of The Onion, I think it holds up. There’s
+                something to that platitude. The Onion’s truth, while humorous,
+                is the only one commenting on my actual emotions.
+            </p>
+            <p>
+                <a
+                    href="http://www.theonion.com/articles/fuck-everything-nation-reports,30743/"
+                    >“Fuck Everything, Nation Reports”</a
+                >. “Just fuck it all to hell,” the sub headline read. This was
+                in the wake of the Sandy Hook shooting that left 26 dead at an
+                elementary school. This was no time for facts. The Onion was
+                reporting the truth.
+            </p>
 
-      <blockquote>
-        <p>“I&hellip;” said Tom Miller, 27, after reading an article about the tragedy online. “I just&hellip;”</p>
+            <blockquote>
+                <p>
+                    “I&hellip;” said Tom Miller, 27, after reading an article
+                    about the tragedy online. “I just&hellip;”
+                </p>
 
-        <p>“&hellip;” he added.</p>
+                <p>“&hellip;” he added.</p>
 
-        <p>At press time&hellip;screw it, there’s nothing else to say.</p>
-      </blockquote>
+                <p>
+                    At press time&hellip;screw it, there’s nothing else to say.
+                </p>
+            </blockquote>
 
-      <p>In just a little over a week later, there was another shooting in the shadows of the Empire State Building.</p>
-      <p><a href="http://www.theonion.com/articles/nation-celebrates-full-week-without-deadly-mass-sh,29293/">“Nation Celebrates Full Week Without Deadly Mass Shooting UPDATE: Never Mind”</a> The Onion was able to capture the shared sentiment of everyone who heard news of this shooting so soon after Sandy Hook’s. The Onion synthesized my emotions in 11 words. I wasn’t looking for analysis of the event, I wasn’t looking for talking heads on either side of the gun issue, and I certainly wasn’t looking for information about the shooter. The Onion was able to comment without glorifying a murderer, sharing details, or even starting a debate.</p>
+            <p>
+                In just a little over a week later, there was another shooting
+                in the shadows of the Empire State Building.
+            </p>
+            <p>
+                <a
+                    href="http://www.theonion.com/articles/nation-celebrates-full-week-without-deadly-mass-sh,29293/"
+                    >“Nation Celebrates Full Week Without Deadly Mass Shooting
+                    UPDATE: Never Mind”</a
+                >
+                The Onion was able to capture the shared sentiment of everyone
+                who heard news of this shooting so soon after Sandy Hook’s. The
+                Onion synthesized my emotions in 11 words. I wasn’t looking for
+                analysis of the event, I wasn’t looking for talking heads on
+                either side of the gun issue, and I certainly wasn’t looking for
+                information about the shooter. The Onion was able to comment
+                without glorifying a murderer, sharing details, or even starting
+                a debate.
+            </p>
 
-      <hr>
+            <hr />
 
-      <p>I was 9 when I read my first Onion headline, <a href="https://www.ling.upenn.edu/~beatrice/humor/clinton-deploys-vowels.html">“Clinton Deploys Vowels to Bosnia; Cities of Sjlbvdnzv, Grzny to Be First Recipients”</a>. This was 1995. Of course, I didn’t understand the conflict in Bosnia, and honestly, after reading the Wikipedia article on the matter, I still don’t. As a 9-year-old, I’d giggle at the half a beat pause before Tom Brokaw would read those Yugoslavian cities names. It wasn’t deep satire, but the headline made me laugh. It was silly. It was goofy.</p>
-      <p>I grew up near Madison, WI, The Onion’s home town. This is a huge source of pride for me. Any time we’d head into town there were physical copies of the paper. You could pick them up at the pizza place. Or the music store. In high school, we’d pick one up during lunch, reading the headlines aloud and trying not to fuck up the punchline by stuttering or blowing a word.</p>
-      <p>In my first year of high school I read “Bush: &lsquo;Our Long National Nightmare Of Peace and Prosperity Is Finally Over’” Since I was so young when Clinton was in office, Bush was, for all intents and purposes, my first president.</p>
-      <p>Most would point to Jon Stewart or Stephen Colbert as their sources for political satire. Actually, it turns out that <a href="http://www.indecisionforever.com/blog/2009/03/25/daily-show-and-colbert-report-replacing-traditional-news-sources">32% of adults cite satire as their biggest source of news</a>. Jon Stewart took over The Daily Show just before Bush was elected and began a slow transition into the show we know today. But it was The Onion and its headlines that helped me to articulate the truths of the Bush presidency. <a href="http://www.theonion.com/articles/after-careful-consideration-bush-recommends-oil-dr,8814/">“After Careful Consideration, Bush Recommends Oil Drilling”</a>.</p>
-      <p>Is there a comedy institution more consistent than The Onion? Even after 9/11, The Onion, without sacrifice, plowed ahead without breaking their voice, while providing pitch-perfect satire. Instead of asking “can we be funny,” they just were. Their unwavering normalcy signaled to me that everything was going to be ok. By just doing what they do, reporting the emotional truth, they made everything just fine.</p>
-      <p>In the wake of 9/11 Stewart delivered <a href="http://thedailyshow.cc.com/videos/1q93jy/september-11--2001">an incredible monologue</a>. Yet, it seemed antithetical to the way The Daily Show presented its news. It wasn’t absurd. There wasn’t any commentary. It was a rare break of the 4th wall. Stewart revealed that he was indeed a person with feelings and emotions. And while I loved <em>him</em> for it, it revealed a rare tonal shift for his show.</p>
-      <p>These are extreme examples, to be certain. Though, just as a skilled artist can find beauty even in banality, The Onion finds humor. In The Onion’s world, there’s no such thing as a slow news day. In fact, some of their best headlines fill that very vacuum.</p>
+            <p>
+                I was 9 when I read my first Onion headline,
+                <a
+                    href="https://www.ling.upenn.edu/~beatrice/humor/clinton-deploys-vowels.html"
+                    >“Clinton Deploys Vowels to Bosnia; Cities of Sjlbvdnzv,
+                    Grzny to Be First Recipients”</a
+                >. This was 1995. Of course, I didn’t understand the conflict in
+                Bosnia, and honestly, after reading the Wikipedia article on the
+                matter, I still don’t. As a 9-year-old, I’d giggle at the half a
+                beat pause before Tom Brokaw would read those Yugoslavian cities
+                names. It wasn’t deep satire, but the headline made me laugh. It
+                was silly. It was goofy.
+            </p>
+            <p>
+                I grew up near Madison, WI, The Onion’s home town. This is a
+                huge source of pride for me. Any time we’d head into town there
+                were physical copies of the paper. You could pick them up at the
+                pizza place. Or the music store. In high school, we’d pick one
+                up during lunch, reading the headlines aloud and trying not to
+                fuck up the punchline by stuttering or blowing a word.
+            </p>
+            <p>
+                In my first year of high school I read “Bush: &lsquo;Our Long
+                National Nightmare Of Peace and Prosperity Is Finally Over’”
+                Since I was so young when Clinton was in office, Bush was, for
+                all intents and purposes, my first president.
+            </p>
+            <p>
+                Most would point to Jon Stewart or Stephen Colbert as their
+                sources for political satire. Actually, it turns out that
+                <a
+                    href="http://www.indecisionforever.com/blog/2009/03/25/daily-show-and-colbert-report-replacing-traditional-news-sources"
+                    >32% of adults cite satire as their biggest source of
+                    news</a
+                >. Jon Stewart took over The Daily Show just before Bush was
+                elected and began a slow transition into the show we know today.
+                But it was The Onion and its headlines that helped me to
+                articulate the truths of the Bush presidency.
+                <a
+                    href="http://www.theonion.com/articles/after-careful-consideration-bush-recommends-oil-dr,8814/"
+                    >“After Careful Consideration, Bush Recommends Oil
+                    Drilling”</a
+                >.
+            </p>
+            <p>
+                Is there a comedy institution more consistent than The Onion?
+                Even after 9/11, The Onion, without sacrifice, plowed ahead
+                without breaking their voice, while providing pitch-perfect
+                satire. Instead of asking “can we be funny,” they just were.
+                Their unwavering normalcy signaled to me that everything was
+                going to be ok. By just doing what they do, reporting the
+                emotional truth, they made everything just fine.
+            </p>
+            <p>
+                In the wake of 9/11 Stewart delivered
+                <a
+                    href="http://thedailyshow.cc.com/videos/1q93jy/september-11--2001"
+                    >an incredible monologue</a
+                >. Yet, it seemed antithetical to the way The Daily Show
+                presented its news. It wasn’t absurd. There wasn’t any
+                commentary. It was a rare break of the 4th wall. Stewart
+                revealed that he was indeed a person with feelings and emotions.
+                And while I loved <em>him</em> for it, it revealed a rare tonal
+                shift for his show.
+            </p>
+            <p>
+                These are extreme examples, to be certain. Though, just as a
+                skilled artist can find beauty even in banality, The Onion finds
+                humor. In The Onion’s world, there’s no such thing as a slow
+                news day. In fact, some of their best headlines fill that very
+                vacuum.
+            </p>
 
-      <ul>
-        <li><a href="http://www.npr.org/assets/news/2013/onion-drugs.pdf">“Drugs Win Drug War”</a></li>
-        <li><a href="http://www.theonion.com/articles/winner-didnt-even-know-it-was-pieeating-contest,8980/">“Winner Didn’t Even Know It Was Pie-Eating Contest”</a></li>
-      </ul>
+            <ul>
+                <li>
+                    <a
+                        href="http://www.npr.org/assets/news/2013/onion-drugs.pdf"
+                        >“Drugs Win Drug War”</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="http://www.theonion.com/articles/winner-didnt-even-know-it-was-pieeating-contest,8980/"
+                        >“Winner Didn’t Even Know It Was Pie-Eating Contest”</a
+                    >
+                </li>
+            </ul>
 
-      <p>The Onion is an unwavering bastion of truth. You can set your watch to it. With every week, good or bad, it will deliver 12 headlines that perfectly tap into the emotional pulse of its readership. Tragedy or not. Even when it canceled its physical papers, <a href="http://www.theonion.com/articles/print-dead-at-1803,33244/">“Print Dead at 1803”</a>, The Onion never broke its voice.</p>
+            <p>
+                The Onion is an unwavering bastion of truth. You can set your
+                watch to it. With every week, good or bad, it will deliver 12
+                headlines that perfectly tap into the emotional pulse of its
+                readership. Tragedy or not. Even when it canceled its physical
+                papers,
+                <a
+                    href="http://www.theonion.com/articles/print-dead-at-1803,33244/"
+                    >“Print Dead at 1803”</a
+                >, The Onion never broke its voice.
+            </p>
 
-      <p>“America’s Finest News Source.” You’re god damned right.</p>
-    </div>
-  </body>
+            <p>“America’s Finest News Source.” You’re god damned right.</p>
+        </div>
+    </body>
 </html>

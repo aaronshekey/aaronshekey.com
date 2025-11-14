@@ -1,64 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en" class="antialiased">
-  <head>
-    include "header.html"
+    <head>
+        <!-- prettier-ignore-start -->
+        include "header.html"
+        <!-- prettier-ignore-end -->
 
-    <title>Automatic Comping in Logic Pro - Aaron Shekey</title>
-  </head>
-  <body class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference">
-    include "subheader.html"
+        <title>Automatic Comping in Logic Pro - Aaron Shekey</title>
+    </head>
+    <body
+        class="bg-[#F4F2EA] h-full min-h-full bg-[url('/_/img/noise.png')] bg-size-[160px] bg-blend-difference"
+    >
+        <!-- prettier-ignore-start -->
+        include "subheader.html"
+        <!-- prettier-ignore-end -->
 
-    <div class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm">
-      <p class="font-sans text-sm mb-0">February, 2017</p>
-      <h2 class="mt-0">Automatic Comping in Logic Pro</h2>
+        <div
+            class="mx-auto w-full mt-20 px-4 pb-20 prose prose-xl prose-headings:font-normal prose-headings:font-sans prose-a:text-[#A18222] prose-a:hover:underline font-light font-serif prose-a:font-light prose-a:underline-offset-3 prose-a:decoration-1 prose-a:no-underline prose-figcaption:font-sans prose-figcaption:text-sm"
+        >
+            <p class="font-sans text-sm mb-0">February, 2017</p>
+            <h2 class="mt-0">Automatic Comping in Logic Pro</h2>
 
-      <p>Apple’s <a href="http://www.apple.com/logic-pro/">Logic Pro X</a> is an indispensable tool in my audio production workflow. After a song idea graduates from <a href="https://justhum.com/">Hum</a>, they end up in Logic to get fleshed out as a full demo. Drums, bass, keys, auxiliary guitars, and vocals are added.</p>
+            <p>
+                Apple’s
+                <a href="http://www.apple.com/logic-pro/">Logic Pro X</a> is an
+                indispensable tool in my audio production workflow. After a song
+                idea graduates from <a href="https://justhum.com/">Hum</a>, they
+                end up in Logic to get fleshed out as a full demo. Drums, bass,
+                keys, auxiliary guitars, and vocals are added.
+            </p>
 
-      <p>I use Logic instead of Pro Tools. Pro Tools feels like Photoshop in many ways. It’s the de facto standard, largely due to its ubiquity after entering its 3rd decade. It’s seen as too big to fail.</p>
+            <p>
+                I use Logic instead of Pro Tools. Pro Tools feels like Photoshop
+                in many ways. It’s the de facto standard, largely due to its
+                ubiquity after entering its 3rd decade. It’s seen as too big to
+                fail.
+            </p>
 
-      <p>Like Photoshop, Pro Tools has never felt native to the macOS experience. It crashes often. Its draconian licensing is relegated to a physical breakout device that has to be purchased separately from the software itself. Its management of takes as playlists feels archaic. Its default set of plugins are paltry in its selection. In the Pro Tools universe, its often easy to feel nickel-and-dimed in order to be productive.</p>
+            <p>
+                Like Photoshop, Pro Tools has never felt native to the macOS
+                experience. It crashes often. Its draconian licensing is
+                relegated to a physical breakout device that has to be purchased
+                separately from the software itself. Its management of takes as
+                playlists feels archaic. Its default set of plugins are paltry
+                in its selection. In the Pro Tools universe, its often easy to
+                feel nickel-and-dimed in order to be productive.
+            </p>
 
-      <p>These <strike>papercuts</strike> details matter to a product dork like myself. I’ve tweeted often about my love for Logic. For starters, its price tag is insanely reasonable. It offers incredible plugins that have evolved into an incredibly robust starting point. It doesn’t require any hardware lock-in. It offers a clear path of upgrading from GarageBand and performances with MainStage. It’s my shit. Extremely.</p>
+            <p>
+                These <strike>papercuts</strike> details matter to a product
+                dork like myself. I’ve tweeted often about my love for Logic.
+                For starters, its price tag is insanely reasonable. It offers
+                incredible plugins that have evolved into an incredibly robust
+                starting point. It doesn’t require any hardware lock-in. It
+                offers a clear path of upgrading from GarageBand and
+                performances with MainStage. It’s my shit. Extremely.
+            </p>
 
-      <p>Its best features are baked right into the dough. Its flex time &amp; pitch rival what you could purchase as a third party plugin in the Pro Tools environment. Its quick-swipe comping is an incredible time-saver.</p>
+            <p>
+                Its best features are baked right into the dough. Its flex time
+                &amp; pitch rival what you could purchase as a third party
+                plugin in the Pro Tools environment. Its quick-swipe comping is
+                an incredible time-saver.
+            </p>
 
-      <h3>A problem</h3>
+            <h3>A problem</h3>
 
-      <p>In any session, it’s likely that you’ll record a few takes of vocals. Comping is the act of choosing bits out of each of those takes to build one cohesive performance that’s both in key, on time, and has the right emotion. Comping audio is time consuming in any application. Logic makes it trivial to select the portion, but you’ll still have to listen to each take in earnest to isolate those best bits.</p>
+            <p>
+                In any session, it’s likely that you’ll record a few takes of
+                vocals. Comping is the act of choosing bits out of each of those
+                takes to build one cohesive performance that’s both in key, on
+                time, and has the right emotion. Comping audio is time consuming
+                in any application. Logic makes it trivial to select the
+                portion, but you’ll still have to listen to each take in earnest
+                to isolate those best bits.
+            </p>
 
-      <h3>A solution</h3>
+            <h3>A solution</h3>
 
-      <p>What if this could be simpler? With its Flex Time &amp; Pitch engine, Logic already knows the tempo and pitch data for each of those takes. Allow me to propose the notion of “Automatic comping”. Instead of auditioning each take, what if Logic built a best guess comp based on which notes are closest to the reference note? Here’s what comping looks like currently.</p>
+            <p>
+                What if this could be simpler? With its Flex Time &amp; Pitch
+                engine, Logic already knows the tempo and pitch data for each of
+                those takes. Allow me to propose the notion of “Automatic
+                comping”. Instead of auditioning each take, what if Logic built
+                a best guess comp based on which notes are closest to the
+                reference note? Here’s what comping looks like currently.
+            </p>
 
-      <figure>
-        <img src="media/uncomped.png" alt="Comping" width="1415" loading="lazy">
-        <figcaption>Selecting an area to comp is as easy as swiping on the take you want.</figcaption>
-      </figure>
+            <figure>
+                <img
+                    src="media/uncomped.png"
+                    alt="Comping"
+                    width="1415"
+                    loading="lazy"
+                />
+                <figcaption>
+                    Selecting an area to comp is as easy as swiping on the take
+                    you want.
+                </figcaption>
+            </figure>
 
-      <p>Within the comping dropdown, we could select “Automatic comping (pitch)”. Logic will analyze the notes in each each phrase that was sung, and then comp based on which of those notes vary the least from the reference note.</p>
+            <p>
+                Within the comping dropdown, we could select “Automatic comping
+                (pitch)”. Logic will analyze the notes in each each phrase that
+                was sung, and then comp based on which of those notes vary the
+                least from the reference note.
+            </p>
 
-      <figure>
-        <img src="media/menu.png" alt="Menu" width="1415" loading="lazy">
-        <figcaption>A new type of comp could appear in this menu.</figcaption>
-      </figure>
+            <figure>
+                <img
+                    src="media/menu.png"
+                    alt="Menu"
+                    width="1415"
+                    loading="lazy"
+                />
+                <figcaption>
+                    A new type of comp could appear in this menu.
+                </figcaption>
+            </figure>
 
-      <figure>
-        <img src="media/comped.png" alt="Automatically Comped" width="1415" loading="lazy">
-        <figcaption>Selecting a comp based on pitch would show the relative pitch of each note and select which is closest to the reference note.</figcaption>
-      </figure>
+            <figure>
+                <img
+                    src="media/comped.png"
+                    alt="Automatically Comped"
+                    width="1415"
+                    loading="lazy"
+                />
+                <figcaption>
+                    Selecting a comp based on pitch would show the relative
+                    pitch of each note and select which is closest to the
+                    reference note.
+                </figcaption>
+            </figure>
 
-      <p>Here we have a strong starting point based on pitch. In the case of a more rhythmic instrument, bass, or drums, as an example, we could build a comp based on the transients.</p>
+            <p>
+                Here we have a strong starting point based on pitch. In the case
+                of a more rhythmic instrument, bass, or drums, as an example, we
+                could build a comp based on the transients.
+            </p>
 
-      <h3>Keeping it artful</h3>
+            <h3>Keeping it artful</h3>
 
-      <p>Comping is an art. Too many folks get carried away with editing their performances—lining drums up perfectly on the grid, nudging the tuning of a vocal performance, looping a difficult passage. With heavy editing, often these performances lose an undefinable feel. There’s a balancing act there. Of course, one could choose the take that a performer said “was the one” and tune every note and skip comping altogether.</p>
+            <p>
+                Comping is an art. Too many folks get carried away with editing
+                their performances—lining drums up perfectly on the grid,
+                nudging the tuning of a vocal performance, looping a difficult
+                passage. With heavy editing, often these performances lose an
+                undefinable feel. There’s a balancing act there. Of course, one
+                could choose the take that a performer said “was the one” and
+                tune every note and skip comping altogether.
+            </p>
 
-      <p>Pitch detection could bring some of the art back to comping. Knowing at a glance which performance is technically correct, we could free up our comping time and allow engineers to focus on the emotion and timbre of the artist’s performance.</p>
+            <p>
+                Pitch detection could bring some of the art back to comping.
+                Knowing at a glance which performance is technically correct, we
+                could free up our comping time and allow engineers to focus on
+                the emotion and timbre of the artist’s performance.
+            </p>
 
-      <p>At its best, Logic gets out of the way, allowing the artist to focus on expressing their vision for the song. Less time spent on comping means more time experimenting, or hell, writing lyrics worth listening to. Or moving on to another song.</p>
+            <p>
+                At its best, Logic gets out of the way, allowing the artist to
+                focus on expressing their vision for the song. Less time spent
+                on comping means more time experimenting, or hell, writing
+                lyrics worth listening to. Or moving on to another song.
+            </p>
 
-      <p>Or maybe robots should just sing this shit in the first place? 🤔</p>
-    </div>
-  </body>
+            <p>
+                Or maybe robots should just sing this shit in the first place?
+                🤔
+            </p>
+        </div>
+    </body>
 </html>
