@@ -1,0 +1,10 @@
+# Netlify redirects file
+/hum/ /work/hum/ 301
+/reflow/ /work/adobe/ 301
+/work/reflow/ /work/adobe/ 301
+/github/ /work/github/ 301
+/posts/the-truth-and-the-onion/ /posts/americas-finest-news-source/ 301
+/posts/redesigning-octicons/ /work/github/ 301
+
+# Webfinger redirect
+/.well-known/webfinger https://mastodon.social/.well-known/webfinger?resource=acct:aaronshekey@mastodon.social 200
