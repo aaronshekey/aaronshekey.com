@@ -7,11 +7,25 @@ import { glob } from "glob";
 function htmlIncludesPlugin() {
 	return {
 		name: "html-includes",
+		configureServer(server) {
+			// Watch template files and trigger full reload on changes
+			const templatesPath = resolve(process.cwd(), "src/_templates");
+			server.watcher.add(`${templatesPath}/**/*.html`);
+
+			server.watcher.on("change", (file) => {
+				if (file.includes("_templates")) {
+					server.ws.send({
+						type: "full-reload",
+						path: "*",
+					});
+				}
+			});
+		},
 		transformIndexHtml: {
 			order: "pre",
 			handler(html, ctx) {
 				// Process include directives recursively
-				function processIncludes(content) {
+				function processIncludes(content, includedFiles = []) {
 					const includeRegex = /include\s+"([^"]+)"/g;
 					let result = content;
 					let hasIncludes = false;
@@ -29,6 +43,11 @@ function htmlIncludesPlugin() {
 						try {
 							const templateContent = fs.readFileSync(fullPath, "utf-8");
 							result = result.replace(match[0], templateContent);
+
+							// Track included files for HMR
+							if (!includedFiles.includes(fullPath)) {
+								includedFiles.push(fullPath);
+							}
 						} catch {
 							console.warn(
 								`Warning: Could not include template ${templatePath}`,
@@ -40,7 +59,7 @@ function htmlIncludesPlugin() {
 
 					// Process recursively if we found includes
 					if (hasIncludes) {
-						return processIncludes(result);
+						return processIncludes(result, includedFiles);
 					}
 
 					return result;

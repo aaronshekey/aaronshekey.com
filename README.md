@@ -46,7 +46,7 @@ Merging to `master` automatically deploys the site via Netlify. ✌️
 
 ```
 src/
-├── _/                      # Assets directory
+├── _/                     # Assets directory
 │   ├── css/               # Stylesheets (Tailwind CSS)
 │   ├── fonts/             # Web fonts
 │   └── img/               # Images
@@ -55,7 +55,7 @@ src/
 ├── posts/                 # Blog posts
 ├── resume/                # Resume page
 ├── work/                  # Work/portfolio pages
-└── index.html            # Homepage
+└── index.html             # Homepage
 ```
 
 ## Technology Stack
